@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context=".BmiCalculator">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        >
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/bmi"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:text="BMI CALCULATOR"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/malefemaleLinearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/linearLayout"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="40dp"
+            >
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardMale"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:cardCornerRadius="20dp">
+
+                <ImageView
+                    android:id="@+id/male"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/malegender" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MALE"
+                android:textColor="@color/black"
+                android:textSize="27dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="40dp"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardFemale"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:cardCornerRadius="20dp">
+
+                <ImageView
+                    android:id="@+id/female"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/female" />
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FEMALE"
+                android:textColor="@color/black"
+                android:textSize="27dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/malefemaleLinearlayout"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="21dp"
+        app:cardCornerRadius="10dp">
+
+        <TextView
+            android:id="@+id/currentheight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="HEIGHT"
+            android:textColor="@color/black"
+            android:textSize="28dp"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/seekbarforheight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="65dp"
+            android:max="200"
+            android:min="100" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="90dp"
+            android:text="Your Height in cm"
+            android:textColor="@color/black"
+            android:textSize="26dp"
+            android:textStyle="bold" />
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/linearweightage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/cardview"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/weightCardView"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            app:cardCornerRadius="20dp"
+            android:layout_marginRight="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WEIGHT"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                android:layout_marginTop="4dp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/currentweight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="45"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+
+            <ImageView
+                android:id="@+id/decrementweight"
+                android:layout_width="35dp"
+                android:layout_height="46dp"
+                android:src="@drawable/minus"
+                android:layout_marginTop="75dp"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="start"/>
+
+            <ImageView
+                android:id="@+id/incremetweight"
+                android:layout_width="35dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="75dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/plus"
+                android:layout_gravity="end"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/ageCardView"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            app:cardCornerRadius="20dp"
+            android:layout_marginLeft="30dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AGE"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                android:layout_marginTop="4dp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/currentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="22"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+
+            <ImageView
+                android:id="@+id/decrementage"
+                android:layout_width="35dp"
+                android:layout_height="46dp"
+                android:src="@drawable/minus"
+                android:layout_marginTop="75dp"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="start"/>
+
+            <ImageView
+                android:id="@+id/incrementage"
+                android:layout_width="35dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="75dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/plus"
+                android:layout_gravity="end"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/calculatebmi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="CALCULATE"
+        android:textSize="25dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/purple_700"
+        android:layout_below="@id/linearweightage"
+        android:layout_marginHorizontal="60dp"/>
+
+</RelativeLayout>

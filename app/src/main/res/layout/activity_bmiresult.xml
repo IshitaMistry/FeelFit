@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4F669F"
+    tools:context=".ResultBMI">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_res"
+        android:layout_width="match_parent"
+        android:layout_height="195dp"
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="15dp"
+        android:layout_marginHorizontal="15dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+
+                android:id="@+id/notepad_image"
+                android:layout_width="119dp"
+                android:layout_height="153dp"
+                android:src="@drawable/notepad"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/notepad_image"
+                android:text="Your Result"
+                android:textColor="@color/black"
+                android:textSize="32dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardV2"
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        android:layout_below="@+id/card_res"
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/content_layout"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text_UnderWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Underweight"
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+
+                android:id="@+id/result_bmi"
+                android:layout_width="340dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/text_UnderWeight"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/roudtextv"
+                android:text="35"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/gender"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_below="@+id/result_bmi"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:text="Gender "
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="33dp"
+                android:textStyle="bold"></TextView>
+
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/Proceed"
+            android:layout_width="180dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="290dp"
+            android:backgroundTint="#4F669F"
+            android:backgroundTintMode="add"
+            android:layout_gravity="center_horizontal"
+            android:text="PROCEED"
+            android:textSize="20dp">
+
+        </Button>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="29dp"
+        android:layout_below="@+id/cardV2"
+        android:text=" NO PAIN NO GAIN !!"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="30dp"></TextView>
+
+
+</RelativeLayout>

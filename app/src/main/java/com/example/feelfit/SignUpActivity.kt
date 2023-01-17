@@ -1,23 +1,27 @@
 package com.example.feelfit
-
+import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.example.feelfit.databinding.ActivitySignUpBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class SignUpActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivitySignUpBinding
-    private lateinit var firebaseAuth: FirebaseAuth
-
-
+  private lateinit var firebaseAuth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding= ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+       // tools:context=".SignupActivity"
+       // if unresolved wala error occurs
 
 
         binding.Login.setOnClickListener(View .OnClickListener {
