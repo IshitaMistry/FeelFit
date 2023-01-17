@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "590855792594",
+    "project_id": "feelfit-9f785",
+    "storage_bucket": "feelfit-9f785.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:590855792594:android:6a7486bcbc09cace12ca0b",
+        "android_client_info": {
+          "package_name": "com.example.feelfit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "590855792594-u7rns8oko8hld5se79c386uksgjfqt7e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.feelfit",
+            "certificate_hash": "85db7c07a77618781727df2b328821994574a790"
+          }
+        },
+        {
+          "client_id": "590855792594-i1fmoekekba86l8sn8m1al1n9ag71saq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_e6ORQ9v2JHT9CZORJaxy_-SdFRgn6Fs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "590855792594-i1fmoekekba86l8sn8m1al1n9ag71saq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

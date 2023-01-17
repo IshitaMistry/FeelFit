@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FeelFit</string>
+    <string name="register">Register</string>
+    <string name="don_t_have_an_account">Don\'t Have An Account?</string>
+    <string name="LogIn" />
+    <string name="already_have_an_acoount">Already have an Acoount</string>
+    <string name="login">Login</string>
+</resources>
