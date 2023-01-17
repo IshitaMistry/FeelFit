@@ -5,4 +5,11 @@
     <string name="LogIn" />
     <string name="already_have_an_acoount">Already have an Acoount</string>
     <string name="login">Login</string>
+    <string name="place_holder_time">place_holder_time</string>
+    <string name="reset">Reset</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+
+    <string name="nav_open">open</string>
+    <string name="nav_close">close</string>
 </resources>

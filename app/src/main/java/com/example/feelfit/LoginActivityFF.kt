@@ -1,13 +1,10 @@
 package com.example.feelfit
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.view.View.inflate
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.feelfit.databinding.ActivityLoginffBinding
-import com.example.feelfit.databinding.ActivityLoginffBinding.inflate
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivityFF : AppCompatActivity() {
@@ -22,9 +19,18 @@ private lateinit var firebaseAuth: FirebaseAuth
             val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
         }
+
+
         binding.BtnRegister.setOnClickListener {
             val email = binding.EmailRegister.text.toString()
             val pass = binding.PasswordRegister.text.toString()
+
+            val sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE)
+            val editor = sharedPreferences.edit()
+            val userEmail = email //
+
+            editor.putString("user_email", userEmail)
+            editor.apply()
 
 
 
@@ -39,7 +45,6 @@ private lateinit var firebaseAuth: FirebaseAuth
                     }
                     else{
                         Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
-
                     }
                 }
             }
@@ -47,6 +52,8 @@ private lateinit var firebaseAuth: FirebaseAuth
                 Toast.makeText(this, "Password is not Matching", Toast.LENGTH_SHORT).show()
             }
         }
+
+
 
 
     }
