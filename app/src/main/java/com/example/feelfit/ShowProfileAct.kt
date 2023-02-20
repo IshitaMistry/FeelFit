@@ -2,14 +2,17 @@ package com.example.feelfit
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import com.example.feelfit.databinding.ActivityShowProfileBinding
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
 class ShowProfileAct : AppCompatActivity() {
 
+    private lateinit var firebaseAuth: FirebaseAuth
 
     lateinit var binding: ActivityShowProfileBinding
     lateinit var InsDB: AppDatabase
@@ -23,28 +26,36 @@ class ShowProfileAct : AppCompatActivity() {
         setContentView(binding.root)
 
 
+        firebaseAuth= FirebaseAuth.getInstance()
+        var user=firebaseAuth.currentUser?.email
+
+
 
 
         binding.reccalculatebmi.setOnClickListener(View.OnClickListener {
-
             startActivity(Intent(this, BmiCalculator::class.java))
         })
 
 
         InsDB = AppDatabase.getDatabase(this@ShowProfileAct)
-
-
         GlobalScope.launch(Dispatchers.IO) {
 
-            val enties = InsDB.userInfoDao().getAll()
+            val enties = user?.let { InsDB.userInfoDao().getAll(it) }
+            Log.e("hello", "Shubh: $enties" +
+                    "", )
 
-            binding.getemail.text = enties[0].email
-            binding.gen.text = enties[1].gender
-//            binding.height1.text = enties[2].height
-//            binding.weight1.text = enties[3].weight
-//            binding.age1.text = enties[4].age
-//            binding.body.text = enties[5].body
-//            binding.bmi.text = enties[6].bmi
+            launch(Dispatchers.Main) {
+
+
+                binding.getemail.text = enties!![0].email
+                binding.gen.text = enties[0].gender
+                binding.height1.text = enties[0].height
+                binding.weight1.text = enties[0].weight
+                binding.age1.text = enties[0].age
+                binding.body.text = enties[0].body
+                binding.bmi.text = enties[0].bmi
+
+            }
         }
 
     }

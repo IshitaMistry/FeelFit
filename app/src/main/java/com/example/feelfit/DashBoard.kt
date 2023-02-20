@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
+import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -38,7 +39,16 @@ class DashBoard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
         setSupportActionBar(toolbar)
 
         firebaseAuth= FirebaseAuth.getInstance()
+
+        var user=firebaseAuth.currentUser?.email
+       // var  maile=user.toString()
         builder=AlertDialog.Builder(this)
+
+        var mail=findViewById<TextView>(R.id.header_email)
+
+
+      // mail.setText(user?.email)
+
 
 
 //
@@ -103,6 +113,17 @@ class DashBoard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
                 // Show the Alert Dialog box
                 alertDialog.show()
 
+            }
+            R.id.share ->
+            {
+
+                val shareBody="Download FeelFit on Play Store:"
+                val sharehub="FeelFit : make brain powerful"
+                val shareIntent=Intent(Intent.ACTION_SEND)
+                shareIntent.type="text/plain"
+                shareIntent.putExtra(Intent.EXTRA_SUBJECT,sharehub)
+                shareIntent.putExtra(Intent.EXTRA_TEXT,shareBody)
+                startActivity(shareIntent)
             }
         }
         return true

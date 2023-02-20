@@ -4,15 +4,18 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.TextView
 import com.example.feelfit.databinding.ActivityBmiresultBinding
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.collection.LLRBNode.Color
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
 class ResultBMI : AppCompatActivity() {
+    private lateinit var firebaseAuth: FirebaseAuth
 
     private lateinit var binding: ActivityBmiresultBinding
     var intbmi = 0f
@@ -44,23 +47,27 @@ class ResultBMI : AppCompatActivity() {
         mbmi = java.lang.Float.toString(intbmi)
         println(mbmi)
 
-        var underweight=findViewById<TextView>(R.id.text_UnderWeight)
+
+        firebaseAuth= FirebaseAuth.getInstance()
+        var email=firebaseAuth.currentUser?.email
+
+
+    //    var underweight=findViewById<TextView>(R.id.text_UnderWeight)
 
 
 
-        val bmi=intbmi.toFloat().toString()
-        var body=underweight.text.toString()
+
 
 
         InsDB= AppDatabase.getDatabase(this)
 
-        GlobalScope.launch (Dispatchers.IO){
-           InsDB.userInfoDao().Update(bmi,body)
 
-        }
 
 
         if (intbmi <=16 ){
+
+
+
             binding.textUnderWeight.setText("Severe Skinny")
             binding.contentLayout.background=resources.getDrawable(R.color.green)
         }
@@ -103,6 +110,14 @@ class ResultBMI : AppCompatActivity() {
 
 
         binding.Proceed.setOnClickListener(View.OnClickListener {
+            val bmi=intbmi.toFloat().toString()
+
+            var body=binding.textUnderWeight.text.toString()
+            Log.e("shubh", "show :$body " )
+            GlobalScope.launch (Dispatchers.IO){
+                email?.let { InsDB.userInfoDao().Update(it,bmi,body) }
+
+            }
 
             if(intbmi >=16 && intbmi <=18.4) {
                 intent=Intent(this,GainingActivity

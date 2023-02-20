@@ -76,7 +76,6 @@
         android:text="HEIGHT :"
         android:textSize="25dp"
         android:textStyle="bold"
-
         android:textColor="@color/black"
         android:paddingLeft="2dp"/>
 
