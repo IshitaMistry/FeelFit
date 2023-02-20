@@ -38,8 +38,12 @@ class ResultBMI : AppCompatActivity() {
         var intent:Intent
         intent=getIntent()
 
+
         height=intent.getStringExtra("height")
         weight = intent.getStringExtra("weight")
+
+
+
         intheight = height!!.toFloat()
         intweight = weight!!.toFloat()
         intheight = intheight / 100
@@ -54,19 +58,11 @@ class ResultBMI : AppCompatActivity() {
 
     //    var underweight=findViewById<TextView>(R.id.text_UnderWeight)
 
-
-
-
-
-
         InsDB= AppDatabase.getDatabase(this)
 
 
 
-
         if (intbmi <=16 ){
-
-
 
             binding.textUnderWeight.setText("Severe Skinny")
             binding.contentLayout.background=resources.getDrawable(R.color.green)
@@ -75,7 +71,6 @@ class ResultBMI : AppCompatActivity() {
         {
             binding.textUnderWeight.setText("Moderate Skinny")
             binding.contentLayout.background=resources.getDrawable(R.color.orange)
-
 
         }
         else if (intbmi <= 18.4 && intbmi >= 17){
@@ -113,9 +108,14 @@ class ResultBMI : AppCompatActivity() {
             val bmi=intbmi.toFloat().toString()
 
             var body=binding.textUnderWeight.text.toString()
+             val gender=binding.gender.text.toString()
+            val height1=weight.toString()
+
+
+
             Log.e("shubh", "show :$body " )
             GlobalScope.launch (Dispatchers.IO){
-                email?.let { InsDB.userInfoDao().Update(it,bmi,body) }
+                email?.let { InsDB.userInfoDao().Update(it,bmi,body,gender,height1) }
 
             }
 

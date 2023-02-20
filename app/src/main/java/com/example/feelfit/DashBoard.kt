@@ -46,15 +46,7 @@ class DashBoard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
 
         var mail=findViewById<TextView>(R.id.header_email)
 
-
       // mail.setText(user?.email)
-
-
-
-//
-
-
-
 
         toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.nav_open, R.string.nav_close)
         drawerLayout.addDrawerListener(toggle)
@@ -116,7 +108,6 @@ class DashBoard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
             }
             R.id.share ->
             {
-
                 val shareBody="Download FeelFit on Play Store:"
                 val sharehub="FeelFit : make brain powerful"
                 val shareIntent=Intent(Intent.ACTION_SEND)
@@ -129,6 +120,5 @@ class DashBoard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
         return true
 
     }
-
 
 }

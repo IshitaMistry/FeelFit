@@ -130,12 +130,13 @@ class BmiCalculator : AppCompatActivity() {
             Writedata()
 
 
-
            // if (typerofuser =="0")
 
             //{
               //  Toast.makeText(applicationContext,"Select your gender ",Toast.LENGTH_SHORT).show()
            // }
+
+
            if(binding.radiogrp.checkedRadioButtonId==-1){
                Toast.makeText(applicationContext,"Select your gender",Toast.LENGTH_SHORT).show()
             }
@@ -153,14 +154,13 @@ class BmiCalculator : AppCompatActivity() {
 
                 intent = Intent(this,ResultBMI::class.java)
 
-
                 val intSelectButton: Int = binding.radiogrp!!.checkedRadioButtonId
                 radioButton = findViewById(intSelectButton)
+
+
+
+               intent.putExtra("weight",binding.currentweight.text.toString())
                 intent.putExtra("gender",radioButton.text)
-
-
-
-
                 intent.putExtra("height",mintprogress)
                 intent.putExtra("weight",weight2)
                 intent.putExtra("age",age2)
@@ -172,6 +172,12 @@ class BmiCalculator : AppCompatActivity() {
         })
 
 
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(this,DashBoard::class.java))
+        finish()
     }
 
 }

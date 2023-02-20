@@ -41,13 +41,12 @@ class ShowProfileAct : AppCompatActivity() {
         GlobalScope.launch(Dispatchers.IO) {
 
             val enties = user?.let { InsDB.userInfoDao().getAll(it) }
-            Log.e("hello", "Shubh: $enties" +
-                    "", )
+            Log.e("hello", "Shubh: $enties" + "" )
 
             launch(Dispatchers.Main) {
 
 
-                binding.getemail.text = enties!![0].email
+               binding.getemail.text = enties!![0].email
                 binding.gen.text = enties[0].gender
                 binding.height1.text = enties[0].height
                 binding.weight1.text = enties[0].weight
