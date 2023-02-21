@@ -75,12 +75,12 @@
 
             <Button
 
-                android:id="@+id/timer"
+                android:id="@+id/count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:backgroundTint="#3C8DCD"
-                android:text="TIMER"
+                android:text="COUNT"
                 android:textStyle="bold"
                 android:layout_marginHorizontal="20dp"
                 tools:ignore="HardcodedText"/>
