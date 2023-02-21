@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Exercise_details_three"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".Exercise_details_two"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:id="@+id/arrow3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                tools:ignore="MissingConstraints"/>
+
+            <TextView
+                android:id="@+id/run"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="JUMPING ROPE"
+                android:fontFamily="@font/merriweatherblack"
+                android:textSize="25sp"
+                android:layout_marginStart="40dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                tools:ignore="HardcodedText" />
+
+
+        </LinearLayout>
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="350dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/jumping"
+            android:layout_marginTop="35dp"/>
+
+        <TextView
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:background="#3C8DCD"
+            android:fontFamily="@font/merriweatherblack"
+            android:text="  \n   BENEFITS:-\n\n  -Burn Calories. Jumping rope \n     helps to burn calories.\n\n  -Decrease Belly Fat.\n\n  -Jumping rope is considered a \n     vigorous-intensity activity.\n\n  - It is an excellent exercise for \n     elevating your heart rate and \n     burning calories.\n\n  -Improves Overall Mental \n     Health.\n"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <Button
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#3C8DCD"
+            app:cornerRadius="10dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="DIET PLAN"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/quotes1"
+            android:layout_width="331dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/white"
+            android:fontFamily="@font/merriweatherblack"
+            android:text="“It’s just pathetic to give up on something before you even give it a shot.”\n \n \nSLIDE LEFT>>"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            tools:ignore="HardcodedText"/>
+
+        <TextView
+            android:id="@+id/quotes2"
+            android:layout_width="331dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:fontFamily="@font/merriweatherblack"
+            android:text="To enjoy the glow of good health,you must exercise."
+            tools:ignore="HardcodedText"/>
+
+        <TextView
+            android:id="@+id/quotes3"
+            android:layout_width="331dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:fontFamily="@font/merriweatherblack"
+            android:text="Stop waiting for Monday, January 1, or anything else. Start now."
+            tools:ignore="HardcodedText"/>
+
+
+        <TextView
+            android:id="@+id/quotes4"
+            android:layout_width="331dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:fontFamily="@font/merriweatherblack"
+            android:text="Never not training."
+            tools:ignore="HardcodedText"/>
+
+        <TextView
+            android:id="@+id/quotes5"
+            android:layout_width="331dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:fontFamily="@font/merriweatherblack"
+            android:text="If you can dream it, you can do it"
+            tools:ignore="HardcodedText"/>
+
+        <TextView
+            android:id="@+id/quotes6"
+            android:layout_width="331dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:fontFamily="@font/merriweatherblack"
+            android:text="Get stronger and fitter with us. Push yourself harder to become better. Finding your inner fitness instinct. Keep calm and gym with us."
+            tools:ignore="HardcodedText"/>
+
+    </LinearLayout>
+</HorizontalScrollView>

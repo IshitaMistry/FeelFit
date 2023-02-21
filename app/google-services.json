@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "337327161524",
+    "project_id": "feelfit-65f31",
+    "storage_bucket": "feelfit-65f31.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:337327161524:android:dc1d4b60a7bf478df4d7e1",
+        "android_client_info": {
+          "package_name": "com.example.feelfit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "337327161524-jc0hq2k71p9g78l3n90ucavn3hejk8l6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApIGseb7H8QmjPMRgV0dasByLDFFj8jpQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "337327161524-jc0hq2k71p9g78l3n90ucavn3hejk8l6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

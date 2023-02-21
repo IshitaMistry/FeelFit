@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3C8DCD"
+    tools:context=".ResultBMI">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_res"
+        android:layout_width="match_parent"
+        android:layout_height="195dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="15dp">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+
+                android:id="@+id/notepadimage"
+                android:layout_width="119dp"
+                android:layout_height="153dp"
+                android:src="@drawable/notepad">
+
+            </ImageView>
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@+id/notepadimage"
+                android:text="YOUR RESULT"
+                android:fontFamily="@font/merriweatherblack"
+
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_res1"
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        android:layout_below="@+id/card_res"
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="15dp">
+
+        <RelativeLayout
+            android:id="@+id/content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/text_UnderWeight"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/merriweatherblack"
+
+                android:text="Underweight"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/result_bmi"
+                android:layout_width="340dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/text_UnderWeight"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/merriweatherblack"
+
+                android:background="#3C8DCD"
+                android:text="35"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/result_bmi"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="GENDER"
+                android:fontFamily="@font/merriweatherblack"
+
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/LossGain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gender"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="About Loss and Gain Message"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:fontFamily="@font/merriweatherblack"
+
+                android:textSize="23sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/Proceed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="300dp"
+            android:backgroundTint="#3C8DCD"
+            android:text="PROCEED"
+            android:textSize="20sp"
+            android:fontFamily="@font/merriweatherblack"
+
+            tools:ignore="HardcodedText">
+
+        </Button>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card_res1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:text="'NO PAIN NO GAIN!!'"
+        android:fontFamily="@font/merriweatherblack"
+
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+
+</RelativeLayout>

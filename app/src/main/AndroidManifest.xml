@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.feelfit">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logo"
+        android:label="FeelFit"
+        android:roundIcon="@drawable/ic_launcher_background"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FeelFit"
+        tools:targetApi="31">
+        <activity
+            android:name=".NormalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ShowProfileAct"
+            android:exported="false" />
+        <activity
+            android:name=".gaining6"
+            android:exported="false" />
+        <activity
+            android:name=".gaining5"
+            android:exported="false" />
+        <activity
+            android:name=".gaining4"
+            android:exported="false" />
+        <activity
+            android:name=".gaining3"
+            android:exported="false" />
+        <activity
+            android:name=".gaining2"
+            android:exported="false" />
+        <activity
+            android:name=".gaining1"
+            android:exported="false" />
+        <activity
+            android:name=".item_gaining_exercise"
+            android:exported="false" />
+        <activity
+            android:name=".Exercise2"
+            android:exported="false" />
+        <activity
+            android:name=".DietPlanOne"
+            android:exported="false" />
+        <activity
+            android:name=".timer"
+            android:exported="false" />
+        <activity
+            android:name=".Exercise_details_six"
+            android:exported="false" />
+        <activity
+            android:name=".Exercise_details_five"
+            android:exported="false" />
+        <activity
+            android:name=".Exercise_details_four"
+            android:exported="false" />
+        <activity
+            android:name=".Exercise_details_three"
+            android:exported="false" />
+        <activity
+            android:name=".showSteps"
+            android:exported="false" />
+        <activity
+            android:name=".Exercise_details_two"
+            android:exported="false" />
+        <activity
+            android:name=".Exercise_details_one"
+            android:exported="false" />
+        <activity
+            android:name=".firstexercise"
+            android:exported="false" />
+        <activity
+            android:name=".ExerciseI"
+            android:exported="false" />
+        <activity
+            android:name=".ResultBMI"
+            android:exported="false" />
+        <activity
+            android:name=".BmiCalculator"
+            android:exported="false" />
+        <activity
+            android:name=".Dashboard"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

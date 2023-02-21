@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Exercise_details_two"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".Exercise_details_two"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+
+            <ImageView
+                android:id="@+id/arrow2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                tools:ignore="MissingConstraints"/>
+
+            <TextView
+                android:id="@+id/run"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="90dp"
+                android:fontFamily="@font/merriweatherblack"
+                android:text="CRUNCHES"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText"/>
+
+        </LinearLayout>
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:src="@drawable/crunchess"
+            android:layout_marginTop="35dp"/>
+
+        <TextView
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:background="#3C8DCD"
+            android:fontFamily="@font/merriweatherblack"
+            android:text="  \n   BENEFITS:-\n\n  - Help you build muscle. \n\n  - 10-12 repetitions and three \n    sets of crunches will be good \n    enough.\n\n  - Improves Metabolism.\n\n"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#3C8DCD"
+                android:text="DIET PLAN"
+                android:layout_gravity="center_horizontal"
+                tools:ignore="HardcodedText"/>
+
+    </LinearLayout>
+</ScrollView>
+
