@@ -1,9 +1,11 @@
 package com.example.feelfit
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
@@ -20,12 +22,20 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
 
     private lateinit var binding: ActivityDashboardBinding
 
+    private lateinit var builder: AlertDialog.Builder
+
+
     private lateinit var toggle: ActionBarDrawerToggle
     lateinit var drawerLayout: DrawerLayout
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDashboardBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
+        builder=AlertDialog.Builder(this)
+
 
         drawerLayout=findViewById(R.id.drawerlayout)
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
@@ -52,14 +62,7 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
 
 
         firebaseUser = FirebaseAuth.getInstance().currentUser!!
-
-
-
-           // binding.userName.setText(firebaseUser.displayName)
-            //Log.d("Ishita", "hello world : "+firebaseUser)
             binding.userMail.setText(firebaseUser.email)
-            //  Log.e("shubh", "hello : "+firebaseUser )
-
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -80,8 +83,30 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
                 val intent = Intent(this@Dashboard,ShowProfileAct::class.java)
                 startActivity(intent)
             }
+
+            R.id.logout ->
+            {
+                builder.setTitle("FeelFit")
+                    .setMessage("Do You Want To Logout ?")
+                    .setCancelable(false)
+                    .setPositiveButton("Yes"){dialogInterface,it ->
+                        firebaseAuth.signOut()
+                        intent= Intent(applicationContext,Login::class.java)
+                        startActivity(intent)
+                        finish()
+                    }
+                    .setNegativeButton("No"){dialogInterface,it ->
+                        dialogInterface.cancel()
+                    }
+                val alertDialog = builder.create()
+                // Show the Alert Dialog box
+                alertDialog.show()
+
+            }
+
+
         }
-        drawerLayout.closeDrawer(GravityCompat.START)
+       // drawerLayout.closeDrawer(GravityCompat.START)
         return true
          }
 

@@ -40,12 +40,7 @@ class ResultBMI : AppCompatActivity() {
         firebaseAuth= FirebaseAuth.getInstance()
         var email=firebaseAuth.currentUser?.email
 
-
-
-
         InsDB= AppDatabase.getDatabase(this)
-
-
 
 
         var intent:Intent = intent
@@ -57,6 +52,8 @@ class ResultBMI : AppCompatActivity() {
         intweight = weight!!.toFloat()
 
         intheight = intheight /100
+
+
         intbmi = intweight/(intheight * intheight)
         mbmi = java.lang.Float.toString(intbmi)
         println(mbmi)
@@ -118,21 +115,18 @@ class ResultBMI : AppCompatActivity() {
         binding.Proceed.setOnClickListener {
             val bmi=intbmi.toFloat().toString()
             val body=binding.textUnderWeight.text.toString()
+            val gender=binding.gender.text.toString()
             Log.e("shubh", "show :$body " )
 
 
             GlobalScope.launch (Dispatchers.IO){
-                email?.let { InsDB.userInfoDao().Update(it,bmi,body) }
+                email?.let { InsDB.userInfoDao().Update(it,bmi,body,gender) }
 
             }
             //binding.contentLayout.setBackgroundColor(R.color.lightblue)
 
 
-
-
-
-
-        if(intbmi <=16 && intbmi <=18.4) {
+        if(intbmi >=15 && intbmi <=18.4) {
             intent=Intent(this,Exercise2
             ::class.java)
             startActivity(intent)
@@ -151,12 +145,6 @@ class ResultBMI : AppCompatActivity() {
         }
 
         }
-
-
-
-
-
-
 
 
     }

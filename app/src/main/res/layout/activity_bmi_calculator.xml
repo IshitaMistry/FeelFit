@@ -151,9 +151,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
-            android:text="HEIGHT"
+            android:text="HEIGHT in  CM"
             android:fontFamily="@font/merriweatherblack"
-
             android:textColor="#3C8DCD"
             android:textSize="25sp"
             android:textStyle="bold"
@@ -208,11 +207,11 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="4dp"
-                android:text="WEIGHT"
+                android:text="WEIGHT KG"
                 android:fontFamily="@font/merriweatherblack"
 
                 android:textColor="#3C8DCD"
-                android:textSize="22sp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 tools:ignore="HardcodedText" />
 
@@ -222,7 +221,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="45dp"
-                android:text="inkgs"
+                android:text="55"
                 android:fontFamily="@font/merriweatherblack"
 
                 android:textColor="@color/lightblue"

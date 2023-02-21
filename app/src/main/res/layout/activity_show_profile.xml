@@ -12,7 +12,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="180dp"
-        android:src="@drawable/user"
+        android:src="@drawable/showuserprofile"
         android:padding="10dp">
     </ImageView>
 

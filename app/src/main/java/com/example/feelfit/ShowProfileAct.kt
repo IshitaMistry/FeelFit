@@ -42,11 +42,11 @@ class ShowProfileAct : AppCompatActivity() {
         })
 
         InsDB = AppDatabase.getDatabase(this@ShowProfileAct)
+
+
         GlobalScope.launch(Dispatchers.IO) {
 
             val enties = user?.let { InsDB.userInfoDao().getAll(it) }
-            Log.e("hello", "Shubh: $enties" + "", )
-
             launch(Dispatchers.Main) {
 
                 binding.getemail.text = enties!![0].email

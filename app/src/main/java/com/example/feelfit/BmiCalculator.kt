@@ -26,7 +26,6 @@ class BmiCalculator : AppCompatActivity()
     var intage = 22
     var currentprogess = 0
     var mintprogress = "170"
-//    var typeofuser = "0"
     var weight2 = "55"
     var age2 = "22"
     lateinit var radioButton: RadioButton
@@ -93,14 +92,13 @@ class BmiCalculator : AppCompatActivity()
             val weight=binding.showweight.text.toString()
             val age=binding.showage.text.toString()
 
-
-
-
+//            val gender=radioButton.text.toString()
+//            Log.e("shubh", "========>>"+gender )
 
             InsDB= AppDatabase.getDatabase(this)
 
             GlobalScope.launch {(Dispatchers.IO)
-                InsDB.userInfoDao().insert(InfoEntityC(email, gender = String(),height,weight,age,null.toString(), null.toString()))
+                InsDB.userInfoDao().insert(InfoEntityC(email,null ,height,weight,age,null.toString(), null.toString()))
 
             }
 
@@ -110,6 +108,7 @@ class BmiCalculator : AppCompatActivity()
         binding.calculateButton.setOnClickListener {
 
             Writedata()
+
             if (binding.btn.checkedRadioButtonId==-1)
             {
                 Toast.makeText(applicationContext,"Select Your Gender",Toast.LENGTH_SHORT).show()
@@ -129,14 +128,14 @@ class BmiCalculator : AppCompatActivity()
             else
             {
                 intent = Intent(this,ResultBMI::class.java)
-                val intSelectButton: Int = binding.btn!!.checkedRadioButtonId
-                radioButton = findViewById(intSelectButton)
-                val gender=binding.btn.checkedRadioButtonId.toString()
-
-
 //                val intSelectButton: Int = binding.btn!!.checkedRadioButtonId
 //                radioButton = findViewById(intSelectButton)
+//                val gender=binding.btn.checkedRadioButtonId.toString()
 
+
+
+                val intSelectButton: Int = binding.btn!!.checkedRadioButtonId
+                radioButton = findViewById(intSelectButton)
 
                 Log.e("parthi","===========>>"+radioButton.text)
 
@@ -149,12 +148,11 @@ class BmiCalculator : AppCompatActivity()
         }
 
 
-
-        }
-
-
-
-
-
+    }
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(this,Dashboard::class.java))
+        finish()
+    }
 
 }
