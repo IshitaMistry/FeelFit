@@ -7,7 +7,6 @@ import android.widget.RadioButton
 import android.widget.SeekBar
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.isEmpty
 import com.example.feelfit.databinding.ActivityBmiCalculatorBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
