@@ -11,6 +11,10 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="PROFILE">PROFILE</string>
     <string name="LOG_OUT">LOG OUT</string>
+    <string name="VEG">VEG</string>
+    <string name="NON_VEG">NON_VEG</string>
+    <string name="VegDietPlan">VegDietPlan</string>
+    <string name="nonVegDietPlan">nonVegDietPlan</string>
 
 
 </resources>

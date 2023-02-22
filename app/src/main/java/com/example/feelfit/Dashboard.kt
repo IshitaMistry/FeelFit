@@ -1,33 +1,29 @@
 package com.example.feelfit
-import android.annotation.SuppressLint
+
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import com.airbnb.lottie.L
 import com.example.feelfit.databinding.ActivityDashboardBinding
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.database.DatabaseReference
 
 class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedListener {
     private lateinit var firebaseAuth: FirebaseAuth
-    private lateinit var database: DatabaseReference
     private lateinit var firebaseUser: FirebaseUser
 
     private lateinit var binding: ActivityDashboardBinding
-
     private lateinit var builder: AlertDialog.Builder
-
 
     private lateinit var toggle: ActionBarDrawerToggle
     lateinit var drawerLayout: DrawerLayout
-    @SuppressLint("SuspiciousIndentation")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDashboardBinding.inflate(layoutInflater)
@@ -60,6 +56,8 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
         }
 
 
+        firebaseAuth= FirebaseAuth.getInstance()
+        var user=firebaseAuth.currentUser?.email
 
         firebaseUser = FirebaseAuth.getInstance().currentUser!!
             binding.userMail.setText(firebaseUser.email)
