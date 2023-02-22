@@ -17,7 +17,7 @@
         android:textColor="@color/lightblue"
         android:textSize="30sp"
         android:textStyle="bold"
-        tools:ignore="HardcodedText" />
+        tools:ignore="HardcodedText"/>
 
     <!--Text view to display sensor status-->
     <TextView
@@ -29,6 +29,6 @@
         android:text="0"
         android:textColor="@color/lightblue"
         android:textSize="50sp"
-        tools:ignore="HardcodedText" />
+        tools:ignore="HardcodedText"/>
 
 </RelativeLayout>

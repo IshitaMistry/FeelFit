@@ -8,13 +8,20 @@
         <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_diet_plan_one.xml" value="0.20416666666666666" />
         <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_exercise_details_five.xml" value="0.20416666666666666" />
         <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_exercise_details_four.xml" value="0.20416666666666666" />
+        <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_exercise_details_one.xml" value="0.20416666666666666" />
         <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_exercise_details_three.xml" value="0.20416666666666666" />
         <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_exercise_details_two.xml" value="0.20416666666666666" />
         <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_gaining1.xml" value="0.18981481481481483" />
         <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_gaining2.xml" value="0.20416666666666666" />
+        <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_non_veg.xml" value="0.19010416666666666" />
         <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_proximity_sensor.xml" value="0.1" />
         <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_result_bmi.xml" value="0.20416666666666666" />
         <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_show_profile.xml" value="0.20416666666666666" />
+        <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_veg.xml" value="0.20416666666666666" />
+        <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/fragment_nonveg.xml" value="0.22" />
+        <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/fragment_nonveg_diet_plan.xml" value="0.19010416666666666" />
+        <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/fragment_veg.xml" value="0.20416666666666666" />
+        <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/fragment_veg_diet_plan.xml" value="0.20416666666666666" />
         <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/toolbar.xml" value="0.20416666666666666" />
       </map>
     </option>

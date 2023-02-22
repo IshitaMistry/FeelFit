@@ -1,192 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".DietPlanOne">
 
-    <LinearLayout
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablelayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="DIET PLAN"
-        android:gravity="center"
-        android:paddingTop="45dp"
-        android:textSize="30sp"
-        android:background="@drawable/ribbonone"
+        android:layout_height="70dp"
+        app:tabBackground="@color/lightblue"
+        app:tabIndicatorColor="@color/white"
+        app:tabSelectedTextColor="@color/white"
+        app:tabIndicatorHeight="2dp"
+        app:tabTextColor="@color/white"
         android:fontFamily="@font/merriweatherblack"
-        android:textColor="@color/white"
-        tools:ignore="HardcodedText"/>
+        tools:ignore="MissingClass">
 
-    <LinearLayout
-        android:background="#3C8DCD"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpage"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
+        android:layout_height="wrap_content">
 
-        <pl.droidsonroids.gif.GifImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/fruitsvegetables"
-            android:fontFamily="@font/merriweatherblack"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginStart="20dp"/>
 
-        <TextView
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="FRUITS AND VEGETABLES"
-            android:textSize="20sp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginStart="20dp"
-            android:fontFamily="@font/merriweatherblack"
-            android:textColor="@color/white"
-            tools:ignore="HardcodedText" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:background="#3C8DCD"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
-
-        <pl.droidsonroids.gif.GifImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/avacado"
-            android:fontFamily="@font/merriweatherblack"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginBottom="20dp"/>
-
-        <TextView
-
-            android:layout_marginEnd="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="AVACADO"
-            android:textSize="25sp"
-            android:layout_marginStart="20dp"
-            android:fontFamily="@font/merriweatherblack"
-            android:textColor="@color/white"
-            tools:ignore="HardcodedText"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:background="#3C8DCD"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
-
-        <pl.droidsonroids.gif.GifImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/chicken"
-            android:fontFamily="@font/merriweatherblack"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginStart="20dp"/>
-
-        <TextView
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="65dp"
-            android:layout_marginStart="20dp"
-            android:text="CHICKEN"
-            android:layout_marginEnd="20dp"
-            android:textSize="25sp"
-            android:fontFamily="@font/merriweatherblack"
-            android:textColor="@color/white"
-            tools:ignore="HardcodedText"/>
-
-    </LinearLayout>
-
-        <LinearLayout
-            android:background="#3C8DCD"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
+    </androidx.viewpager.widget.ViewPager>
 
 
 
-            <pl.droidsonroids.gif.GifImageView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:src="@drawable/yogurt"
-                android:background="@color/white"
-                android:fontFamily="@font/merriweatherblack"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                android:layout_marginStart="20dp"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="65dp"
-                android:layout_marginStart="20dp"
-                android:text="YOGURT"
-                android:layout_marginEnd="20dp"
-                android:textSize="25sp"
-                android:fontFamily="@font/merriweatherblack"
-                android:textColor="@color/white"
-                tools:ignore="HardcodedText"/>
 
-        </LinearLayout>
 
-        <LinearLayout
-            android:background="#3C8DCD"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
-
-            <pl.droidsonroids.gif.GifImageView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:src="@drawable/meat"
-                android:fontFamily="@font/merriweatherblack"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                android:layout_marginStart="20dp"/>
-
-            <TextView
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="65dp"
-                android:layout_marginStart="20dp"
-                android:text="MEAT"
-                android:layout_marginEnd="20dp"
-                android:textSize="25sp"
-                android:fontFamily="@font/merriweatherblack"
-                android:textColor="@color/white"
-                tools:ignore="HardcodedText"/>
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-</ScrollView>
+</LinearLayout>
