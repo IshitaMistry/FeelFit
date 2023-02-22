@@ -53,13 +53,8 @@ class SplashScreenActivity : AppCompatActivity() {
 
                         }
 
-
-
-
                     }
                     }
-
-
 
 
                     startActivity(Intent(applicationContext,DashBoard::class.java))
