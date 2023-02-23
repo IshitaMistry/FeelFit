@@ -10,11 +10,12 @@
         android:id="@+id/idTVHeading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="70dp"
+        android:background="@color/lightblue"
         android:gravity="center"
         android:padding="4dp"
         android:text="COUNT YOUR PUSHUPS!!"
-        android:textColor="@color/lightblue"
+        android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold"
         tools:ignore="HardcodedText"/>
@@ -22,9 +23,10 @@
     <!--Text view to display sensor status-->
     <TextView
         android:id="@+id/idTVSensorStatus"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:layout_marginTop="300dp"
         android:gravity="center"
         android:text="0"
         android:textColor="@color/lightblue"

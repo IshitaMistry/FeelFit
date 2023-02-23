@@ -33,7 +33,6 @@ class Exercise2 : AppCompatActivity(), customAdapter2.MyClickListener {
         recyclerView.setHasFixedSize(true)
 
         var back=findViewById<ImageView>(R.id.backpress253)
-
         back.setOnClickListener(View.OnClickListener {
             startActivity(Intent(this,Dashboard::class.java))
         })

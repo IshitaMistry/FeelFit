@@ -20,13 +20,22 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="141dp">
-        <ImageView
-            android:id="@+id/image_exercise"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/exercise">
-        </ImageView>
+
+            <ImageView
+                android:id="@+id/backpress253"
+                android:layout_width="50dp"
+                android:layout_height="90dp"
+                android:src="@drawable/back_arrow"
+                android:layout_marginTop="20dp"></ImageView>
+
+            <ImageView
+                android:id="@+id/image_exercise"
+                android:layout_width="80dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="50dp"
+                android:src="@drawable/exercise"/>
+
 
             <TextView
                 android:layout_width="wrap_content"

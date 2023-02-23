@@ -126,7 +126,7 @@ class ResultBMI : AppCompatActivity() {
             //binding.contentLayout.setBackgroundColor(R.color.lightblue)
 
 
-        if(intbmi <=15 && intbmi <=18.4) {
+        if(intbmi >=15 && intbmi <=18.4) {
             intent=Intent(this,Exercise2
             ::class.java)
             startActivity(intent)
