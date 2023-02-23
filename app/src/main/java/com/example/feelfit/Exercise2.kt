@@ -4,15 +4,23 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+
+
 class Exercise2 : AppCompatActivity(), customAdapter2.MyClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_exercise2)
 
+
+
         val recyclerView = findViewById<RecyclerView>(R.id.recycler_view2)
         recyclerView.layoutManager= LinearLayoutManager(this)
 
+
+
         val data2 = ArrayList<itemview2>()
+
+
 
         data2.add(itemview2(R.drawable.gain1,R.drawable.lung,"LUNGES"))
         data2.add(itemview2(R.drawable.gain2,R.drawable.pull,"PULL-UPS"))
@@ -26,10 +34,8 @@ class Exercise2 : AppCompatActivity(), customAdapter2.MyClickListener {
         val adapter2 = customAdapter2(data2, this@Exercise2)
         recyclerView.adapter=adapter2
         recyclerView.setHasFixedSize(true)
-
-
-
     }
+
 
     override fun onClick(position: Int) {
 

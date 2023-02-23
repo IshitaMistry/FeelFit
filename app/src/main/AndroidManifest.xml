@@ -20,6 +20,12 @@
         android:theme="@style/Theme.FeelFit"
         tools:targetApi="31">
         <activity
+            android:name=".Normal1"
+            android:exported="false" />
+        <activity
+            android:name=".item_normal_exercise"
+            android:exported="false" />
+        <activity
             android:name=".NonVeg"
             android:exported="false" />
         <activity
