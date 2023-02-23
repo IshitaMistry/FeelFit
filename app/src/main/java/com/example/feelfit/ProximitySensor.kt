@@ -1,6 +1,5 @@
 package com.example.feelfit
 
-import android.R.bool
 import android.content.Context
 import android.hardware.Sensor
 import android.hardware.SensorEvent
@@ -10,7 +9,6 @@ import android.os.Bundle
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-
 
 class ProximitySensor : AppCompatActivity() {
 
@@ -32,10 +30,12 @@ class ProximitySensor : AppCompatActivity() {
         proximitySensor = sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY)
         // on below line we are checking if the proximity sensor is null
         if (proximitySensor == null) {
+
             // on below line we are displaying a toast if no sensor is available
             Toast.makeText(this, "No proximity sensor found in device..", Toast.LENGTH_SHORT).show()
             finish()
         } else {
+
             // on below line we are registering
             // our sensor with sensor manager
             sensorManager.registerListener(
@@ -66,11 +66,17 @@ class ProximitySensor : AppCompatActivity() {
                     // if sensor event return 0 then object is closed
                     // to sensor else object is away from sensor.
                     sensorStatusTV.text = C.toString()
-                } else {
+                }
+                else
+                {
                     // on below line we are setting text for text view
                     // as object is away from sensor.
                 }
+
             }
+
         }
+
     }
+
     }

@@ -18,7 +18,14 @@ class Exercise_details_two : AppCompatActivity() {
             intent= Intent(this,timer::class.java)
             startActivity(intent)
             finish()
+        }
 
+
+        val diettwo = findViewById<Button>(R.id.diet2)
+        diettwo.setOnClickListener {
+            intent=Intent(this,DietPlanOne::class.java)
+            startActivity(intent)
+            finish()
         }
 
     }

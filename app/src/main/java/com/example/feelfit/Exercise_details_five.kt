@@ -3,6 +3,7 @@ package com.example.feelfit
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import com.example.feelfit.databinding.ActivityExerciseDetailsFiveBinding
 
 class Exercise_details_five : AppCompatActivity() {
@@ -20,6 +21,14 @@ class Exercise_details_five : AppCompatActivity() {
             startActivity(intent)
             finish()
 
+
+
+        }
+        val dietfive = findViewById<Button>(R.id.diet5)
+        dietfive.setOnClickListener {
+            intent=Intent(this,DietPlanOne::class.java)
+            startActivity(intent)
+            finish()
         }
 
 
