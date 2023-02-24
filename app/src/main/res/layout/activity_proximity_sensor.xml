@@ -12,11 +12,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
         android:background="@color/lightblue"
+        android:fontFamily="@font/merriweatherblack"
         android:gravity="center"
         android:padding="4dp"
         android:text="COUNT YOUR PUSHUPS!!"
         android:textColor="@color/white"
-        android:textSize="30sp"
+        android:textSize="28sp"
         android:textStyle="bold"
         tools:ignore="HardcodedText"/>
 
@@ -26,10 +27,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:layout_marginStart="80dp"
         android:layout_marginTop="300dp"
+        android:background="@color/lightblue"
         android:gravity="center"
         android:text="0"
-        android:textColor="@color/lightblue"
+        android:textColor="@color/white"
         android:textSize="50sp"
         tools:ignore="HardcodedText"/>
 

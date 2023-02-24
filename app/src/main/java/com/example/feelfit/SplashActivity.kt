@@ -1,4 +1,5 @@
 package com.example.feelfit
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,7 +7,6 @@ import android.os.Handler
 import android.os.Looper
 import android.util.Log
 import android.widget.Toast
-import com.example.feelfit.databinding.ActivityMainBinding
 import com.example.feelfit.databinding.ActivitySplashBinding
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.Dispatchers
@@ -18,6 +18,7 @@ class SplashActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var binding: ActivitySplashBinding
 
+    @SuppressLint("LogNotTimber")
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -77,7 +78,8 @@ class SplashActivity : AppCompatActivity() {
                         if(body== "OBESE II")
                         {
                             startActivity(Intent(applicationContext,ExerciseI::class.java))
-                        }else
+                        }
+                        else
                         {
 
                         }
