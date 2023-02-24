@@ -127,17 +127,15 @@ class BmiCalculator : AppCompatActivity()
             else
             {
                 intent = Intent(this,ResultBMI::class.java)
-//                val intSelectButton: Int = binding.btn!!.checkedRadioButtonId
-//                radioButton = findViewById(intSelectButton)
-//                val gender=binding.btn.checkedRadioButtonId.toString()
-
-
 
                 val intSelectButton: Int = binding.btn!!.checkedRadioButtonId
                 radioButton = findViewById(intSelectButton)
 
                 Log.e("parthi","===========>>"+radioButton.text)
-
+                intent.putExtra("weight",binding.showweight.text.toString())
+                intent.putExtra("age",binding.showage.text.toString())
+                intent.putExtra("height1",binding.seekHeight.text.toString())
+                intent.putExtra("weight2",binding.showweight.text.toString())
                 intent.putExtra("gender",radioButton.text)
                 intent.putExtra("height",mintprogress)
                 intent.putExtra("weight",weight2)

@@ -1,5 +1,6 @@
 package com.example.feelfit
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
@@ -23,6 +24,7 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
     private lateinit var toggle: ActionBarDrawerToggle
     lateinit var drawerLayout: DrawerLayout
 
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDashboardBinding.inflate(layoutInflater)
@@ -30,7 +32,6 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
 
 
         builder=AlertDialog.Builder(this)
-
 
         drawerLayout=findViewById(R.id.drawerlayout)
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
@@ -54,9 +55,10 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
             startActivity(intent)
         }
 
-
         firebaseAuth= FirebaseAuth.getInstance()
         var user=firebaseAuth.currentUser?.email
+
+
 
         firebaseUser = FirebaseAuth.getInstance().currentUser!!
             binding.userMail.setText(firebaseUser.email)
@@ -100,8 +102,6 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
                 alertDialog.show()
 
             }
-
-
         }
        // drawerLayout.closeDrawer(GravityCompat.START)
         return true

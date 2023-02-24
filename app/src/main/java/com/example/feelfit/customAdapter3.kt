@@ -29,12 +29,9 @@ class customAdapter3(private val mList3: List<itemview3>, val listner: MyClickLi
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-
         val view1 = LayoutInflater.from(parent.context)
             .inflate(R.layout.activity_item_normal_exercise,parent,false)
         return ViewHolder(view1)
-
-
 
     }
 

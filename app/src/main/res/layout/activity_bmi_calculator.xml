@@ -176,8 +176,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="100dp"
             android:fontFamily="@font/merriweatherblack"
-
-            android:text="YOUR HEIGHT IN CMS"
+            android:text="90"
             android:textColor="#3C8DCD"
             android:textSize="25sp"
             android:textStyle="bold"

@@ -46,6 +46,10 @@ class ResultBMI : AppCompatActivity() {
         var intent:Intent = intent
         height = intent.getStringExtra("height")
         weight = intent.getStringExtra("weight")
+        var age=intent.getStringExtra("age")
+        var height1=intent.getStringExtra("height1")
+        var weight1=intent.getStringExtra("weight2")
+
 
 
         intheight = height!!.toFloat()
@@ -77,9 +81,7 @@ class ResultBMI : AppCompatActivity() {
             binding.textUnderWeight.setText("MILD THINNESS")
             binding.LossGain.setText("YOU NEED TO GAIN!!")
 
-
         }
-
         else if (intbmi < 24.9 && intbmi > 18.5)
         {
             binding.textUnderWeight.setText("NORMAL")
@@ -116,11 +118,14 @@ class ResultBMI : AppCompatActivity() {
             val bmi=intbmi.toFloat().toString()
             val body=binding.textUnderWeight.text.toString()
             val gender=binding.gender.text.toString()
+            val age=age.toString()
+            val height=height1.toString()
+            val weight=weight1.toString()
             Log.e("shubh", "show :$body " )
 
 
             GlobalScope.launch (Dispatchers.IO){
-                email?.let { InsDB.userInfoDao().Update(it,bmi,body,gender) }
+                email?.let { InsDB.userInfoDao().Update(it,bmi,body,gender,age,height,weight) }
 
             }
             //binding.contentLayout.setBackgroundColor(R.color.lightblue)

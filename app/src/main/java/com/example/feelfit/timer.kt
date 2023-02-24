@@ -104,7 +104,6 @@ class timer : AppCompatActivity() {
         val hours = (ms / (1000 * 60 * 60) % 24)
         return makeTimeString(hours, minutes, seconds)
     }
-
     private fun makeTimeString(hours: Long, minutes: Long, seconds: Long): String
     {
         return String.format("%02d:%02d:%02d", hours, minutes, seconds)
