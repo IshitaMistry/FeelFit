@@ -49,4 +49,9 @@ class NormalActivity : AppCompatActivity(), customAdapter3.MyClickListener {
             }
         }
     }
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(applicationContext,Dashboard::class.java))
+        finish()
+    }
 }

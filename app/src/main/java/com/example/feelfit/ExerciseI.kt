@@ -3,6 +3,8 @@ package com.example.feelfit
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import java.util.ArrayList
@@ -16,6 +18,7 @@ class ExerciseI : AppCompatActivity(), customAdapter.MyClickListener {
         recyclerView.layoutManager= LinearLayoutManager(this)
 
 
+
         val data = ArrayList<itemview>()
 
         data.add(itemview(R.drawable.gain1,R.drawable.jog,"RUNNING"))
@@ -24,14 +27,18 @@ class ExerciseI : AppCompatActivity(), customAdapter.MyClickListener {
         data.add(itemview(R.drawable.gain4,R.drawable.burpeesexercise,"BURPESS"))
         data.add(itemview(R.drawable.gain5,R.drawable.pushup,"PUSHUP"))
         data.add(itemview(R.drawable.gain6,R.drawable.crunchess,"CRUNCHES"))
-//        data.add(itemview(R.drawable.exercise,R.drawable.exercise,"RUNNING"))
-//        data.add(itemview(R.drawable.exercise,R.drawable.exercise,"RUNNING"))
-//        data.add(itemview(R.drawable.exercise,R.drawable.exercise,"RUNNING"))
 
         val adapter = customAdapter(data,this@ExerciseI)
         recyclerView.adapter=adapter
         recyclerView.setHasFixedSize(true)
 
+
+
+        var arrow33=findViewById<ImageView>(R.id.arrowlose)
+
+        arrow33.setOnClickListener(View.OnClickListener {
+            startActivity(Intent(this,Dashboard::class.java))
+        })
 
 
 

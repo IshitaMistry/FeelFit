@@ -12,7 +12,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/card_res"
         android:layout_width="match_parent"
-        android:layout_height="175dp"
+        android:layout_height="170dp"
         app:cardCornerRadius="15dp"
         android:layout_marginHorizontal="15dp"
         android:layout_marginTop="25dp">
@@ -25,16 +25,16 @@
                 android:id="@+id/backpress253"
                 android:layout_width="50dp"
                 android:layout_height="90dp"
-                android:src="@drawable/back_arrow"
-                android:layout_marginTop="20dp"></ImageView>
+                android:layout_marginTop="20dp"
+                android:src="@drawable/back_arrow"/>
+
             <ImageView
                 android:id="@+id/image_exercise"
                 android:layout_width="80dp"
                 android:layout_height="90dp"
+                android:layout_marginStart="50dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginLeft="50dp"
-                android:src="@drawable/exercise">
-            </ImageView>
+                android:src="@drawable/exercise"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -42,9 +42,8 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="29dp"
                 android:layout_toEndOf="@+id/image_exercise"
-                android:text="GAINING \nEXERCISES "
                 android:fontFamily="@font/merriweatherblack"
-
+                android:text="GAINING \nEXERCISES "
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="30sp"
@@ -52,8 +51,11 @@
                 tools:ignore="HardcodedText">
 
             </TextView>
+
         </RelativeLayout>
+
     </androidx.cardview.widget.CardView>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view2"
@@ -63,8 +65,5 @@
         android:layout_height="match_parent">
 
     </androidx.recyclerview.widget.RecyclerView>
-
-
-
 
 </LinearLayout>

@@ -1,142 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".ShowProfileAct">
 
-
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="180dp"
         android:src="@drawable/showuserprofile"
-        android:padding="10dp">
+        android:padding="10dp"
+        android:contentDescription="TODO"
+        tools:ignore="ContentDescription,HardcodedText">
+
     </ImageView>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_marginStart="10dp"
         android:text="EMAIL :-"
-        android:textStyle="bold"
-        android:textSize="25dp"
         android:textColor="@color/black"
-        android:padding="5dp"/>
+        android:textSize="25sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText"/>
+
     <TextView
         android:id="@+id/getemail"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:textColor="@color/black"
-        android:textSize="20dp"
+        android:textSize="20sp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
-        android:hint="shubhudiws223@gmail.com"/>
+        android:hint="shubhudiws223@gmail.com"
+        tools:ignore="HardcodedText"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="GENDER:-"
+        android:layout_marginStart="10dp"
         android:textStyle="bold"
-
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:textColor="@color/black"
-        android:paddingLeft="2dp"/>
-
+        android:paddingLeft="2dp"
+        tools:ignore="HardcodedText"/>
 
     <TextView
         android:id="@+id/gen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="2dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
         android:hint="FEMALE"
         android:textColor="@color/black"
-        android:textSize="25dp" />
+        android:textSize="25sp"
+        tools:ignore="HardcodedText"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="AGE:"
         android:textStyle="bold"
-        android:textSize="25dp"
+        android:layout_marginStart="10dp"
+        android:textSize="25sp"
         android:textColor="@color/black"
-        android:paddingLeft="2dp"/>
+        android:paddingLeft="2dp"
+        tools:ignore="HardcodedText"/>
+
     <TextView
         android:id="@+id/age1"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="22"
-        android:textSize="20dp"/>
-
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="20sp"
+        tools:ignore="HardcodedText"/>
 
     <TextView
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="HEIGHT :"
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:textStyle="bold"
         android:textColor="@color/black"
-        android:paddingLeft="2dp"/>
+        android:paddingStart="2dp"
+        android:layout_marginStart="10dp"
+        tools:ignore="HardcodedText,RtlSymmetry"/>
 
     <TextView
         android:id="@+id/height1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="171"
-        android:textSize="20dp"/>
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="20sp"
+        tools:ignore="HardcodedText"/>
 
     <TextView
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="WEIGHT:-"
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:textStyle="bold"
+        android:layout_marginStart="10dp"
         android:textColor="@color/black"
-        android:paddingLeft="2dp"/>
+        android:paddingStart="2dp"
+        tools:ignore="HardcodedText"/>
+
     <TextView
         android:id="@+id/weight1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="52"
-        android:textSize="20dp"/>
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="20sp"
+        tools:ignore="HardcodedText"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:text="BODYTYPE:-"
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/black"
+        tools:ignore="HardcodedText"/>
 
-        android:textColor="@color/black"/>
     <TextView
         android:id="@+id/body"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="body"
-        android:textSize="20dp"/>
-
-
+        android:textSize="20sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        tools:ignore="HardcodedText"/>
 
     <TextView
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="BMI:-"
         android:textStyle="bold"
-
-        android:textSize="25dp"
+        android:textSize="25sp"
+        android:layout_marginStart="10dp"
         android:textColor="@color/black"
-        android:paddingLeft="2dp"/>
+        android:paddingLeft="2dp"
+        tools:ignore="HardcodedText"/>
 
     <TextView
         android:id="@+id/bmi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="16.32"
-        android:textSize="20dp"/>
+        android:textSize="20sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        tools:ignore="HardcodedText"/>
 
     <Button
         android:id="@+id/reccalculatebmi"
@@ -145,9 +175,9 @@
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
         android:textColor="@color/white"
-        android:backgroundTint="#3CADCD"
+        android:backgroundTint="@color/lightblue"
         android:layout_marginTop="50dp"
-        android:text="RECALCULATE BMI"/>
-
+        android:text="RECALCULATE BMI"
+        tools:ignore="HardcodedText"/>
 
 </LinearLayout>
