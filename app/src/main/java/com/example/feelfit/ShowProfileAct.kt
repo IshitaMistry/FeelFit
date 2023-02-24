@@ -3,7 +3,6 @@ package com.example.feelfit
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import com.example.feelfit.databinding.ActivityShowProfileBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -15,6 +14,7 @@ class ShowProfileAct : AppCompatActivity() {
 
 
     private lateinit var firebaseAuth: FirebaseAuth
+
 
     lateinit var binding: ActivityShowProfileBinding
     lateinit var InsDB: AppDatabase
@@ -59,5 +59,10 @@ class ShowProfileAct : AppCompatActivity() {
 
             }
         }
+    }
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(applicationContext,Dashboard::class.java))
+        finish()
     }
 }

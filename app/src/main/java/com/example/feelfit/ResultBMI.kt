@@ -153,4 +153,9 @@ class ResultBMI : AppCompatActivity() {
 
 
     }
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(applicationContext,Dashboard::class.java))
+        finish()
+    }
 }

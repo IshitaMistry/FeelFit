@@ -65,7 +65,7 @@
             android:layout_gravity="center_horizontal"
             android:textStyle="bold"
             android:textColor="@color/white"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText"/>
 
 
         <LinearLayout
@@ -87,10 +87,9 @@
                 android:textSize="12sp"
                 android:textColor="@color/white"
                 android:textStyle="bold"
-                tools:ignore="HardcodedText" />
+                tools:ignore="HardcodedText"/>
 
             <Button
-
                 android:id="@+id/diet"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -101,7 +100,7 @@
                 android:textSize="12sp"
                 android:textColor="@color/white"
                 android:backgroundTint="#3C8DCD"
-                tools:ignore="HardcodedText" />
+                tools:ignore="HardcodedText"/>
 
         </LinearLayout>
 

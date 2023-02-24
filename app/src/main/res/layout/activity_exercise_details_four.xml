@@ -77,8 +77,5 @@
             android:textSize="20sp"
             tools:ignore="HardcodedText"/>
 
-
-
     </LinearLayout>
-
 </ScrollView>
