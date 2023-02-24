@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 
 class Exercise_details_six : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,6 +17,15 @@ class Exercise_details_six : AppCompatActivity() {
             intent= Intent(this,DietPlanOne::class.java)
             startActivity(intent)
             finish()
+
+        }
+
+        val arrow6 = findViewById<ImageView>(R.id.arrow6)
+        arrow6.setOnClickListener {
+            intent = Intent(this, ExerciseI::class.java)
+            startActivity(intent)
+            finish()
+
         }
     }
 }
