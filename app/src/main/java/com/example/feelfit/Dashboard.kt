@@ -8,7 +8,6 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
-import com.airbnb.lottie.L
 import com.example.feelfit.databinding.ActivityDashboardBinding
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth

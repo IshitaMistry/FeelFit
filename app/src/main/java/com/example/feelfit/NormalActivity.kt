@@ -41,11 +41,11 @@ class NormalActivity : AppCompatActivity(), customAdapter3.MyClickListener {
             }
             1 ->
             {
-                startActivity(Intent(this,Normal1::class.java))
+                startActivity(Intent(this,Normal2::class.java))
             }
             2 ->
             {
-                startActivity(Intent(this,Normal1::class.java))
+                startActivity(Intent(this,Normal3::class.java))
             }
         }
     }

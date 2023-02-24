@@ -19,6 +19,13 @@ class Exercise_details_three : AppCompatActivity() {
             finish()
         }
 
+        val arrow3 = findViewById<ImageView>(R.id.arrow3)
+        arrow3.setOnClickListener {
+            intent = Intent(this, ExerciseI::class.java)
+            startActivity(intent)
+            finish()
+        }
+
 
     }
 }

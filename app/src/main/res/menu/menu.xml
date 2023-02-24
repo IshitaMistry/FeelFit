@@ -9,10 +9,5 @@
                 <item
                     android:id="@+id/logout"
                     android:title="@string/LOG_OUT"/>
-
         </group>
-
-
-
-
 </menu>

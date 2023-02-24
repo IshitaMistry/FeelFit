@@ -20,6 +20,13 @@ class Exercise_details_two : AppCompatActivity() {
             finish()
         }
 
+        val arrow2 = findViewById<ImageView>(R.id.arrow2)
+        arrow2.setOnClickListener {
+            intent= Intent(this,ExerciseI::class.java)
+            startActivity(intent)
+            finish()
+        }
+
 
         val diettwo = findViewById<Button>(R.id.diet2)
         diettwo.setOnClickListener {
