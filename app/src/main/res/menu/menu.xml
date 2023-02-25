@@ -5,9 +5,28 @@
 
                 <item
                     android:id="@+id/profile"
-                    android:title="@string/PROFILE"/>
+                    android:icon="@drawable/login"
+                    android:title="@string/Profile"/>
+
+                <item
+                        android:id="@+id/GotoExer"
+                    android:icon="@drawable/current"
+                        android:title="Current Exercise"/>
+                <item
+                        android:id="@+id/Aboutus"
+                    android:icon="@drawable/info"
+                        android:title="About Us"/>
+                <item
+                        android:id="@+id/Share"
+                    android:icon="@drawable/shareapp"
+                        android:title="Share"/>
+                <item
+                        android:id="@+id/Rate"
+                    android:icon="@drawable/rateus"
+                        android:title="Rate Us"/>
                 <item
                     android:id="@+id/logout"
-                    android:title="@string/LOG_OUT"/>
+                    android:icon="@drawable/logout"
+                    android:title="@string/Log_Out"/>
         </group>
 </menu>

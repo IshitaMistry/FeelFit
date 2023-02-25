@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#3C8DCD"
     android:orientation="vertical"
-    tools:context=".ExerciseI">
+    tools:context=".LosingExercise.ExerciseI">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_res"
@@ -22,11 +22,11 @@
             android:layout_height="141dp">
 
             <ImageView
-                android:id="@+id/backpress253"
-                android:layout_width="50dp"
-                android:layout_height="90dp"
-                android:src="@drawable/back_arrow"
-                android:layout_marginTop="20dp"></ImageView>
+            android:id="@+id/backpress253"
+            android:layout_width="50dp"
+            android:layout_height="90dp"
+            android:src="@drawable/back_arrow"
+            android:layout_marginTop="20dp"/>
 
             <ImageView
                 android:id="@+id/image_exercise"
