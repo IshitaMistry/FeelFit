@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.feelfit.RoomDB.AppDatabase
+import com.example.feelfit.RoomDB.InfoEntityC
 import com.example.feelfit.databinding.ActivityShowProfileBinding
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.Dispatchers

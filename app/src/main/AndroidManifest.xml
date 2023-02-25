@@ -20,16 +20,16 @@
         android:theme="@style/Theme.FeelFit"
         tools:targetApi="31">
         <activity
-            android:name=".Normal4"
+            android:name=".NormalExercise.Normal4"
             android:exported="false" />
         <activity
-            android:name=".Normal3"
+            android:name=".NormalExercise.Normal3"
             android:exported="false" />
         <activity
-            android:name=".Normal2"
+            android:name=".NormalExercise.Normal2"
             android:exported="false" />
         <activity
-            android:name=".Normal1"
+            android:name=".NormalExercise.Normal1"
             android:exported="false" />
         <activity
             android:name=".item_normal_exercise"
@@ -44,34 +44,34 @@
             android:name=".ProximitySensor"
             android:exported="false" />
         <activity
-            android:name=".NormalActivity"
+            android:name=".NormalExercise.NormalActivity"
             android:exported="false" />
         <activity
             android:name=".ShowProfileAct"
             android:exported="false" />
         <activity
-            android:name=".gaining6"
+            android:name=".GainingExercises.gaining6"
             android:exported="false" />
         <activity
-            android:name=".gaining5"
+            android:name=".GainingExercises.gaining5"
             android:exported="false" />
         <activity
-            android:name=".gaining4"
+            android:name=".GainingExercises.gaining4"
             android:exported="false" />
         <activity
-            android:name=".gaining3"
+            android:name=".GainingExercises.gaining3"
             android:exported="false" />
         <activity
-            android:name=".gaining2"
+            android:name=".GainingExercises.gaining2"
             android:exported="false" />
         <activity
-            android:name=".gaining1"
+            android:name=".GainingExercises.gaining1"
             android:exported="false" />
         <activity
             android:name=".item_gaining_exercise"
             android:exported="false" />
         <activity
-            android:name=".Exercise2"
+            android:name=".GainingExercises.Exercise2"
             android:exported="false" />
         <activity
             android:name=".DietPlanOne"
@@ -80,31 +80,31 @@
             android:name=".timer"
             android:exported="false" />
         <activity
-            android:name=".Exercise_details_six"
+            android:name=".LosingExercise.Exercise_details_six"
             android:exported="false" />
         <activity
-            android:name=".Exercise_details_five"
+            android:name=".LosingExercise.Exercise_details_five"
             android:exported="false" />
         <activity
-            android:name=".Exercise_details_four"
+            android:name=".LosingExercise.Exercise_details_four"
             android:exported="false" />
         <activity
-            android:name=".Exercise_details_three"
+            android:name=".LosingExercise.Exercise_details_three"
             android:exported="false" />
         <activity
             android:name=".showSteps"
             android:exported="false" />
         <activity
-            android:name=".Exercise_details_two"
+            android:name=".LosingExercise.Exercise_details_two"
             android:exported="false" />
         <activity
-            android:name=".Exercise_details_one"
+            android:name=".LosingExercise.Exercise_details_one"
             android:exported="false" />
         <activity
             android:name=".firstexercise"
             android:exported="false" />
         <activity
-            android:name=".ExerciseI"
+            android:name=".LosingExercise.ExerciseI"
             android:exported="false" />
         <activity
             android:name=".ResultBMI"
@@ -120,13 +120,13 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Login"
+            android:name=".Credentials.Login"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Credentials.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".Credentials.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
