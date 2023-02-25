@@ -82,7 +82,6 @@ class BmiCalculator : AppCompatActivity()
 
 
 
-
         fun Writedata() {
 
             var email=user.toString()
@@ -127,6 +126,8 @@ class BmiCalculator : AppCompatActivity()
             else
             {
                 intent = Intent(this,ResultBMI::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
                 val intSelectButton: Int = binding.btn!!.checkedRadioButtonId
                 radioButton = findViewById(intSelectButton)

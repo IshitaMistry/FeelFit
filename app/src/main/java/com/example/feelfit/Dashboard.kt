@@ -52,6 +52,8 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
 
         binding.buttonCalculate.setOnClickListener {
             intent = Intent(this@Dashboard, BmiCalculator::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent)
         }
 
@@ -91,6 +93,8 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
                     .setPositiveButton("Yes"){dialogInterface,it ->
                         firebaseAuth.signOut()
                         intent= Intent(applicationContext,Login::class.java)
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         startActivity(intent)
                         finish()
                     }

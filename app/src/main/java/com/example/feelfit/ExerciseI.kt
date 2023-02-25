@@ -48,7 +48,6 @@ class ExerciseI : AppCompatActivity(), customAdapter.MyClickListener {
             3 -> {startActivity(Intent(this,Exercise_details_four::class.java))}
             4 -> {startActivity(Intent(this,Exercise_details_five::class.java))}
             5 -> {startActivity(Intent(this,Exercise_details_six::class.java))}
-
         }
     }
 

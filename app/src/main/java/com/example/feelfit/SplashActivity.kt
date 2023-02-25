@@ -41,7 +41,6 @@ class SplashActivity : AppCompatActivity() {
                     launch(Dispatchers.Main) {
                         var body= enties?.get(0)?.body.toString()
                        Log.e("majil", "=========>:$body ", )
-                        Toast.makeText(applicationContext,"chalo bhai", Toast.LENGTH_SHORT).show()
 
 
                         if (body== "SEVERE SKINNY")
@@ -87,11 +86,15 @@ class SplashActivity : AppCompatActivity() {
                 }
 
                 startActivity(Intent(applicationContext,Dashboard::class.java))
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 finish()
             }
             else {
 
                 startActivity(Intent(this,Login::class.java))
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 finish()
             }
 

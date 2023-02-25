@@ -13,6 +13,8 @@ class gaining2 : AppCompatActivity() {
         val dietgain2 = findViewById<Button>(R.id.diet12)
         dietgain2.setOnClickListener {
             intent= Intent(this,DietPlanOne::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent)
             finish()
 

@@ -12,8 +12,6 @@ class Exercise2 : AppCompatActivity(), customAdapter2.MyClickListener {
         setContentView(R.layout.activity_exercise2)
 
 
-
-
         val recyclerView = findViewById<RecyclerView>(R.id.recycler_view2)
         recyclerView.layoutManager= LinearLayoutManager(this)
 
@@ -36,8 +34,6 @@ class Exercise2 : AppCompatActivity(), customAdapter2.MyClickListener {
         back.setOnClickListener(View.OnClickListener {
             startActivity(Intent(this,Dashboard::class.java))
         })
-
-
 
     }
 
@@ -70,9 +66,6 @@ class Exercise2 : AppCompatActivity(), customAdapter2.MyClickListener {
                 startActivity(Intent(this,gaining6::class.java))
             }
         }
-
-
-
 
 
     }

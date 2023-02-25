@@ -42,7 +42,6 @@ class customAdapter3(private val mList3: List<itemview3>, val listner: MyClickLi
         holder.textView2.text = itemview3.text
         holder.imageShow3.setImageResource(itemview3.image3)
 
-
     }
 
     override fun getItemCount(): Int

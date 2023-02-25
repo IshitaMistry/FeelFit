@@ -6,7 +6,6 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
 
-
 @Dao
 interface UserInfoDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
