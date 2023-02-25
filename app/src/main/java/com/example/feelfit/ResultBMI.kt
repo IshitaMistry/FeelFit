@@ -5,6 +5,10 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import com.example.feelfit.GainingExercises.Exercise2
+import com.example.feelfit.LosingExercise.ExerciseI
+import com.example.feelfit.NormalExercise.NormalActivity
+import com.example.feelfit.RoomDB.AppDatabase
 import com.example.feelfit.databinding.ActivityResultBmiBinding
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.DelicateCoroutinesApi
@@ -132,22 +136,22 @@ class ResultBMI : AppCompatActivity() {
 
             if (intbmi <= 15){
                 intent=Intent(
-                    this,Exercise2::class.java)
+                    this, Exercise2::class.java)
                 startActivity(intent)
             }
 
         else if(intbmi >=15 && intbmi <=18.4) {
-            intent=Intent(this,Exercise2
+            intent=Intent(this, Exercise2
             ::class.java)
             startActivity(intent)
 
         }else if(intbmi >=18.5 && intbmi <=24.9){
-            intent=Intent(this,NormalActivity::class.java)
+            intent=Intent(this, NormalActivity::class.java)
             startActivity(intent)
 
 
         }else if (intbmi > 24.9 ){
-            intent=Intent(this,ExerciseI::class.java)
+            intent=Intent(this, ExerciseI::class.java)
             startActivity(intent)
 
         }else{

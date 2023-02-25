@@ -6,6 +6,19 @@
                 <item
                     android:id="@+id/profile"
                     android:title="@string/PROFILE"/>
+
+                <item
+                        android:id="@+id/GotoExer"
+                        android:title="Current Exercise"/>
+                <item
+                        android:id="@+id/Aboutus"
+                        android:title="About Us"/>
+                <item
+                        android:id="@+id/Share"
+                        android:title="Share"/>
+                <item
+                        android:id="@+id/Rate"
+                        android:title="Rate Us"/>
                 <item
                     android:id="@+id/logout"
                     android:title="@string/LOG_OUT"/>

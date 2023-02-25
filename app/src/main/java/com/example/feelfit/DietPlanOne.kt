@@ -3,6 +3,7 @@ package com.example.feelfit
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.viewpager.widget.ViewPager
+import com.example.feelfit.Adapter.AdapterDiet
 import com.google.android.material.tabs.TabLayout
 class DietPlanOne : AppCompatActivity() {
 

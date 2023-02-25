@@ -9,6 +9,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
+import com.example.feelfit.Credentials.Login
 import com.example.feelfit.databinding.ActivityDashboardBinding
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
@@ -92,7 +93,7 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
                     .setCancelable(false)
                     .setPositiveButton("Yes"){dialogInterface,it ->
                         firebaseAuth.signOut()
-                        intent= Intent(applicationContext,Login::class.java)
+                        intent= Intent(applicationContext, Login::class.java)
                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         startActivity(intent)
@@ -104,6 +105,11 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
                 val alertDialog = builder.create()
                 // Show the Alert Dialog box
                 alertDialog.show()
+
+            }
+            R.id.GotoExer  ->
+            {
+
 
             }
         }
