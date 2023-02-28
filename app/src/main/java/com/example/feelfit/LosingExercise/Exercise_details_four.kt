@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
-import com.example.feelfit.DietPlanOne
+import com.example.feelfit.DietPlan.DietPlanOne
 import com.example.feelfit.R
 
 class Exercise_details_four : AppCompatActivity() {

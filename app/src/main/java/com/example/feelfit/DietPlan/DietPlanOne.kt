@@ -1,9 +1,13 @@
-package com.example.feelfit
+package com.example.feelfit.DietPlan
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.LinearLayout
 import androidx.viewpager.widget.ViewPager
 import com.example.feelfit.Adapter.AdapterDiet
+import com.example.feelfit.R
+import com.example.feelfit.fruitschart
 import com.google.android.material.tabs.TabLayout
 class DietPlanOne : AppCompatActivity() {
 
@@ -42,6 +46,7 @@ class DietPlanOne : AppCompatActivity() {
 
         }
         )
+
 
 
 

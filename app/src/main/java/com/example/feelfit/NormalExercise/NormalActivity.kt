@@ -29,7 +29,6 @@ class NormalActivity : AppCompatActivity(), customAdapter3.MyClickListener {
         data3.add(itemview3(R.drawable.gain3, R.drawable.squat,"SQUATS"))
         data3.add(itemview3(R.drawable.gain4, R.drawable.benchpress,"BENCH PRESS"))
         data3.add(itemview3(R.drawable.gain5, R.drawable.pushupss,"PUSHUP"))
-        data3.add(itemview3(R.drawable.gain6, R.drawable.burpees,"GLUTE KICK"))
 
 
 
@@ -41,9 +40,6 @@ class NormalActivity : AppCompatActivity(), customAdapter3.MyClickListener {
         back.setOnClickListener(View.OnClickListener {
             startActivity(Intent(this, Dashboard::class.java))
         })
-
-
-
     }
 
     override fun onClick(position: Int) {
@@ -60,6 +56,14 @@ class NormalActivity : AppCompatActivity(), customAdapter3.MyClickListener {
             2 ->
             {
                 startActivity(Intent(this, Normal3::class.java))
+            }
+            3 ->
+            {
+                startActivity(Intent(this,Normal4::class.java))
+            }
+            4 ->
+            {
+                startActivity(Intent(this,Normal5::class.java))
             }
         }
     }
