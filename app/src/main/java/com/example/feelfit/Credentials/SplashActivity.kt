@@ -1,11 +1,11 @@
 package com.example.feelfit.Credentials
 import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import com.example.feelfit.Dashboard
 import com.example.feelfit.GainingExercises.Exercise2
 import com.example.feelfit.LosingExercise.ExerciseI
@@ -43,44 +43,61 @@ class SplashActivity : AppCompatActivity() {
                     var enties = user?.let { InsDB.userInfoDao().getAll(it) }
                     Log.e("mello", "Shubh: $enties" + "" )
                     launch(Dispatchers.Main) {
-                        var body= enties?.get(0)?.body.toString()
-                       Log.e("majil", "=========>:$body ", )
+                        val body= enties?.get(0)?.body.toString()
+                       Log.e("majil", "=========>:$body ")
 
 
                         if (body== "SEVERE SKINNY")
                         {
-
                             startActivity(Intent(applicationContext, Exercise2::class.java))
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                            finish()
                         }
                         if (body== "MODERATE SKINNY")
                         {
                             startActivity(Intent(applicationContext, Exercise2::class.java))
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                            finish()
                         }
                         if (body== "MODERATE SKINNY")
                         {
                             startActivity(Intent(applicationContext, Exercise2::class.java))
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                            finish()
 
                         }
                         if(body== "MILD THINNESS")
                         {
                             startActivity(Intent(applicationContext, Exercise2::class.java))
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                            finish()
 
                         }
                         if(body== "NORMAL")
                         {
                             startActivity(Intent(applicationContext, NormalActivity::class.java))
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                            finish()
                         }
                         if(body== "OVERWEIGHT")
                         {
                             startActivity(Intent(applicationContext, ExerciseI::class.java))
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                            finish()
                         }
                         if(body== "OBESE I")
                         {
                             startActivity(Intent(applicationContext, ExerciseI::class.java))
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                            finish()
+
                         }
                         if(body== "OBESE II")
                         {
                             startActivity(Intent(applicationContext, ExerciseI::class.java))
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                            finish()
+
                         }
                         else
                         {
@@ -90,15 +107,12 @@ class SplashActivity : AppCompatActivity() {
                 }
 
                 startActivity(Intent(applicationContext, Dashboard::class.java))
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
                 finish()
             }
             else {
 
                 startActivity(Intent(this, Login::class.java))
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 finish()
             }
 

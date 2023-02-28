@@ -140,7 +140,7 @@ class ResultBMI : AppCompatActivity() {
                 startActivity(intent)
             }
 
-        else if(intbmi >=15 && intbmi <=18.4) {
+        else if(intbmi >=15 && intbmi <=18.49) {
             intent=Intent(this, Exercise2
             ::class.java)
             startActivity(intent)

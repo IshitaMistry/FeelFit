@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import com.example.feelfit.RoomDB.AppDatabase
 import com.example.feelfit.RoomDB.InfoEntityC
 import com.example.feelfit.databinding.ActivityShowProfileBinding
@@ -43,24 +44,28 @@ class ShowProfileAct : AppCompatActivity() {
             startActivity(Intent(this, BmiCalculator::class.java))
         })
 
+
+
         InsDB = AppDatabase.getDatabase(this@ShowProfileAct)
 
 
         GlobalScope.launch(Dispatchers.IO) {
 
-            val enties = user?.let { InsDB.userInfoDao().getAll(it) }
-            launch(Dispatchers.Main) {
+                val enties = user?.let { InsDB.userInfoDao().getAll(it) }
+                launch(Dispatchers.Main) {
 
-                binding.getemail.text = enties!![0].email
-                binding.gen.text = enties[0].gender
-                binding.height1.text = enties[0].height
-                binding.weight1.text = enties[0].weight
-                binding.age1.text = enties[0].age
-                binding.body.text = enties[0].body
-                binding.bmi.text = enties[0].bmi
+                    binding.getemail.text = enties!![0].email
+                    binding.gen.text = enties[0].gender
+                    binding.height1.text = enties[0].height
+                    binding.weight1.text = enties[0].weight
+                    binding.age1.text = enties[0].age
+                    binding.body.text = enties[0].body
+                    binding.bmi.text = enties[0].bmi
 
-            }
+                }
+
         }
+
     }
     override fun onBackPressed() {
         super.onBackPressed()
