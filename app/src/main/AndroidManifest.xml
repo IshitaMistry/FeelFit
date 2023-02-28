@@ -20,6 +20,12 @@
         android:theme="@style/Theme.FeelFit"
         tools:targetApi="31">
         <activity
+            android:name=".fruitschart"
+            android:exported="false" />
+        <activity
+            android:name=".NormalExercise.Normal5"
+            android:exported="false" />
+        <activity
             android:name=".NormalExercise.Normal4"
             android:exported="false" />
         <activity
@@ -74,7 +80,7 @@
             android:name=".GainingExercises.Exercise2"
             android:exported="false" />
         <activity
-            android:name=".DietPlanOne"
+            android:name=".DietPlan.DietPlanOne"
             android:exported="false" />
         <activity
             android:name=".timer"

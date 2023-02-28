@@ -75,7 +75,17 @@
         android:gravity="center_horizontal">
 
       <Button
-          android:id="@+id/diet123"
+          android:id="@+id/timern1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:backgroundTint="#3C8DCD"
+          android:text="TIMER"
+          android:textStyle="bold"
+          android:layout_marginHorizontal="10dp"
+          tools:ignore="HardcodedText"/>
+
+      <Button
+          android:id="@+id/dietn"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:text="DIET PLAN"

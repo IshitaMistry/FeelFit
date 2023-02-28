@@ -20,6 +20,7 @@
             android:layout_height="match_parent">
 
             <LinearLayout
+                android:id="@+id/fruitsOne"
                 android:background="#3C8DCD"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
