@@ -17,6 +17,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
+@SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
@@ -32,7 +33,7 @@ class SplashActivity : AppCompatActivity() {
 
         Handler(Looper.getMainLooper()).postDelayed({
             auth = FirebaseAuth.getInstance()
-            var user=auth.currentUser?.email
+            val user=auth.currentUser?.email
 
             if (auth.currentUser != null) {
 
@@ -40,7 +41,7 @@ class SplashActivity : AppCompatActivity() {
                 GlobalScope.launch(Dispatchers.IO) {
 
 
-                    var enties = user?.let { InsDB.userInfoDao().getAll(it) }
+                    val enties = user?.let { InsDB.userInfoDao().getAll(it) }
                     Log.e("mello", "Shubh: $enties" + "" )
                     launch(Dispatchers.Main) {
                         val body= enties?.get(0)?.body.toString()

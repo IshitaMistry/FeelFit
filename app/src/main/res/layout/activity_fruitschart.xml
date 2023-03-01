@@ -1,9 +1,221 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".fruitschart">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp">
+
+            <ImageView
+                android:id="@+id/arrowf"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                tools:ignore="MissingConstraints"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="FRUITS"
+                android:textSize="30sp"
+                android:layout_marginStart="100dp"
+                android:fontFamily="@font/merriweatherblack"
+                android:textColor="@color/lightblue"
+                tools:ignore="HardcodedText"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="4 Servings Per Day"
+            android:textColor="@color/lightblue"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/merriweatherblack"
+            android:layout_marginStart="30dp"
+            android:textSize="25sp"
+            tools:ignore="HardcodedText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="1. ONE MEDIUM FRUIT"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="30dp"
+            android:textSize="25sp"
+            android:fontFamily="@font/merriweatherblack"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText"/>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp">
+
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:background="@drawable/apple"
+                android:layout_marginStart="20dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="About the size of your fist"
+                android:textSize="25sp"
+                android:fontFamily="@font/merriweatherblack"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="170dp"
+                android:textColor="@color/black"
+                tools:ignore="HardcodedText"/>
+
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="2. FRESH, FROZEN"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="30dp"
+            android:textSize="25sp"
+            android:fontFamily="@font/merriweatherblack"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText" />
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp">
+
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:background="@drawable/fresh"
+                android:layout_marginStart="20dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1/2 cup"
+                android:textSize="30sp"
+                android:fontFamily="@font/merriweatherblack"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="170dp"
+                android:textColor="@color/black"
+                tools:ignore="HardcodedText"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/merriweatherblack"
+            android:text="3. DRIED"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            tools:ignore="HardcodedText"/>
+
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp">
+
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:background="@drawable/dried"
+                android:layout_marginStart="20dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1/4 cup"
+                android:textSize="30sp"
+                android:fontFamily="@font/merriweatherblack"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="170dp"
+                android:textColor="@color/black"
+                tools:ignore="HardcodedText"/>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/merriweatherblack"
+            android:text="4. FRUIT JUICE"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            tools:ignore="HardcodedText"/>
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp">
+
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:background="@drawable/fruitjuice"
+                android:layout_marginStart="20dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1/4 cup"
+                android:textSize="30sp"
+                android:fontFamily="@font/merriweatherblack"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="170dp"
+                android:textColor="@color/black"
+                tools:ignore="HardcodedText"/>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <Button
+            android:id="@+id/desc"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:text="DESECRIPTION"
+            android:fontFamily="@font/merriweatherblack"
+            android:backgroundTint="@color/lightblue"
+            tools:ignore="HardcodedText"/>
+
+    </LinearLayout>
+
+</ScrollView>

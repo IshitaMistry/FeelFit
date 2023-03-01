@@ -2,7 +2,6 @@ package com.example.feelfit.GainingExercises
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -33,10 +32,10 @@ class Exercise2 : AppCompatActivity(), customAdapter2.MyClickListener {
         recyclerView.adapter=adapter2
         recyclerView.setHasFixedSize(true)
 
-        var back=findViewById<ImageView>(R.id.backpress253)
-        back.setOnClickListener(View.OnClickListener {
+        val back=findViewById<ImageView>(R.id.backpress253)
+        back.setOnClickListener{
             startActivity(Intent(this, Dashboard::class.java))
-        })
+        }
 
     }
 
@@ -72,6 +71,7 @@ class Exercise2 : AppCompatActivity(), customAdapter2.MyClickListener {
 
 
     }
+    @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         super.onBackPressed()
         startActivity(Intent(applicationContext, Dashboard::class.java))
