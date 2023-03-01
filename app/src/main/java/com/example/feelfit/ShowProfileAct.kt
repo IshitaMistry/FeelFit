@@ -60,6 +60,7 @@ class ShowProfileAct : AppCompatActivity() {
                     binding.age1.text = enties[0].age
                     binding.body.text = enties[0].body
                     binding.bmi.text = enties[0].bmi
+                    
 
                 }
 

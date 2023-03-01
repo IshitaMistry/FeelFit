@@ -1,7 +1,6 @@
 package com.example.feelfit.Credentials
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.feelfit.Users
@@ -20,21 +19,21 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding= ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.Login.setOnClickListener(View .OnClickListener {
+        binding.Login.setOnClickListener{
             intent= Intent(this, Login::class.java)
             startActivity(intent)
-        })
+        }
         // validation Start from here
 
         firebaseAuth = FirebaseAuth.getInstance()
 
-        binding.btnregis23.setOnClickListener(View.OnClickListener {
+        binding.btnregis23.setOnClickListener{
 
             val name=binding.nameRegister.text.toString()
 
             val email=binding.EmailRegister.text.toString()
             val pass =binding.PasswordRegister.text.toString()
-            val cnfpass=binding.cnfPasswordRegister.toString()
+//            val cnfpass=binding.cnfPasswordRegister.toString()
 
 
 
@@ -58,7 +57,7 @@ class MainActivity : AppCompatActivity() {
 
 //
 
-        })
+        }
 
     }
 }

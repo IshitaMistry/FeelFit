@@ -65,8 +65,8 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
 
         binding.buttonCalculate.setOnClickListener {
             intent = Intent(this@Dashboard, BmiCalculator::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
         }
 
@@ -88,6 +88,7 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
         return super.onOptionsItemSelected(item)
     }
 
+    @SuppressLint("LogNotTimber")
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
 
         when(item.itemId)
@@ -97,12 +98,12 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
                 InsDB = AppDatabase.getDatabase(applicationContext)
                 GlobalScope.launch(Dispatchers.IO) {
 
-                    var user = firebaseAuth.currentUser?.email
+                    val user = firebaseAuth.currentUser?.email
 
-                    var enties = user?.let { InsDB.userInfoDao().getAll(it) }
+                    val enties = user?.let { InsDB.userInfoDao().getAll(it) }
                     Log.e("mello", "Shubh: $enties" + "")
                     launch(Dispatchers.Main) {
-                        var body = enties?.get(0)?.bmi.toString()
+                        val body = enties?.get(0)?.bmi.toString()
                         Log.e("majil", "=========>:$body ")
 
                         if (body==null) {
@@ -126,8 +127,8 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
                     .setPositiveButton("Yes"){dialogInterface,it ->
                         firebaseAuth.signOut()
                         intent= Intent(applicationContext, Login::class.java)
-                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                         startActivity(intent)
                         finish()
                     }
@@ -144,12 +145,12 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
                 InsDB = AppDatabase.getDatabase(applicationContext)
                 GlobalScope.launch(Dispatchers.IO) {
 
-                    var user=firebaseAuth.currentUser?.email
+                    val user=firebaseAuth.currentUser?.email
 
-                    var enties = user?.let { InsDB.userInfoDao().getAll(it) }
+                    val enties = user?.let { InsDB.userInfoDao().getAll(it) }
                     Log.e("mello", "Shubh: $enties" + "" )
                     launch(Dispatchers.Main) {
-                        var body= enties?.get(0)?.body.toString()
+                        val body= enties?.get(0)?.body.toString()
                         Log.e("majil", "=========>:$body ")
 
                         if (body== "SEVERE SKINNY")

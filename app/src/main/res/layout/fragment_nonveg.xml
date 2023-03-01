@@ -10,7 +10,6 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
-
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -65,7 +64,6 @@
                     android:layout_marginBottom="20dp"/>
 
                 <TextView
-
                     android:layout_marginEnd="20dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -97,7 +95,6 @@
                     android:layout_marginStart="20dp"/>
 
                 <TextView
-
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="65dp"
@@ -118,8 +115,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp">
-
-
 
                 <pl.droidsonroids.gif.GifImageView
                     android:layout_width="150dp"
@@ -153,8 +148,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp">
 
-
-
                 <pl.droidsonroids.gif.GifImageView
                     android:layout_width="150dp"
                     android:layout_height="150dp"
@@ -180,23 +173,4 @@
             </LinearLayout>
         </LinearLayout>
     </FrameLayout>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </ScrollView>
