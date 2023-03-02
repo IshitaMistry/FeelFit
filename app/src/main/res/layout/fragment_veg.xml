@@ -80,6 +80,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/rice"
                 android:background="#3C8DCD"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
@@ -90,7 +91,7 @@
                 <pl.droidsonroids.gif.GifImageView
                     android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:src="@drawable/brocoli"
+                    android:src="@drawable/rice"
                     android:fontFamily="@font/merriweatherblack"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="20dp"
@@ -99,18 +100,17 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="65dp"
-                    android:layout_marginStart="20dp"
                     android:text="RICE"
-                    android:layout_marginEnd="20dp"
                     android:textSize="25sp"
                     android:fontFamily="@font/merriweatherblack"
                     android:textColor="@color/white"
-                    tools:ignore="HardcodedText"/>
-
+                    android:layout_marginTop="65dp"
+                    android:layout_marginStart="20dp"
+                    tools:ignore="HardcodedText" />
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/yogurt"
                 android:background="#3C8DCD"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
@@ -143,6 +143,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/protein"
                 android:background="#3C8DCD"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
@@ -153,7 +154,7 @@
                 <pl.droidsonroids.gif.GifImageView
                     android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:src="@drawable/yogurt"
+                    android:src="@drawable/proteinshake"
                     android:background="@color/white"
                     android:fontFamily="@font/merriweatherblack"
                     android:layout_marginTop="20dp"
@@ -165,7 +166,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="65dp"
                     android:layout_marginStart="20dp"
-                    android:text="YOGURT"
+                    android:text="PROTEIN SHAKE"
                     android:layout_marginEnd="20dp"
                     android:textSize="25sp"
                     android:fontFamily="@font/merriweatherblack"
