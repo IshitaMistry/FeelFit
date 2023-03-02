@@ -37,7 +37,6 @@ android {
 }
 
 dependencies {
-
     implementation 'androidx.navigation:navigation-fragment:2.3.5'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
     implementation 'androidx.room:room-common:2.4.3'

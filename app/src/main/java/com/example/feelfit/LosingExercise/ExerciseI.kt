@@ -36,6 +36,7 @@ class ExerciseI : AppCompatActivity(), customAdapter.MyClickListener {
         var back=findViewById<ImageView>(R.id.backpress253)
         back.setOnClickListener(View.OnClickListener {
             startActivity(Intent(this, Dashboard::class.java))
+            finish()
         })
 
     }

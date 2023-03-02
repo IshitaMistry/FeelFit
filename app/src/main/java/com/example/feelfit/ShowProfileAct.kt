@@ -53,6 +53,7 @@ class ShowProfileAct : AppCompatActivity() {
                 val enties = user?.let { InsDB.userInfoDao().getAll(it) }
                 launch(Dispatchers.Main) {
 
+
                     binding.getemail.text = enties!![0].email
                     binding.gen.text = enties[0].gender
                     binding.height1.text = enties[0].height
@@ -60,7 +61,6 @@ class ShowProfileAct : AppCompatActivity() {
                     binding.age1.text = enties[0].age
                     binding.body.text = enties[0].body
                     binding.bmi.text = enties[0].bmi
-                    
 
                 }
 
@@ -70,6 +70,8 @@ class ShowProfileAct : AppCompatActivity() {
     override fun onBackPressed() {
         super.onBackPressed()
         startActivity(Intent(applicationContext,Dashboard::class.java))
+        intent.addFlags( Intent.FLAG_ACTIVITY_CLEAR_TASK)
+
         finish()
     }
 }

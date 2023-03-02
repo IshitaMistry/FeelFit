@@ -11,6 +11,7 @@ import com.example.feelfit.RoomDB.AppDatabase
 import com.example.feelfit.RoomDB.InfoEntityC
 import com.example.feelfit.databinding.ActivityBmiCalculatorBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -21,7 +22,7 @@ class BmiCalculator : AppCompatActivity()
 
     lateinit var InsDB: AppDatabase
     private lateinit var auth: FirebaseAuth
-//    private lateinit var user: FirebaseUser
+    private lateinit var user: FirebaseUser
     var intweight = 55
     var intage = 22
     var currentprogess = 0
@@ -32,7 +33,7 @@ class BmiCalculator : AppCompatActivity()
 
 
 
-    @SuppressLint("ResourceAsColor", "LogNotTimber")
+    @SuppressLint("ResourceAsColor")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityBmiCalculatorBinding.inflate(layoutInflater)
@@ -40,7 +41,7 @@ class BmiCalculator : AppCompatActivity()
 
 
         auth= FirebaseAuth.getInstance()
-        val user=auth.currentUser?.email
+        var user=auth.currentUser?.email
 
 
         binding.seekbar.setMax(300)
@@ -79,9 +80,13 @@ class BmiCalculator : AppCompatActivity()
             binding.showage.setText(age2)
         }
 
+
+
+
+
         fun Writedata() {
 
-            val email=user.toString()
+            var email=user.toString()
         //    Log.e("123", "--------->>>$gender")
             val height=mintprogress.toInt().toString()
             val weight=binding.showweight.text.toString()
@@ -123,8 +128,7 @@ class BmiCalculator : AppCompatActivity()
             else
             {
                 intent = Intent(this,ResultBMI::class.java)
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
                 val intSelectButton: Int = binding.btn!!.checkedRadioButtonId
                 radioButton = findViewById(intSelectButton)
@@ -139,15 +143,17 @@ class BmiCalculator : AppCompatActivity()
                 intent.putExtra("weight",weight2)
                 intent.putExtra("age",age2)
                 startActivity(intent)
+                finish()
             }
         }
 
 
     }
-    @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         super.onBackPressed()
         startActivity(Intent(this,Dashboard::class.java))
+        intent.addFlags( Intent.FLAG_ACTIVITY_CLEAR_TASK)
+
         finish()
     }
 

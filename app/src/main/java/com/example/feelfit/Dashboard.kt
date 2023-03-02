@@ -1,7 +1,13 @@
 package com.example.feelfit
 
 import android.annotation.SuppressLint
+import android.app.AlarmManager
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.app.PendingIntent
+import android.content.Context
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
@@ -10,6 +16,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.core.app.NotificationCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.example.feelfit.Credentials.Login
 import com.example.feelfit.GainingExercises.Exercise2
@@ -34,7 +41,7 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
     private lateinit var toggle: ActionBarDrawerToggle
     lateinit var drawerLayout: DrawerLayout
 
-    lateinit var InsDB: AppDatabase
+
 
 
     @SuppressLint("SuspiciousIndentation")
@@ -42,6 +49,12 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
         super.onCreate(savedInstanceState)
         binding = ActivityDashboardBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+      //  startActivity(Intent(applicationContext,Reminder::class.java))
+
+        //-------------------------------------------------------------------------------------
+
+
 
 
         builder=AlertDialog.Builder(this)
@@ -58,6 +71,26 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
         toggle.isDrawerIndicatorEnabled=true
         toggle.syncState()
 
+        // notification for water
+//--------------------------------------______________________________________________________
+       var intent = Intent(this, water::class.java)
+        val pendingIntent: PendingIntent
+        pendingIntent = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_IMMUTABLE)
+        } else {
+            PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT)
+        }
+        val alarmManager = getSystemService(ALARM_SERVICE) as AlarmManager
+        alarmManager.setRepeating(
+            AlarmManager.RTC_WAKEUP,
+            System.currentTimeMillis(),
+            REMINDER_INTERVAL_MILLIS.toLong(),
+            pendingIntent
+        )
+
+//_______________________________________________//____________________________________________________//______________
+//____________________________________________//____________________________________________________________________//______
+
         navigationView.setNavigationItemSelectedListener(this)
         supportActionBar!!.setHomeButtonEnabled(true)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
@@ -65,8 +98,8 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
 
         binding.buttonCalculate.setOnClickListener {
             intent = Intent(this@Dashboard, BmiCalculator::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent)
         }
 
@@ -79,6 +112,11 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
             binding.userMail.setText(firebaseUser.email)
     }
 
+    companion object {
+        private const val REMINDER_INTERVAL_MILLIS = 60 * 60 * 1000
+    }
+
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         if (toggle.onOptionsItemSelected(item))
@@ -87,36 +125,17 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
         }
         return super.onOptionsItemSelected(item)
     }
+    lateinit var InsDB: AppDatabase
 
-    @SuppressLint("LogNotTimber")
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
 
         when(item.itemId)
         {
-            R.id.profile -> {
-
-                InsDB = AppDatabase.getDatabase(applicationContext)
-                GlobalScope.launch(Dispatchers.IO) {
-
-                    val user = firebaseAuth.currentUser?.email
-
-                    val enties = user?.let { InsDB.userInfoDao().getAll(it) }
-                    Log.e("mello", "Shubh: $enties" + "")
-                    launch(Dispatchers.Main) {
-                        val body = enties?.get(0)?.bmi.toString()
-                        Log.e("majil", "=========>:$body ")
-
-                        if (body==null) {
-                            Toast.makeText(applicationContext,"Calculate BMI",Toast.LENGTH_SHORT).show()
-
-                        }
-                        else{
-                            val intent = Intent(this@Dashboard,ShowProfileAct::class.java)
-                            startActivity(intent)
-                        }
-                    }
-
-                }
+            R.id.profile ->
+            {
+                val intent = Intent(this@Dashboard,ShowProfileAct::class.java)
+                startActivity(intent)
+                finish()
             }
 
             R.id.logout ->
@@ -127,8 +146,8 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
                     .setPositiveButton("Yes"){dialogInterface,it ->
                         firebaseAuth.signOut()
                         intent= Intent(applicationContext, Login::class.java)
-                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         startActivity(intent)
                         finish()
                     }
@@ -145,63 +164,54 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
                 InsDB = AppDatabase.getDatabase(applicationContext)
                 GlobalScope.launch(Dispatchers.IO) {
 
-                    val user=firebaseAuth.currentUser?.email
+                    var user=firebaseAuth.currentUser?.email
 
-                    val enties = user?.let { InsDB.userInfoDao().getAll(it) }
+                    var enties = user?.let { InsDB.userInfoDao().getAll(it) }
                     Log.e("mello", "Shubh: $enties" + "" )
                     launch(Dispatchers.Main) {
-                        val body= enties?.get(0)?.body.toString()
+                        var body= enties?.get(0)?.body.toString()
                         Log.e("majil", "=========>:$body ")
 
                         if (body== "SEVERE SKINNY")
                         {
                             startActivity(Intent(applicationContext, Exercise2::class.java))
-                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
                             finish()
                         }
                         if (body== "MODERATE SKINNY")
                         {
                             startActivity(Intent(applicationContext, Exercise2::class.java))
-                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
                             finish()
                         }
                         if (body== "MODERATE SKINNY")
                         {
                             startActivity(Intent(applicationContext, Exercise2::class.java))
-                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
                             finish()
 
                         }
                         if(body== "MILD THINNESS")
                         {
                             startActivity(Intent(applicationContext, Exercise2::class.java))
-                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
                             finish()
 
                         }
                         if(body== "NORMAL")
                         {
                             startActivity(Intent(applicationContext, NormalActivity::class.java))
-                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
                             finish()
                         }
                         if(body== "OVERWEIGHT")
                         {
                             startActivity(Intent(applicationContext, ExerciseI::class.java))
-                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
                             finish()
                         }
                         if(body== "OBESE I")
                         {
                             startActivity(Intent(applicationContext, ExerciseI::class.java))
-                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
                             finish()
-
                         }
                         if(body== "OBESE II")
                         {
                             startActivity(Intent(applicationContext, ExerciseI::class.java))
-                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
                             finish()
 
                         }
@@ -211,9 +221,6 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
                         }
                     }
                 }
-
-
-
             }
             R.id.Share ->
             {
@@ -225,10 +232,32 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
                 shareIntent.putExtra(Intent.EXTRA_TEXT,shareBody)
                 startActivity(shareIntent)
             }
+
         }
        // drawerLayout.closeDrawer(GravityCompat.START)
         return true
          }
+    override fun onBackPressed() {
+        super.onBackPressed()
+        builder.setTitle("FeelFit")
+            .setMessage("Do You Want To Logout ?")
+            .setCancelable(false)
+            .setPositiveButton("Yes"){dialogInterface,it ->
+                firebaseAuth.signOut()
+                intent= Intent(applicationContext, Login::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+              intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent)
+                finish()
+            }
+            .setNegativeButton("No"){dialogInterface,it ->
+                dialogInterface.cancel()
+            }
+        val alertDialog = builder.create()
+        // Show the Alert Dialog box
+        alertDialog.show()
+
+    }
 
 }
 
