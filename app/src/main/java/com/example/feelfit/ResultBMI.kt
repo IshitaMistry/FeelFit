@@ -42,7 +42,7 @@ class ResultBMI : AppCompatActivity() {
 
 
         firebaseAuth= FirebaseAuth.getInstance()
-        var email=firebaseAuth.currentUser?.email
+        val email=firebaseAuth.currentUser?.email
 
         InsDB= AppDatabase.getDatabase(this)
 
@@ -50,10 +50,9 @@ class ResultBMI : AppCompatActivity() {
         var intent:Intent = intent
         height = intent.getStringExtra("height")
         weight = intent.getStringExtra("weight")
-        var age=intent.getStringExtra("age")
-        var height1=intent.getStringExtra("height1")
-        var weight1=intent.getStringExtra("weight2")
-
+        val age=intent.getStringExtra("age")
+        val height1=intent.getStringExtra("height1")
+        val weight1=intent.getStringExtra("weight2")
 
 
         intheight = height!!.toFloat()
@@ -65,9 +64,6 @@ class ResultBMI : AppCompatActivity() {
         intbmi = intweight/(intheight * intheight)
         mbmi = java.lang.Float.toString(intbmi)
         println(mbmi)
-
-
-
 
         if (intbmi < 16)
         {
@@ -115,9 +111,6 @@ class ResultBMI : AppCompatActivity() {
         binding.gender.setText(intent.getStringExtra("gender"))
         binding.resultBmi.setText(mbmi)
 
-
-
-
         binding.Proceed.setOnClickListener {
             val bmi=intbmi.toFloat().toString()
             val body=binding.textUnderWeight.text.toString()
@@ -159,8 +152,6 @@ class ResultBMI : AppCompatActivity() {
         }
 
         }
-
-
     }
     override fun onBackPressed() {
         super.onBackPressed()

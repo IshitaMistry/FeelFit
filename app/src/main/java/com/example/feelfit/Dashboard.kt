@@ -43,14 +43,12 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
         binding = ActivityDashboardBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
         builder=AlertDialog.Builder(this)
 
         drawerLayout=findViewById(R.id.drawerlayout)
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         val navigationView=findViewById<NavigationView>(R.id.navigation_id)
         setSupportActionBar(toolbar)
-
 
         setSupportActionBar(toolbar)
         toggle = ActionBarDrawerToggle(this,drawerLayout,R.string.nav_open,R.string.nav_close)
@@ -72,8 +70,6 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
 
         firebaseAuth= FirebaseAuth.getInstance()
         var user=firebaseAuth.currentUser?.email
-
-
 
         firebaseUser = FirebaseAuth.getInstance().currentUser!!
             binding.userMail.setText(firebaseUser.email)
@@ -115,10 +111,8 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
                             startActivity(intent)
                         }
                     }
-
                 }
             }
-
             R.id.logout ->
             {
                 builder.setTitle("FeelFit")
@@ -135,11 +129,13 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
                     .setNegativeButton("No"){dialogInterface,it ->
                         dialogInterface.cancel()
                     }
+
                 val alertDialog = builder.create()
                 // Show the Alert Dialog box
                 alertDialog.show()
 
             }
+
             R.id.GotoExer  ->
             {
                 InsDB = AppDatabase.getDatabase(applicationContext)
@@ -211,10 +207,9 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
                         }
                     }
                 }
-
-
-
             }
+
+
             R.id.Share ->
             {
                 val shareBody="Download FeelFit on Play Store:"
@@ -229,6 +224,8 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
        // drawerLayout.closeDrawer(GravityCompat.START)
         return true
          }
+
+
 
 }
 

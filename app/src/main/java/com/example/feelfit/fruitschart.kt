@@ -10,7 +10,6 @@ class fruitschart : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fruitschart)
 
-
         val desc1 = findViewById<Button>(R.id.desc)
         desc1.setOnClickListener {
             intent=Intent(this,Description::class.java)

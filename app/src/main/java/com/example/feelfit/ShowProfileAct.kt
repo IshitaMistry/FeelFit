@@ -17,7 +17,6 @@ class ShowProfileAct : AppCompatActivity() {
 
     private lateinit var firebaseAuth: FirebaseAuth
 
-
     lateinit var binding: ActivityShowProfileBinding
     lateinit var InsDB: AppDatabase
     var UserList = listOf<InfoEntityC>()
@@ -26,17 +25,12 @@ class ShowProfileAct : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_show_profile)
 
-
-
-
         binding = ActivityShowProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 
         firebaseAuth= FirebaseAuth.getInstance()
         var user=firebaseAuth.currentUser?.email
-
-
 
 
         binding.reccalculatebmi.setOnClickListener(View.OnClickListener {
@@ -60,13 +54,11 @@ class ShowProfileAct : AppCompatActivity() {
                     binding.age1.text = enties[0].age
                     binding.body.text = enties[0].body
                     binding.bmi.text = enties[0].bmi
-                    
 
                 }
-
         }
-
     }
+
     override fun onBackPressed() {
         super.onBackPressed()
         startActivity(Intent(applicationContext,Dashboard::class.java))

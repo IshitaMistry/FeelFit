@@ -21,6 +21,18 @@
         android:theme="@style/Theme.FeelFit"
         tools:targetApi="31">
         <activity
+            android:name=".eggcgart"
+            android:exported="false" />
+        <activity
+            android:name=".yogurtchart2"
+            android:exported="false" />
+        <activity
+            android:name=".chickenchart"
+            android:exported="false" />
+        <activity
+            android:name=".fruitchart2"
+            android:exported="false" />
+        <activity
             android:name=".proteinchart"
             android:exported="false" />
         <activity
