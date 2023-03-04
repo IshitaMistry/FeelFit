@@ -25,7 +25,6 @@ class DataHelper(context: Context) {
             stopTime = dateFormat.parse(stopString)
     }
 
-
     fun startTime(): Date? = startTime
 
     fun setStartTime(date: Date?)
@@ -51,7 +50,6 @@ class DataHelper(context: Context) {
             apply()
         }
     }
-
     fun timerCounting(): Boolean = timerCounting
 
     fun setTimerCounting(value: Boolean)
@@ -63,7 +61,6 @@ class DataHelper(context: Context) {
             apply()
         }
     }
-
     companion object
     {
         const val PREFERENCES = "prefs"

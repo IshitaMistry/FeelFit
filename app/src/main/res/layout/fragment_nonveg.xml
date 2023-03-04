@@ -15,6 +15,7 @@
             android:layout_height="match_parent">
 
             <LinearLayout
+                android:id="@+id/fruit2"
                 android:background="#3C8DCD"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
@@ -36,8 +37,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:text="FRUITS AND VEGETABLES"
-                    android:textSize="20sp"
+                    android:text="FRUITS"
+                    android:textSize="30sp"
                     android:layout_marginEnd="20dp"
                     android:layout_marginStart="20dp"
                     android:fontFamily="@font/merriweatherblack"
@@ -47,6 +48,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/vege2"
                 android:background="#3C8DCD"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
@@ -57,7 +59,7 @@
                 <pl.droidsonroids.gif.GifImageView
                     android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:src="@drawable/avacado"
+                    android:src="@drawable/vege"
                     android:fontFamily="@font/merriweatherblack"
                     android:layout_marginTop="20dp"
                     android:layout_marginStart="20dp"
@@ -68,8 +70,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:text="AVACADO"
-                    android:textSize="25sp"
+                    android:text="VEGETABLES"
+                    android:textSize="20sp"
                     android:layout_marginStart="20dp"
                     android:fontFamily="@font/merriweatherblack"
                     android:textColor="@color/white"
@@ -78,6 +80,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/chicken1"
                 android:background="#3C8DCD"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
@@ -109,6 +112,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/yogs"
                 android:background="#3C8DCD"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
@@ -141,6 +145,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/eggss"
                 android:background="#3C8DCD"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
