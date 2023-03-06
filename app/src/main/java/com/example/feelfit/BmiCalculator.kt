@@ -154,7 +154,7 @@ class BmiCalculator : AppCompatActivity()
         startActivity(Intent(this,Dashboard::class.java))
         intent.addFlags( Intent.FLAG_ACTIVITY_CLEAR_TASK)
 
-        finish()
+        this.finish()
     }
 
 }

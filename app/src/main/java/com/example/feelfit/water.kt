@@ -13,7 +13,6 @@ class water: BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
         showNotification(context!!, "Shubham", "DRINK WATER", "Drink Water")
 
-
     }
     private fun showNotification(
         context: Context,

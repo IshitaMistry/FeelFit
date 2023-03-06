@@ -160,6 +160,7 @@ class ResultBMI : AppCompatActivity() {
     override fun onBackPressed() {
         super.onBackPressed()
         startActivity(Intent(applicationContext,Dashboard::class.java))
-        finish()
+        intent.addFlags( Intent.FLAG_ACTIVITY_CLEAR_TASK)
+        this.finish()
     }
 }

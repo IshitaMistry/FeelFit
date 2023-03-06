@@ -2,34 +2,33 @@ package com.example.feelfit
 
 import android.annotation.SuppressLint
 import android.app.AlarmManager
-import android.app.NotificationChannel
-import android.app.NotificationManager
 import android.app.PendingIntent
-import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.app.NotificationCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.FragmentTransaction
 import com.example.feelfit.Credentials.Login
 import com.example.feelfit.GainingExercises.Exercise2
 import com.example.feelfit.LosingExercise.ExerciseI
 import com.example.feelfit.NormalExercise.NormalActivity
 import com.example.feelfit.RoomDB.AppDatabase
 import com.example.feelfit.databinding.ActivityDashboardBinding
+import com.google.android.material.bottomnavigation.BottomNavigationItemView
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import kotlin.math.log
 
 class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedListener {
     private lateinit var firebaseAuth: FirebaseAuth
@@ -49,6 +48,94 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
         super.onCreate(savedInstanceState)
         binding = ActivityDashboardBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        //--------------Main Fragments-------------------------//
+        val btn = findViewById<BottomNavigationItemView>(R.id.profile)
+        btn.setOnClickListener {
+            val intent = Intent(applicationContext,ShowProfileAct::class.java)
+            startActivity(intent)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            val FragmentManager= supportFragmentManager
+            val FragmentTransaction=FragmentManager.beginTransaction()
+            FragmentTransaction.replace(R.id.fragment,home())
+            FragmentTransaction.commit()
+
+        }
+
+        val btn2 = findViewById<BottomNavigationItemView>(R.id.exercise)
+        btn2.setOnClickListener {
+            InsDB = AppDatabase.getDatabase(applicationContext)
+            GlobalScope.launch(Dispatchers.IO) {
+
+                var user=firebaseAuth.currentUser?.email
+
+                var enties = user?.let { InsDB.userInfoDao().getAll(it) }
+                Log.e("mello", "Shubh: $enties" + "" )
+                launch(Dispatchers.Main) {
+                    var body= enties?.get(0)?.body.toString()
+                    Log.e("majil", "=========>:$body ")
+
+                    if (body== "SEVERE SKINNY")
+                    {
+                        startActivity(Intent(applicationContext, Exercise2::class.java))
+                        finish()
+                    }
+                    if (body== "MODERATE SKINNY")
+                    {
+                        startActivity(Intent(applicationContext, Exercise2::class.java))
+                        finish()
+                    }
+                    if (body== "MODERATE SKINNY")
+                    {
+                        startActivity(Intent(applicationContext, Exercise2::class.java))
+                        finish()
+
+                    }
+                    if(body== "MILD THINNESS")
+                    {
+                        startActivity(Intent(applicationContext, Exercise2::class.java))
+                        finish()
+
+                    }
+                    if(body== "NORMAL")
+                    {
+                        startActivity(Intent(applicationContext, NormalActivity::class.java))
+                        finish()
+                    }
+                    if(body== "OVERWEIGHT")
+                    {
+                        startActivity(Intent(applicationContext, ExerciseI::class.java))
+                        finish()
+                    }
+                    if(body== "OBESE I")
+                    {
+                        startActivity(Intent(applicationContext, ExerciseI::class.java))
+                        finish()
+                    }
+                    if(body== "OBESE II")
+                    {
+                        startActivity(Intent(applicationContext, ExerciseI::class.java))
+                        finish()
+
+                    }
+                    else
+                    {
+
+                    }
+                }
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            }
+
+            val FragmentManager= supportFragmentManager
+            val FragmentTransaction=FragmentManager.beginTransaction()
+            FragmentTransaction.replace(R.id.fragment,home())
+            FragmentTransaction.commit()
+
+        }
+
+
+
+
 
       //  startActivity(Intent(applicationContext,Reminder::class.java))
 
@@ -92,6 +179,7 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
 //____________________________________________//____________________________________________________________________//______
 
         navigationView.setNavigationItemSelectedListener(this)
+        navigationView.bringToFront()
         supportActionBar!!.setHomeButtonEnabled(true)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setDisplayUseLogoEnabled(true)
@@ -99,7 +187,6 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
         binding.buttonCalculate.setOnClickListener {
             intent = Intent(this@Dashboard, BmiCalculator::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent)
         }
 
@@ -129,13 +216,14 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
 
+        Log.e("majil", "=========>:$item ")
         when(item.itemId)
         {
             R.id.profile ->
             {
                 val intent = Intent(this@Dashboard,ShowProfileAct::class.java)
                 startActivity(intent)
-                finish()
+                this.finish()
             }
 
             R.id.logout ->
@@ -147,9 +235,8 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
                         firebaseAuth.signOut()
                         intent= Intent(applicationContext, Login::class.java)
                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         startActivity(intent)
-                        finish()
+                        this.finish()
                     }
                     .setNegativeButton("No"){dialogInterface,it ->
                         dialogInterface.cancel()
@@ -245,17 +332,16 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
             .setPositiveButton("Yes"){dialogInterface,it ->
                 firebaseAuth.signOut()
                 intent= Intent(applicationContext, Login::class.java)
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-              intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent)
-                finish()
+                this.finish()
             }
             .setNegativeButton("No"){dialogInterface,it ->
                 dialogInterface.cancel()
             }
-        val alertDialog = builder.create()
+       // val alertDialog = builder.create()
         // Show the Alert Dialog box
-        alertDialog.show()
+        //alertDialog.show()
 
     }
 

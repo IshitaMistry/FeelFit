@@ -74,7 +74,8 @@ class Exercise2 : AppCompatActivity(), customAdapter2.MyClickListener {
     @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         super.onBackPressed()
+        intent.addFlags( Intent.FLAG_ACTIVITY_CLEAR_TASK)
         startActivity(Intent(applicationContext, Dashboard::class.java))
-        finish()
+        this.finish()
     }
 }

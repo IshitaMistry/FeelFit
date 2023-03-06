@@ -47,7 +47,6 @@ class ShowProfileAct : AppCompatActivity() {
                 val enties = user?.let { InsDB.userInfoDao().getAll(it) }
                 launch(Dispatchers.Main) {
 
-
                     binding.getemail.text = enties!![0].email
                     binding.gen.text = enties[0].gender
                     binding.height1.text = enties[0].height
@@ -64,7 +63,6 @@ class ShowProfileAct : AppCompatActivity() {
         super.onBackPressed()
         startActivity(Intent(applicationContext,Dashboard::class.java))
         intent.addFlags( Intent.FLAG_ACTIVITY_CLEAR_TASK)
-
-        finish()
+        this.finish()
     }
 }
