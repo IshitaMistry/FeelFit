@@ -8,6 +8,8 @@ import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
+import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -65,65 +67,64 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
         val btn2 = findViewById<BottomNavigationItemView>(R.id.exercise)
         btn2.setOnClickListener {
             InsDB = AppDatabase.getDatabase(applicationContext)
+
+
             GlobalScope.launch(Dispatchers.IO) {
 
-                var user=firebaseAuth.currentUser?.email
+                var user = firebaseAuth.currentUser?.email
 
                 var enties = user?.let { InsDB.userInfoDao().getAll(it) }
-                Log.e("mello", "Shubh: $enties" + "" )
+                Log.e("mello", "Shubh: $enties" + "")
                 launch(Dispatchers.Main) {
-                    var body= enties?.get(0)?.body.toString()
-                    Log.e("majil", "=========>:$body ")
+                    if (enties!!.isEmpty()) {
+                        Toast.makeText(applicationContext,"Calculate your BMI First",Toast.LENGTH_SHORT).show()
 
-                    if (body== "SEVERE SKINNY")
-                    {
-                        startActivity(Intent(applicationContext, Exercise2::class.java))
-                        finish()
-                    }
-                    if (body== "MODERATE SKINNY")
-                    {
-                        startActivity(Intent(applicationContext, Exercise2::class.java))
-                        finish()
-                    }
-                    if (body== "MODERATE SKINNY")
-                    {
-                        startActivity(Intent(applicationContext, Exercise2::class.java))
-                        finish()
+                    } else {
+                        var body = enties?.get(0)?.body.toString()
 
-                    }
-                    if(body== "MILD THINNESS")
-                    {
-                        startActivity(Intent(applicationContext, Exercise2::class.java))
-                        finish()
 
-                    }
-                    if(body== "NORMAL")
-                    {
-                        startActivity(Intent(applicationContext, NormalActivity::class.java))
-                        finish()
-                    }
-                    if(body== "OVERWEIGHT")
-                    {
-                        startActivity(Intent(applicationContext, ExerciseI::class.java))
-                        finish()
-                    }
-                    if(body== "OBESE I")
-                    {
-                        startActivity(Intent(applicationContext, ExerciseI::class.java))
-                        finish()
-                    }
-                    if(body== "OBESE II")
-                    {
-                        startActivity(Intent(applicationContext, ExerciseI::class.java))
-                        finish()
+                        Log.e("majil", "=========>:$body ")
 
-                    }
-                    else
-                    {
+                        if (body == "SEVERE SKINNY") {
+                            startActivity(Intent(applicationContext, Exercise2::class.java))
+                            finish()
+                        }
+                        if (body == "MODERATE SKINNY") {
+                            startActivity(Intent(applicationContext, Exercise2::class.java))
+                            finish()
+                        }
+                        if (body == "MODERATE SKINNY") {
+                            startActivity(Intent(applicationContext, Exercise2::class.java))
+                            finish()
 
+                        }
+                        if (body == "MILD THINNESS") {
+                            startActivity(Intent(applicationContext, Exercise2::class.java))
+                            finish()
+
+                        }
+                        if (body == "NORMAL") {
+                            startActivity(Intent(applicationContext, NormalActivity::class.java))
+                            finish()
+                        }
+                        if (body == "OVERWEIGHT") {
+                            startActivity(Intent(applicationContext, ExerciseI::class.java))
+                            finish()
+                        }
+                        if (body == "OBESE I") {
+                            startActivity(Intent(applicationContext, ExerciseI::class.java))
+                            finish()
+                        }
+                        if (body == "OBESE II") {
+                            startActivity(Intent(applicationContext, ExerciseI::class.java))
+                            finish()
+
+                        } else {
+
+                        }
                     }
                 }
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
             }
 
             val FragmentManager= supportFragmentManager
@@ -221,6 +222,7 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
         {
             R.id.profile ->
             {
+
                 val intent = Intent(this@Dashboard,ShowProfileAct::class.java)
                 startActivity(intent)
                 this.finish()
@@ -246,68 +248,72 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
                 alertDialog.show()
 
             }
-            R.id.GotoExer  ->
-            {
+            R.id.GotoExer  -> {
                 InsDB = AppDatabase.getDatabase(applicationContext)
-                GlobalScope.launch(Dispatchers.IO) {
 
-                    var user=firebaseAuth.currentUser?.email
 
-                    var enties = user?.let { InsDB.userInfoDao().getAll(it) }
-                    Log.e("mello", "Shubh: $enties" + "" )
-                    launch(Dispatchers.Main) {
-                        var body= enties?.get(0)?.body.toString()
-                        Log.e("majil", "=========>:$body ")
+                    GlobalScope.launch(Dispatchers.IO) {
 
-                        if (body== "SEVERE SKINNY")
-                        {
-                            startActivity(Intent(applicationContext, Exercise2::class.java))
-                            finish()
-                        }
-                        if (body== "MODERATE SKINNY")
-                        {
-                            startActivity(Intent(applicationContext, Exercise2::class.java))
-                            finish()
-                        }
-                        if (body== "MODERATE SKINNY")
-                        {
-                            startActivity(Intent(applicationContext, Exercise2::class.java))
-                            finish()
+                        var user = firebaseAuth.currentUser?.email
 
-                        }
-                        if(body== "MILD THINNESS")
-                        {
-                            startActivity(Intent(applicationContext, Exercise2::class.java))
-                            finish()
+                        var enties = user?.let { InsDB.userInfoDao().getAll(it) }
+                        Log.e("mello", "Shubh: $enties" + "")
+                        launch(Dispatchers.Main) {
 
-                        }
-                        if(body== "NORMAL")
-                        {
-                            startActivity(Intent(applicationContext, NormalActivity::class.java))
-                            finish()
-                        }
-                        if(body== "OVERWEIGHT")
-                        {
-                            startActivity(Intent(applicationContext, ExerciseI::class.java))
-                            finish()
-                        }
-                        if(body== "OBESE I")
-                        {
-                            startActivity(Intent(applicationContext, ExerciseI::class.java))
-                            finish()
-                        }
-                        if(body== "OBESE II")
-                        {
-                            startActivity(Intent(applicationContext, ExerciseI::class.java))
-                            finish()
+                            if (enties!!.isEmpty()) {
+                                Toast.makeText(applicationContext,"CALCULATE BMI",Toast.LENGTH_SHORT).show()
 
-                        }
-                        else
-                        {
+                            } else {
 
+                                var body = enties?.get(0)?.body.toString()
+                                Log.e("majil", "=========>:$body ")
+
+                                if (body == "SEVERE SKINNY") {
+                                    startActivity(Intent(applicationContext, Exercise2::class.java))
+                                    finish()
+                                }
+                                if (body == "MODERATE SKINNY") {
+                                    startActivity(Intent(applicationContext, Exercise2::class.java))
+                                    finish()
+                                }
+                                if (body == "MODERATE SKINNY") {
+                                    startActivity(Intent(applicationContext, Exercise2::class.java))
+                                    finish()
+
+                                }
+                                if (body == "MILD THINNESS") {
+                                    startActivity(Intent(applicationContext, Exercise2::class.java))
+                                    finish()
+
+                                }
+                                if (body == "NORMAL") {
+                                    startActivity(
+                                        Intent(
+                                            applicationContext,
+                                            NormalActivity::class.java
+                                        )
+                                    )
+                                    finish()
+                                }
+                                if (body == "OVERWEIGHT") {
+                                    startActivity(Intent(applicationContext, ExerciseI::class.java))
+                                    finish()
+                                }
+                                if (body == "OBESE I") {
+                                    startActivity(Intent(applicationContext, ExerciseI::class.java))
+                                    finish()
+                                }
+                                if (body == "OBESE II") {
+                                    startActivity(Intent(applicationContext, ExerciseI::class.java))
+                                    finish()
+
+                                } else {
+
+                                }
+                            }
                         }
                     }
-                }
+
             }
             R.id.Share ->
             {

@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import com.example.feelfit.RoomDB.AppDatabase
 import com.example.feelfit.RoomDB.InfoEntityC
 import com.example.feelfit.databinding.ActivityShowProfileBinding
@@ -29,34 +30,36 @@ class ShowProfileAct : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        firebaseAuth= FirebaseAuth.getInstance()
-        var user=firebaseAuth.currentUser?.email
+        firebaseAuth = FirebaseAuth.getInstance()
+        var user = firebaseAuth.currentUser?.email
 
 
         binding.reccalculatebmi.setOnClickListener(View.OnClickListener {
             startActivity(Intent(this, BmiCalculator::class.java))
         })
 
-
-
         InsDB = AppDatabase.getDatabase(this@ShowProfileAct)
-
-
-        GlobalScope.launch(Dispatchers.IO) {
-
+            GlobalScope.launch(Dispatchers.IO) {
                 val enties = user?.let { InsDB.userInfoDao().getAll(it) }
                 launch(Dispatchers.Main) {
+                    if (enties!!.isEmpty()) {
+                        Toast.makeText(applicationContext,"Calculate your bmi",Toast.LENGTH_SHORT).show()
 
-                    binding.getemail.text = enties!![0].email
-                    binding.gen.text = enties[0].gender
-                    binding.height1.text = enties[0].height
-                    binding.weight1.text = enties[0].weight
-                    binding.age1.text = enties[0].age
-                    binding.body.text = enties[0].body
-                    binding.bmi.text = enties[0].bmi
+                    } else {
 
+                        binding.getemail.text = enties!![0].email
+                        binding.gen.text = enties[0].gender
+                        binding.height1.text = enties[0].height
+                        binding.weight1.text = enties[0].weight
+                        binding.age1.text = enties[0].age
+                        binding.body.text = enties[0].body
+                        binding.bmi.text = enties[0].bmi
+
+                    }
                 }
-        }
+            }
+
+
     }
 
     override fun onBackPressed() {
