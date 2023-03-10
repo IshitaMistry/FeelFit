@@ -32,7 +32,7 @@
                 android:id="@+id/run"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="BURPEES "
+                android:text="BURPEES"
                 android:fontFamily="@font/merriweatherblack"
                 android:textSize="25sp"
                 android:layout_marginStart="85dp"
@@ -64,7 +64,6 @@
             tools:ignore="HardcodedText"/>
 
         <Button
-
             android:id="@+id/diet4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -78,4 +77,6 @@
             tools:ignore="HardcodedText"/>
 
     </LinearLayout>
+
 </ScrollView>
+

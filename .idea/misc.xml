@@ -7,6 +7,7 @@
         <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/drawable/timmer.xml" value="0.1255" />
         <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_bmi_calculator.xml" value="0.20416666666666666" />
         <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_chickenchart.xml" value="0.18981481481481483" />
+        <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_custom_spinner.xml" value="0.20416666666666666" />
         <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_dashboard.xml" value="0.2" />
         <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_description.xml" value="0.18" />
         <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_diet_plan_one.xml" value="0.20416666666666666" />
@@ -28,9 +29,11 @@
         <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_gaining4.xml" value="0.20416666666666666" />
         <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_gaining5.xml" value="0.20416666666666666" />
         <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_gaining6.xml" value="0.20416666666666666" />
+        <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_intermittent_plan.xml" value="0.20416666666666666" />
         <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_item_gaining_exercise.xml" value="0.20416666666666666" />
         <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_item_normal_exercise.xml" value="0.20416666666666666" />
         <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_login2.xml" value="0.20416666666666666" />
+        <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_main.xml" value="0.18981481481481483" />
         <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_non_veg.xml" value="0.19010416666666666" />
         <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_normal.xml" value="0.20416666666666666" />
         <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_normal1.xml" value="0.20416666666666666" />
@@ -43,10 +46,13 @@
         <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_result_bmi.xml" value="0.20416666666666666" />
         <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_ricechart.xml" value="0.2" />
         <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_show_profile.xml" value="0.22" />
+        <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_show_steps.xml" value="0.20416666666666666" />
+        <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_splash.xml" value="0.20416666666666666" />
         <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_timer.xml" value="0.20416666666666666" />
         <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_veg.xml" value="0.20416666666666666" />
         <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_vegetablechart.xml" value="0.2" />
         <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_yogurtchart.xml" value="0.20416666666666666" />
+        <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/activity_yogurtchart2.xml" value="0.20416666666666666" />
         <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/fragment_exercise.xml" value="0.19010416666666666" />
         <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
         <entry key="..\:/project11/FeelFit_.zi_p/FeelFit/app/src/main/res/layout/fragment_nonveg.xml" value="0.22" />

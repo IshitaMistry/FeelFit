@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".showSteps"
-    android:background="@color/black"
+    android:background="@color/lightblue"
     android:orientation="horizontal">
 
     <TextView
@@ -16,8 +16,9 @@
         android:layout_marginTop="50dp"
         android:fontFamily="@font/merriweatherblack"
         android:text="PEDOMETER"
-        android:textColor="#86BFFC"
-        android:textSize="40dp" />
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -27,20 +28,20 @@
         android:layout_marginTop="20dp"
         android:fontFamily="@font/merriweatherblack"
         android:text="LONG PRESS TO SET ZERO"
-        android:textColor="#86BFFC"
-        android:textSize="20dp"
-
-        android:textStyle="bold" />
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
 
     <com.mikhaellopez.circularprogressbar.CircularProgressBar
         android:id="@+id/progress_circular"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_centerInParent="true"
-        app:cpb_background_progressbar_color="#86BFFC"
+        app:cpb_background_progressbar_color="@color/white"
         app:cpb_background_progressbar_width="20dp"
         app:cpb_progress_max="2500"
-        app:cpb_progressbar_color="#3D5AFE"
+        app:cpb_progressbar_color="@color/white"
         app:cpb_progressbar_width="15dp"
         app:cpb_round_border="true"
         tools:ignore="MissingClass" />
@@ -51,8 +52,9 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:text="0"
-        android:textColor="#86BFFC"
-        android:textSize="40dp" />
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/tv_totalMax"
@@ -61,8 +63,9 @@
         android:layout_below="@+id/tv_stepstaken"
         android:layout_centerInParent="true"
         android:text="/2500"
-        android:textColor="#86BFFC"
-        android:textSize="14dp"/>
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        tools:ignore="HardcodedText" />
 
 
 </RelativeLayout>

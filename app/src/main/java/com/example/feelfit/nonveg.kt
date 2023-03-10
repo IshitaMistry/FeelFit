@@ -52,8 +52,5 @@ class nonveg_diet_plan : Fragment() {
             startActivity(intent)
         }
         return view
-
     }
-
-
 }

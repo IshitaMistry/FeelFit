@@ -39,22 +39,28 @@
 
         </LinearLayout>
 
-        <androidx.cardview.widget.CardView
 
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="@color/lightblue">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Apple, Pear, Orange, Peach:\nMedium\nBanana: 1 small (about6' long)\nGrapefruit: Half of a medium.\nGrape: 16.\nKiwifruit: 1 medium\nMango: Half of a medium\nMelon: Half-inch thick wedge of sliced watermelon. \nPineapple: 1/4 of a medium Strawberry: 4 large."
-                android:layout_marginTop="30dp"
-                android:textSize="30sp"
-                android:textColor="@color/white"
-                android:background="@color/lightblue"
-                android:layout_marginEnd="30dp"
-                android:layout_marginStart="30dp"
-                tools:ignore="HardcodedText"/>
+                android:text="-Apple, Pear, Orange, Peach:\nMedium\nBanana: 1 small (about6' long)\nGrapefruit: Half of a medium.\nGrape: 16.\nKiwifruit: 1 medium\nMango: Half of a medium\nMelon: Half-inch thick wedge of sliced watermelon. \nPineapple: 1/4 of a medium Strawberry: 4 large."
+                tools:ignore="HardcodedText"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/merriweatherblack"
+                android:textColor="@color/white"/>
 
         </androidx.cardview.widget.CardView>
 

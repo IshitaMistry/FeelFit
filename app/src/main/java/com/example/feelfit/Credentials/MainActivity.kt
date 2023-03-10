@@ -1,4 +1,5 @@
 package com.example.feelfit.Credentials
+
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
@@ -10,10 +11,10 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
 class MainActivity : AppCompatActivity() {
+
     private lateinit var binding: ActivityMainBinding
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var database:DatabaseReference
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,8 +37,9 @@ class MainActivity : AppCompatActivity() {
 //            val cnfpass=binding.cnfPasswordRegister.toString()
 
 
-
             firebaseAuth.createUserWithEmailAndPassword(email,pass).addOnCompleteListener {
+
+
                 if(it.isSuccessful){
                     database=FirebaseDatabase.getInstance().getReference("Users")
                     val User= Users(name,email,pass)
@@ -49,15 +51,14 @@ class MainActivity : AppCompatActivity() {
                     }
                     intent=Intent(this, Login::class.java)
                     startActivity(intent)
-                }else{
 
+                }else{
                     Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
                 }
+
             }
-
-//
-
         }
-
     }
+
+
 }

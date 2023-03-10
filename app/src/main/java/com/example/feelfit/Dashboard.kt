@@ -1,5 +1,4 @@
 package com.example.feelfit
-
 import android.annotation.SuppressLint
 import android.app.AlarmManager
 import android.app.PendingIntent
@@ -8,15 +7,12 @@ import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
-import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import androidx.core.app.NotificationCompat
 import androidx.drawerlayout.widget.DrawerLayout
-import androidx.fragment.app.FragmentTransaction
 import com.example.feelfit.Credentials.Login
 import com.example.feelfit.GainingExercises.Exercise2
 import com.example.feelfit.LosingExercise.ExerciseI
@@ -27,10 +23,10 @@ import com.google.android.material.bottomnavigation.BottomNavigationItemView
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-import kotlin.math.log
 
 class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedListener {
     private lateinit var firebaseAuth: FirebaseAuth
@@ -42,10 +38,7 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
     private lateinit var toggle: ActionBarDrawerToggle
     lateinit var drawerLayout: DrawerLayout
 
-
-
-
-    @SuppressLint("SuspiciousIndentation")
+    @SuppressLint("SuspiciousIndentation", "LogNotTimber", "UnspecifiedImmutableFlag")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDashboardBinding.inflate(layoutInflater)
@@ -56,7 +49,7 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
         btn.setOnClickListener {
             val intent = Intent(applicationContext,ShowProfileAct::class.java)
             startActivity(intent)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             val FragmentManager= supportFragmentManager
             val FragmentTransaction=FragmentManager.beginTransaction()
             FragmentTransaction.replace(R.id.fragment,home())
@@ -67,22 +60,18 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
         val btn2 = findViewById<BottomNavigationItemView>(R.id.exercise)
         btn2.setOnClickListener {
             InsDB = AppDatabase.getDatabase(applicationContext)
-
-
             GlobalScope.launch(Dispatchers.IO) {
 
-                var user = firebaseAuth.currentUser?.email
+                val user=firebaseAuth.currentUser?.email
 
-                var enties = user?.let { InsDB.userInfoDao().getAll(it) }
-                Log.e("mello", "Shubh: $enties" + "")
+                val enties = user?.let { InsDB.userInfoDao().getAll(it) }
+                Log.e("mello", "Shubh: $enties" + "" )
                 launch(Dispatchers.Main) {
                     if (enties!!.isEmpty()) {
-                        Toast.makeText(applicationContext,"Calculate your BMI First",Toast.LENGTH_SHORT).show()
-
+                        Toast.makeText(applicationContext, "CALCULATE YOUR BMI", Toast.LENGTH_SHORT)
+                            .show()
                     } else {
-                        var body = enties?.get(0)?.body.toString()
-
-
+                        val body = enties?.get(0)?.body.toString()
                         Log.e("majil", "=========>:$body ")
 
                         if (body == "SEVERE SKINNY") {
@@ -124,7 +113,7 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
                         }
                     }
                 }
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
             }
 
             val FragmentManager= supportFragmentManager
@@ -187,7 +176,7 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
 
         binding.buttonCalculate.setOnClickListener {
             intent = Intent(this@Dashboard, BmiCalculator::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
             startActivity(intent)
         }
 
@@ -215,6 +204,8 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
     }
     lateinit var InsDB: AppDatabase
 
+    @OptIn(DelicateCoroutinesApi::class)
+    @SuppressLint("LogNotTimber")
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
 
         Log.e("majil", "=========>:$item ")
@@ -222,7 +213,6 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
         {
             R.id.profile ->
             {
-
                 val intent = Intent(this@Dashboard,ShowProfileAct::class.java)
                 startActivity(intent)
                 this.finish()
@@ -236,7 +226,7 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
                     .setPositiveButton("Yes"){dialogInterface,it ->
                         firebaseAuth.signOut()
                         intent= Intent(applicationContext, Login::class.java)
-                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
                         startActivity(intent)
                         this.finish()
                     }
@@ -248,72 +238,70 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
                 alertDialog.show()
 
             }
-            R.id.GotoExer  -> {
+            R.id.GotoExer  ->
+            {
                 InsDB = AppDatabase.getDatabase(applicationContext)
+                GlobalScope.launch(Dispatchers.IO) {
+
+                    val user=firebaseAuth.currentUser?.email
+
+                    val enties = user?.let { InsDB.userInfoDao().getAll(it) }
+                    Log.e("mello", "Shubh: $enties" + "" )
+                    launch(Dispatchers.Main) {
+                        if (enties!!.isEmpty()) {
+                            Toast.makeText(applicationContext, "CALCULATE BMI", Toast.LENGTH_SHORT)
+                                .show()
+                        } else {
 
 
-                    GlobalScope.launch(Dispatchers.IO) {
+                            val body = enties?.get(0)?.body.toString()
+                            Log.e("majil", "=========>:$body ")
 
-                        var user = firebaseAuth.currentUser?.email
+                            if (body == "SEVERE SKINNY") {
+                                startActivity(Intent(applicationContext, Exercise2::class.java))
+                                finish()
+                            }
+                            if (body == "MODERATE SKINNY") {
+                                startActivity(Intent(applicationContext, Exercise2::class.java))
+                                finish()
+                            }
+                            if (body == "MODERATE SKINNY") {
+                                startActivity(Intent(applicationContext, Exercise2::class.java))
+                                finish()
 
-                        var enties = user?.let { InsDB.userInfoDao().getAll(it) }
-                        Log.e("mello", "Shubh: $enties" + "")
-                        launch(Dispatchers.Main) {
+                            }
+                            if (body == "MILD THINNESS") {
+                                startActivity(Intent(applicationContext, Exercise2::class.java))
+                                finish()
 
-                            if (enties!!.isEmpty()) {
-                                Toast.makeText(applicationContext,"CALCULATE BMI",Toast.LENGTH_SHORT).show()
+                            }
+                            if (body == "NORMAL") {
+                                startActivity(
+                                    Intent(
+                                        applicationContext,
+                                        NormalActivity::class.java
+                                    )
+                                )
+                                finish()
+                            }
+                            if (body == "OVERWEIGHT") {
+                                startActivity(Intent(applicationContext, ExerciseI::class.java))
+                                finish()
+                            }
+                            if (body == "OBESE I") {
+                                startActivity(Intent(applicationContext, ExerciseI::class.java))
+                                finish()
+                            }
+                            if (body == "OBESE II") {
+                                startActivity(Intent(applicationContext, ExerciseI::class.java))
+                                finish()
 
                             } else {
 
-                                var body = enties?.get(0)?.body.toString()
-                                Log.e("majil", "=========>:$body ")
-
-                                if (body == "SEVERE SKINNY") {
-                                    startActivity(Intent(applicationContext, Exercise2::class.java))
-                                    finish()
-                                }
-                                if (body == "MODERATE SKINNY") {
-                                    startActivity(Intent(applicationContext, Exercise2::class.java))
-                                    finish()
-                                }
-                                if (body == "MODERATE SKINNY") {
-                                    startActivity(Intent(applicationContext, Exercise2::class.java))
-                                    finish()
-
-                                }
-                                if (body == "MILD THINNESS") {
-                                    startActivity(Intent(applicationContext, Exercise2::class.java))
-                                    finish()
-
-                                }
-                                if (body == "NORMAL") {
-                                    startActivity(
-                                        Intent(
-                                            applicationContext,
-                                            NormalActivity::class.java
-                                        )
-                                    )
-                                    finish()
-                                }
-                                if (body == "OVERWEIGHT") {
-                                    startActivity(Intent(applicationContext, ExerciseI::class.java))
-                                    finish()
-                                }
-                                if (body == "OBESE I") {
-                                    startActivity(Intent(applicationContext, ExerciseI::class.java))
-                                    finish()
-                                }
-                                if (body == "OBESE II") {
-                                    startActivity(Intent(applicationContext, ExerciseI::class.java))
-                                    finish()
-
-                                } else {
-
-                                }
                             }
                         }
                     }
-
+                }
             }
             R.id.Share ->
             {
@@ -330,6 +318,7 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
        // drawerLayout.closeDrawer(GravityCompat.START)
         return true
          }
+    @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         super.onBackPressed()
         builder.setTitle("FeelFit")
@@ -338,7 +327,7 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
             .setPositiveButton("Yes"){dialogInterface,it ->
                 firebaseAuth.signOut()
                 intent= Intent(applicationContext, Login::class.java)
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
                 startActivity(intent)
                 this.finish()
             }

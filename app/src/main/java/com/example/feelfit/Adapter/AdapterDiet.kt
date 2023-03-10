@@ -10,8 +10,6 @@ import com.example.feelfit.nonveg_diet_plan
 class AdapterDiet(private val myContext: Context, fm: FragmentManager, private var totalTabs: Int): FragmentPagerAdapter(fm)
 
 {
-
-
     override fun getItem(position: Int): Fragment {
 
         return when (position) {
@@ -30,7 +28,6 @@ class AdapterDiet(private val myContext: Context, fm: FragmentManager, private v
         }
     }
     override fun getCount(): Int {
-
         return totalTabs
     }
 

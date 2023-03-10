@@ -9,16 +9,13 @@
     android:background="@color/white"
     tools:context=".Dashboard">
 
-
   <FrameLayout
       android:layout_width="match_parent"
       android:layout_height="match_parent">
 
   <RelativeLayout
-
       android:layout_width="match_parent"
       android:layout_height="wrap_content">
-
     <include layout="@layout/toolbar"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -26,9 +23,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:background="@color/lightblue"
         app:defaultNavHost="true"
+        app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white"
         app:menu="@menu/bottomnavigation" />
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -36,7 +35,6 @@
         android:orientation="vertical">
 
       <androidx.cardview.widget.CardView
-
           android:id="@+id/cardView"
           android:layout_width="match_parent"
           android:layout_height="200dp"
@@ -56,10 +54,9 @@
             android:text="WELCOME"
             android:textColor="@color/white"
             android:textSize="25sp"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText"/>
 
         <TextView
-
             android:id="@+id/user_mail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -70,7 +67,7 @@
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText"/>
 
       </androidx.cardview.widget.CardView>
 
@@ -93,7 +90,7 @@
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText"/>
 
         <ImageView
             android:layout_width="100dp"
@@ -101,7 +98,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="35dp"
-            android:src="@drawable/bmi" />
+            android:src="@drawable/bmi"/>
 
         <android.widget.Button
             android:id="@+id/buttonCalculate"
@@ -114,7 +111,7 @@
             android:text="CALCULATE BMI"
             android:textColor="@color/lightblue"
             android:textSize="20sp"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText"/>
 
       </androidx.cardview.widget.CardView>
 
@@ -134,14 +131,9 @@
       app:headerLayout="@layout/header"
       app:menu="@menu/menu"/>
 
-
-
   <androidx.fragment.app.FragmentContainerView
       android:layout_width="match_parent"
       android:layout_height="600dp"
-      android:id="@+id/fragment" />
-
-
-
+      android:id="@+id/fragment"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -67,5 +67,6 @@ class ShowProfileAct : AppCompatActivity() {
         startActivity(Intent(applicationContext,Dashboard::class.java))
         intent.addFlags( Intent.FLAG_ACTIVITY_CLEAR_TASK)
         this.finish()
+
     }
 }

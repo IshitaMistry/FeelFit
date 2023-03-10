@@ -9,7 +9,6 @@
     <uses-permission android:name="android.permission.BODY_SENSORS" />
     <uses-permission android:name="android.hardware.sensor.proximity" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.VIBRATE" />
@@ -24,6 +23,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FeelFit"
         tools:targetApi="31">
+        <activity
+            android:name=".customSpinner"
+            android:exported="false" />
+        <activity
+            android:name=".IntermittentPlan"
+            android:exported="false" />
         <activity
             android:name=".Reminder"
             android:exported="false">

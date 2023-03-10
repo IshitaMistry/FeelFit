@@ -114,9 +114,8 @@
             android:layout_marginTop="55dp"
             android:text="SUBMIT"
             android:fontFamily="@font/merriweatherblack"
-
             android:textSize="20sp"
-            tools:ignore="HardcodedText"/>
+            tools:ignore="HardcodedText,UsingOnClickInXml"/>
 
 
         <LinearLayout
@@ -142,10 +141,9 @@
                 android:id="@+id/Regis"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="5dp"
                 android:text="Register"
                 android:fontFamily="@font/merriweatherblack"
-
                 style="bold"
                 android:textColor="@color/white"
                 tools:ignore="HardcodedText"/>
