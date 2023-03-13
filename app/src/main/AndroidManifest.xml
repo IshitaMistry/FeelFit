@@ -24,10 +24,10 @@
         android:theme="@style/Theme.FeelFit"
         tools:targetApi="31">
         <activity
-            android:name=".DietPlan.DietPlanTwo"
+            android:name=".eggschart"
             android:exported="false" />
         <activity
-            android:name=".eggschart"
+            android:name=".DietPlan.DietPlanTwo"
             android:exported="false" />
         <activity
             android:name=".chickenchart"
