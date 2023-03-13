@@ -130,10 +130,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
-                    android:text="LUNCH"
+                    android:text="DINNER"
                     android:textColor="@color/white"
                     android:textSize="15sp"
-                    android:backgroundTint="#129C8F"
+                    android:backgroundTint="#6C129C"
                     android:fontFamily="@font/merriweatherblack"
                     tools:ignore="HardcodedText"/>
 
@@ -160,7 +160,7 @@
                     android:text="More info about intermitent fasting"
                     android:textColor="@color/white"
                     android:textSize="15sp"
-                    android:backgroundTint="#129C8F"
+                    android:backgroundTint="#12359C"
                     android:fontFamily="@font/merriweatherblack"
                     tools:ignore="HardcodedText"/>
 

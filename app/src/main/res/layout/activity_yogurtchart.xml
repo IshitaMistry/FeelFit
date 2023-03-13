@@ -19,7 +19,7 @@
             android:layout_marginTop="30dp">
 
             <ImageView
-                android:id="@+id/arrowf"
+                android:id="@+id/arrowyogurt"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="20dp"

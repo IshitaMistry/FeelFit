@@ -1,5 +1,6 @@
 package com.example.feelfit
 
+import android.annotation.SuppressLint
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
@@ -14,6 +15,7 @@ class water: BroadcastReceiver() {
         showNotification(context!!, "Shubham", "DRINK WATER", "Drink Water")
 
     }
+    @SuppressLint("UnspecifiedImmutableFlag")
     private fun showNotification(
         context: Context,
         ChannelID: String,

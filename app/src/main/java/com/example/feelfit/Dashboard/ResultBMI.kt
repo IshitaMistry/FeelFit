@@ -27,10 +27,7 @@ class ResultBMI : AppCompatActivity() {
     var intweight = 1.0f
     var mbmi: String? =null
 
-
     lateinit var InsDB: AppDatabase
-
-
 
     @OptIn(DelicateCoroutinesApi::class)
     @SuppressLint("ResourceAsColor", "SetTextI18n", "LogNotTimber")
@@ -59,7 +56,6 @@ class ResultBMI : AppCompatActivity() {
         intweight = weight!!.toFloat()
 
         intheight = intheight /100
-
 
         intbmi = intweight/(intheight * intheight)
         mbmi = java.lang.Float.toString(intbmi)
@@ -165,6 +161,7 @@ class ResultBMI : AppCompatActivity() {
 
         }
     }
+    @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         super.onBackPressed()
         startActivity(Intent(applicationContext, Dashboard::class.java))
