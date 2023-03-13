@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.feelfit.*
 import com.example.feelfit.Adapter.customAdapter3
+import com.example.feelfit.Dashboard.Dashboard
 
 class NormalActivity : AppCompatActivity(), customAdapter3.MyClickListener {
     @SuppressLint("MissingInflatedId")

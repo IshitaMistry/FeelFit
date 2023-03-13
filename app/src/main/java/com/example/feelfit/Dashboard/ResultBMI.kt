@@ -1,4 +1,4 @@
-package com.example.feelfit
+package com.example.feelfit.Dashboard
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -159,7 +159,7 @@ class ResultBMI : AppCompatActivity() {
     }
     override fun onBackPressed() {
         super.onBackPressed()
-        startActivity(Intent(applicationContext,Dashboard::class.java))
+        startActivity(Intent(applicationContext, Dashboard::class.java))
         intent.addFlags( Intent.FLAG_ACTIVITY_CLEAR_TASK)
         this.finish()
     }

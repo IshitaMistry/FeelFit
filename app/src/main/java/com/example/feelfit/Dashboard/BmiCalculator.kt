@@ -1,4 +1,4 @@
-package com.example.feelfit
+package com.example.feelfit.Dashboard
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
@@ -127,7 +127,7 @@ class BmiCalculator : AppCompatActivity()
             }
             else
             {
-                intent = Intent(this,ResultBMI::class.java)
+                intent = Intent(this, ResultBMI::class.java)
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
                 val intSelectButton: Int = binding.btn!!.checkedRadioButtonId
@@ -151,8 +151,9 @@ class BmiCalculator : AppCompatActivity()
     }
     override fun onBackPressed() {
         super.onBackPressed()
-        startActivity(Intent(this,Dashboard::class.java))
+        startActivity(Intent(this, Dashboard::class.java))
         intent.addFlags( Intent.FLAG_ACTIVITY_CLEAR_TASK)
+        this.finish()
 
         this.finish()
     }

@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.feelfit.*
 import com.example.feelfit.Adapter.customAdapter
+import com.example.feelfit.Dashboard.Dashboard
 import java.util.ArrayList
 
 class ExerciseI : AppCompatActivity(), customAdapter.MyClickListener {
@@ -28,6 +29,7 @@ class ExerciseI : AppCompatActivity(), customAdapter.MyClickListener {
         data.add(itemview(R.drawable.gain4, R.drawable.burpeesexercise,"BURPESS"))
         data.add(itemview(R.drawable.gain5, R.drawable.pushup,"PUSHUP"))
         data.add(itemview(R.drawable.gain6, R.drawable.crunchess,"CRUNCHES"))
+        data.add(itemview(R.drawable.seven,R.drawable.no,"INTERMITENT\n FASTING"))
 
         val adapter = customAdapter(data,this@ExerciseI)
         recyclerView.adapter=adapter
@@ -51,12 +53,15 @@ class ExerciseI : AppCompatActivity(), customAdapter.MyClickListener {
             3 -> {startActivity(Intent(this, Exercise_details_four::class.java))}
             4 -> {startActivity(Intent(this, Exercise_details_five::class.java))}
             5 -> {startActivity(Intent(this, Exercise_details_six::class.java))}
+            6 ->{startActivity(Intent(this,IntermittentPlan::class.java))}
         }
     }
 
     override fun onBackPressed() {
         super.onBackPressed()
         startActivity(Intent(applicationContext, Dashboard::class.java))
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+
         finish()
     }
 }

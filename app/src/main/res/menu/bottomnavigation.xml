@@ -5,7 +5,7 @@
 
     <item
         android:id="@+id/profile"
-        android:icon="@drawable/ic_baseline_person_outline_24"
+        android:icon="@drawable/profi"
         android:title="Profile"
         tools:ignore="HardcodedText"/>
 

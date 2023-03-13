@@ -1,4 +1,4 @@
-package com.example.feelfit
+package com.example.feelfit.Dashboard
 import android.annotation.SuppressLint
 import android.app.AlarmManager
 import android.app.PendingIntent
@@ -13,6 +13,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
+import com.example.feelfit.*
 import com.example.feelfit.Credentials.Login
 import com.example.feelfit.GainingExercises.Exercise2
 import com.example.feelfit.LosingExercise.ExerciseI
@@ -47,12 +48,12 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
         //--------------Main Fragments-------------------------//
         val btn = findViewById<BottomNavigationItemView>(R.id.profile)
         btn.setOnClickListener {
-            val intent = Intent(applicationContext,ShowProfileAct::class.java)
+            val intent = Intent(applicationContext, ShowProfileAct::class.java)
             startActivity(intent)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             val FragmentManager= supportFragmentManager
             val FragmentTransaction=FragmentManager.beginTransaction()
-            FragmentTransaction.replace(R.id.fragment,home())
+            FragmentTransaction.replace(R.id.fragment, home())
             FragmentTransaction.commit()
 
         }
@@ -118,20 +119,14 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
 
             val FragmentManager= supportFragmentManager
             val FragmentTransaction=FragmentManager.beginTransaction()
-            FragmentTransaction.replace(R.id.fragment,home())
+            FragmentTransaction.replace(R.id.fragment, home())
             FragmentTransaction.commit()
 
         }
 
 
-
-
-
-      //  startActivity(Intent(applicationContext,Reminder::class.java))
-
-        //-------------------------------------------------------------------------------------
-
-
+         //  startActivity(Intent(applicationContext,Reminder::class.java))
+        // ------------------------------------------------------------------------------------------------------------
 
 
         builder=AlertDialog.Builder(this)
@@ -143,13 +138,13 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
 
 
         setSupportActionBar(toolbar)
-        toggle = ActionBarDrawerToggle(this,drawerLayout,R.string.nav_open,R.string.nav_close)
+        toggle = ActionBarDrawerToggle(this,drawerLayout, R.string.nav_open, R.string.nav_close)
         drawerLayout.addDrawerListener(toggle)
         toggle.isDrawerIndicatorEnabled=true
         toggle.syncState()
 
         // notification for water
-//--------------------------------------______________________________________________________
+//_______________________________________________________________________________________________________________________
        var intent = Intent(this, water::class.java)
         val pendingIntent: PendingIntent
         pendingIntent = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -161,18 +156,19 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
         alarmManager.setRepeating(
             AlarmManager.RTC_WAKEUP,
             System.currentTimeMillis(),
-            REMINDER_INTERVAL_MILLIS.toLong(),
-            pendingIntent
-        )
+            REMINDER_INTERVAL_MILLIS.toLong(), pendingIntent)
 
-//_______________________________________________//____________________________________________________//______________
-//____________________________________________//____________________________________________________________________//______
+//_______________________________________________________________________________________________________________________
+//_______________________________________________________________________________________________________________________
 
         navigationView.setNavigationItemSelectedListener(this)
         navigationView.bringToFront()
         supportActionBar!!.setHomeButtonEnabled(true)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setDisplayUseLogoEnabled(true)
+
+
+
 
         binding.buttonCalculate.setOnClickListener {
             intent = Intent(this@Dashboard, BmiCalculator::class.java)
@@ -182,8 +178,6 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
 
         firebaseAuth= FirebaseAuth.getInstance()
         var user=firebaseAuth.currentUser?.email
-
-
 
         firebaseUser = FirebaseAuth.getInstance().currentUser!!
             binding.userMail.setText(firebaseUser.email)
@@ -208,12 +202,12 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
     @SuppressLint("LogNotTimber")
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
 
-        Log.e("majil", "=========>:$item ")
+       // Log.e("majil", "=========>:$item ")
         when(item.itemId)
         {
             R.id.profile ->
             {
-                val intent = Intent(this@Dashboard,ShowProfileAct::class.java)
+                val intent = Intent(this@Dashboard, ShowProfileAct::class.java)
                 startActivity(intent)
                 this.finish()
             }
@@ -238,7 +232,7 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
                 alertDialog.show()
 
             }
-            R.id.GotoExer  ->
+            R.id.GotoExer ->
             {
                 InsDB = AppDatabase.getDatabase(applicationContext)
                 GlobalScope.launch(Dispatchers.IO) {
@@ -328,15 +322,13 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
                 firebaseAuth.signOut()
                 intent= Intent(applicationContext, Login::class.java)
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                this.finish()
                 startActivity(intent)
                 this.finish()
             }
             .setNegativeButton("No"){dialogInterface,it ->
                 dialogInterface.cancel()
             }
-       // val alertDialog = builder.create()
-        // Show the Alert Dialog box
-        //alertDialog.show()
 
     }
 
