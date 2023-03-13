@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import com.example.feelfit.DietPlanGain.*
 
 
 class nonveg_diet_plan : Fragment() {
@@ -25,30 +26,30 @@ class nonveg_diet_plan : Fragment() {
         val view= inflater.inflate(R.layout.fragment_nonveg, container, false)
         val fruit1 = view.findViewById<LinearLayout>(R.id.fruit2)
         fruit1.setOnClickListener{
-            val intent = Intent(activity,fruitschart::class.java)
+            val intent = Intent(activity, fruitschart::class.java)
             startActivity(intent)
         }
 
         val veges2 = view.findViewById<LinearLayout>(R.id.vege2)
         veges2.setOnClickListener {
-            val intent = Intent(activity,vegetablechart::class.java)
+            val intent = Intent(activity, vegetablechart::class.java)
             startActivity(intent)
         }
 
         val chicken = view.findViewById<LinearLayout>(R.id.chicken1)
         chicken.setOnClickListener {
-            val intent = Intent(activity,chickenchart::class.java)
+            val intent = Intent(activity, chickenchart::class.java)
             startActivity(intent)
         }
 
         val yogs11 = view.findViewById<LinearLayout>(R.id.yogs)
         yogs11.setOnClickListener {
-            val intent = Intent(activity,yogurtchart::class.java)
+            val intent = Intent(activity, yogurtchart::class.java)
             startActivity(intent)
         }
         val egg = view.findViewById<LinearLayout>(R.id.eggss)
         egg.setOnClickListener {
-            val intent = Intent(activity,eggcgart::class.java)
+            val intent = Intent(activity, eggcgart::class.java)
             startActivity(intent)
         }
         return view

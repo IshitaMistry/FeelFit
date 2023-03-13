@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.feelfit.*
 import com.example.feelfit.Adapter.customAdapter2
+import com.example.feelfit.Dashboard.Dashboard
 
 class Exercise2 : AppCompatActivity(), customAdapter2.MyClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {

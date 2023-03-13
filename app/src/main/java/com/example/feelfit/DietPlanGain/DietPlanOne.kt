@@ -1,4 +1,4 @@
-package com.example.feelfit.DietPlan
+package com.example.feelfit.DietPlanGain
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -1,4 +1,4 @@
-package com.example.feelfit
+package com.example.feelfit.Sensors
 
 import android.content.Context
 import android.hardware.Sensor
@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.feelfit.R
 
 class ProximitySensor : AppCompatActivity() {
 

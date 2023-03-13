@@ -1,10 +1,12 @@
-package com.example.feelfit
+package com.example.feelfit.Dashboard
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.example.feelfit.R
 import com.example.feelfit.RoomDB.AppDatabase
 import com.example.feelfit.RoomDB.InfoEntityC
 import com.example.feelfit.databinding.ActivityShowProfileBinding
@@ -20,8 +22,8 @@ class ShowProfileAct : AppCompatActivity() {
 
     lateinit var binding: ActivityShowProfileBinding
     lateinit var InsDB: AppDatabase
-    var UserList = listOf<InfoEntityC>()
 
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_show_profile)
@@ -36,7 +38,10 @@ class ShowProfileAct : AppCompatActivity() {
 
         binding.reccalculatebmi.setOnClickListener(View.OnClickListener {
             startActivity(Intent(this, BmiCalculator::class.java))
+            intent.addFlags( Intent.FLAG_ACTIVITY_CLEAR_TASK)
         })
+
+        // RECALCULATE BMI
 
         InsDB = AppDatabase.getDatabase(this@ShowProfileAct)
             GlobalScope.launch(Dispatchers.IO) {
@@ -64,8 +69,9 @@ class ShowProfileAct : AppCompatActivity() {
 
     override fun onBackPressed() {
         super.onBackPressed()
-        startActivity(Intent(applicationContext,Dashboard::class.java))
-        intent.addFlags( Intent.FLAG_ACTIVITY_CLEAR_TASK)
+        startActivity(Intent(applicationContext, Dashboard::class.java))
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         this.finish()
 
     }

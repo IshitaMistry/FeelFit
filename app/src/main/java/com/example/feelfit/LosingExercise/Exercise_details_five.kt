@@ -5,8 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
-import com.example.feelfit.DietPlan.DietPlanOne
-import com.example.feelfit.ProximitySensor
+import com.example.feelfit.DietPlanGain.DietPlanOne
+import com.example.feelfit.Sensors.ProximitySensor
 import com.example.feelfit.R
 import com.example.feelfit.databinding.ActivityExerciseDetailsFiveBinding
 
@@ -23,6 +23,8 @@ class Exercise_details_five : AppCompatActivity() {
 
             intent= Intent(applicationContext, ProximitySensor::class.java)
             startActivity(intent)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             finish()
 
 
@@ -32,6 +34,8 @@ class Exercise_details_five : AppCompatActivity() {
         dietfive.setOnClickListener {
             intent=Intent(this, DietPlanOne::class.java)
             startActivity(intent)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             finish()
         }
 
@@ -39,6 +43,8 @@ class Exercise_details_five : AppCompatActivity() {
         arrow5.setOnClickListener {
             intent = Intent(this, ExerciseI::class.java)
             startActivity(intent)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             finish()
         }
 

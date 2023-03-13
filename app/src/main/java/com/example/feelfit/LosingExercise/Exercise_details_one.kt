@@ -5,11 +5,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
-import com.example.feelfit.DietPlan.DietPlanOne
+import com.example.feelfit.DietPlanGain.DietPlanOne
 import com.example.feelfit.IntermittentPlan
 import com.example.feelfit.R
 import com.example.feelfit.databinding.ActivityExerciseDetailsOneBinding
-import com.example.feelfit.showSteps
+import com.example.feelfit.Sensors.showSteps
 
 class Exercise_details_one : AppCompatActivity() {
     private lateinit var binding: ActivityExerciseDetailsOneBinding

@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.feelfit.Dashboard.BmiCalculator
 import com.example.feelfit.RoomDB.AppDatabase
 import com.example.feelfit.RoomDB.InfoEntityC
 import com.example.feelfit.databinding.FragmentProfileBinding

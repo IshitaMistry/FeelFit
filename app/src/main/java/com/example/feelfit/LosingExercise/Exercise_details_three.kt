@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
-import com.example.feelfit.DietPlan.DietPlanOne
+import com.example.feelfit.DietPlanGain.DietPlanOne
 import com.example.feelfit.R
 
 class Exercise_details_three : AppCompatActivity() {
@@ -25,6 +25,7 @@ class Exercise_details_three : AppCompatActivity() {
         arrow3.setOnClickListener {
             intent = Intent(this, ExerciseI::class.java)
             startActivity(intent)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
             finish()
         }
 

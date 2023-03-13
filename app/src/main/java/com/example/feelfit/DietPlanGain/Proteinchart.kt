@@ -1,11 +1,16 @@
-package com.example.feelfit
-
+package com.example.feelfit.DietPlanGain
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.feelfit.R
 
-class vegetablechart : AppCompatActivity() {
+class proteinchart : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_vegetablechart)
+        setContentView(R.layout.activity_proteinchart)
+
+
+
     }
+
+
 }

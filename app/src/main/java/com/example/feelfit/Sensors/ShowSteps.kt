@@ -1,6 +1,5 @@
-package com.example.feelfit
+package com.example.feelfit.Sensors
 import android.Manifest
-import android.Manifest.permission.ACTIVITY_RECOGNITION
 import android.content.Context
 import android.content.pm.PackageManager
 import android.hardware.Sensor

@@ -4,18 +4,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.example.feelfit.Dashboard
-import com.example.feelfit.GainingExercises.Exercise2
-import com.example.feelfit.LosingExercise.ExerciseI
-import com.example.feelfit.NormalExercise.NormalActivity
+import com.example.feelfit.Dashboard.Dashboard
 import com.example.feelfit.RoomDB.AppDatabase
 import com.example.feelfit.databinding.ActivitySplashBinding
 import com.google.firebase.auth.FirebaseAuth
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
 
 class SplashActivity : AppCompatActivity() {
 

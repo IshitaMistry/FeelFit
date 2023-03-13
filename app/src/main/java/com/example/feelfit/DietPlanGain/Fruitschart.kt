@@ -1,9 +1,11 @@
-package com.example.feelfit
+package com.example.feelfit.DietPlanGain
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.example.feelfit.Description
+import com.example.feelfit.R
 
 class fruitschart : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,7 +14,7 @@ class fruitschart : AppCompatActivity() {
 
         val desc1 = findViewById<Button>(R.id.desc)
         desc1.setOnClickListener {
-            intent=Intent(this,Description::class.java)
+            intent=Intent(this, Description::class.java)
             startActivity(intent)
             finish()
         }

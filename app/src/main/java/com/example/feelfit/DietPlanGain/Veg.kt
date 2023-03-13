@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import com.example.feelfit.DietPlanGain.*
 
 
 class VegDietPlan : Fragment() {
@@ -27,31 +28,31 @@ class VegDietPlan : Fragment() {
 
         val fruits1 = view.findViewById<LinearLayout>(R.id.fruitsOne)
         fruits1.setOnClickListener{
-            val intent = Intent(activity,fruitschart::class.java)
+            val intent = Intent(activity, fruitschart::class.java)
             startActivity(intent)
 
         }
         val vege1 =  view.findViewById<LinearLayout>(R.id.vege)
         vege1.setOnClickListener {
-            val intent = Intent(activity,vegetablechart::class.java)
+            val intent = Intent(activity, vegetablechart::class.java)
             startActivity(intent)
         }
 
         val rice1 = view.findViewById<LinearLayout>(R.id.rice)
         rice1.setOnClickListener {
-            val intent = Intent(activity,ricechart::class.java)
+            val intent = Intent(activity, ricechart::class.java)
             startActivity(intent)
         }
 
         val yogurt1 = view.findViewById<LinearLayout>(R.id.yogurt)
         yogurt1.setOnClickListener {
-            val intent = Intent(activity,yogurtchart::class.java)
+            val intent = Intent(activity, yogurtchart::class.java)
             startActivity(intent)
         }
 
         val proteinshakes = view.findViewById<LinearLayout>(R.id.protein)
         proteinshakes.setOnClickListener {
-            val intent = Intent(activity,proteinchart::class.java)
+            val intent = Intent(activity, proteinchart::class.java)
             startActivity(intent)
         }
         return view

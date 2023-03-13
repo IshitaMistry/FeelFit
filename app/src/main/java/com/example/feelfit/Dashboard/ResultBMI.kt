@@ -1,4 +1,4 @@
-package com.example.feelfit
+package com.example.feelfit.Dashboard
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -131,24 +131,32 @@ class ResultBMI : AppCompatActivity() {
                 intent=Intent(
                     this, Exercise2::class.java)
                 startActivity(intent)
+                intent.addFlags( Intent.FLAG_ACTIVITY_CLEAR_TASK)
+
                 finish()
             }
 
         else if(intbmi >=15 && intbmi <=18.49) {
             intent=Intent(this, Exercise2
             ::class.java)
-            startActivity(intent)
+                startActivity(intent)
+                intent.addFlags( Intent.FLAG_ACTIVITY_CLEAR_TASK)
+
                 finish()
 
         }else if(intbmi >=18.5 && intbmi <=24.9){
             intent=Intent(this, NormalActivity::class.java)
             startActivity(intent)
+                intent.addFlags( Intent.FLAG_ACTIVITY_CLEAR_TASK)
+
                 finish()
 
 
         }else if (intbmi > 24.9 ){
             intent=Intent(this, ExerciseI::class.java)
             startActivity(intent)
+                intent.addFlags( Intent.FLAG_ACTIVITY_CLEAR_TASK)
+
                 finish()
 
         }else{
@@ -159,8 +167,7 @@ class ResultBMI : AppCompatActivity() {
     }
     override fun onBackPressed() {
         super.onBackPressed()
-        startActivity(Intent(applicationContext,Dashboard::class.java))
-        intent.addFlags( Intent.FLAG_ACTIVITY_CLEAR_TASK)
+        startActivity(Intent(applicationContext, Dashboard::class.java))
         this.finish()
     }
 }

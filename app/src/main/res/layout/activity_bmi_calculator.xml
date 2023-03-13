@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#3C8DCD"
-    tools:context=".BmiCalculator">
+    tools:context=".Dashboard.BmiCalculator">
 
     <RelativeLayout
         android:layout_width="match_parent"

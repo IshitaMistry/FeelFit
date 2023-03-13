@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.feelfit.*
 import com.example.feelfit.Adapter.customAdapter3
+import com.example.feelfit.Dashboard.Dashboard
 
 class NormalActivity : AppCompatActivity(), customAdapter3.MyClickListener {
     @SuppressLint("MissingInflatedId")
@@ -47,22 +48,32 @@ class NormalActivity : AppCompatActivity(), customAdapter3.MyClickListener {
             0 ->
             {
                 startActivity(Intent(this, Normal1::class.java))
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+
             }
             1 ->
             {
                 startActivity(Intent(this, Normal2::class.java))
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+
             }
             2 ->
             {
                 startActivity(Intent(this, Normal3::class.java))
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+
             }
             3 ->
             {
                 startActivity(Intent(this,Normal4::class.java))
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+
             }
             4 ->
             {
                 startActivity(Intent(this,Normal5::class.java))
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+
             }
         }
     }
