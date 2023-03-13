@@ -38,19 +38,19 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".DietPlanGain.proteinchart"
+            android:name=".proteinchart"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".DietPlanGain.yogurtchart"
+            android:name=".yogurtchart"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".DietPlanGain.ricechart"
+            android:name=".ricechart"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".DietPlanGain.vegetablechart"
+            android:name=".vegetablechart"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
@@ -58,7 +58,7 @@
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".DietPlanGain.fruitschart"
+            android:name=".fruitschart"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
@@ -86,7 +86,7 @@
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".Sensors.ProximitySensor"
+            android:name=".ProximitySensor"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
@@ -130,7 +130,7 @@
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".DietPlanGain.DietPlanOne"
+            android:name=".DietPlan.DietPlanOne"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
@@ -153,7 +153,7 @@
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".Sensors.showSteps"
+            android:name=".showSteps"
             android:exported="false" />
         <activity
             android:name=".LosingExercise.Exercise_details_two"
