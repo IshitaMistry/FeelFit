@@ -13,7 +13,7 @@ class customAdapter(private val mList: List<itemview>, val listner: MyClickListe
     RecyclerView.Adapter<customAdapter.ViewHolder>(){
 
 
-    //var onItemClick : ((itemview) -> Unit)? = null
+
     inner class ViewHolder(ItemView: View): RecyclerView.ViewHolder(ItemView) {
         val imageViewNum:ImageView=ItemView.findViewById(R.id.image_exercise_one)
         val textView:TextView=ItemView.findViewById(R.id.text_Exercise)
@@ -42,9 +42,6 @@ class customAdapter(private val mList: List<itemview>, val listner: MyClickListe
         holder.textView.text = itemview.text
         holder.imageShow.setImageResource(itemview.image1)
 
-//        holder.itemView.setOnClickListener{
-//            onItemClick?.invoke(itemview)
-//        }
     }
 
     override fun getItemCount(): Int

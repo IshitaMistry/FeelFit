@@ -185,7 +185,7 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setDisplayUseLogoEnabled(true)
 
-//_______________________________________________________________________________________________________
+//___________________________________________________________________________________________________________
 // BMI CALULATOR WILL BE CALLED
 binding.buttonCalculate.setOnClickListener(View.OnClickListener {
 
@@ -285,7 +285,7 @@ binding.buttonCalculate.setOnClickListener(View.OnClickListener {
 
 
                             val body = enties?.get(0)?.body.toString()
-                            Log.e("majil", "=========>:$body ")
+
 
                             if (body == "SEVERE SKINNY") {
                                 startActivity(Intent(applicationContext, Exercise2::class.java))

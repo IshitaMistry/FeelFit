@@ -49,7 +49,7 @@ class nonveg_diet_plan : Fragment() {
         }
         val egg = view.findViewById<LinearLayout>(R.id.eggss)
         egg.setOnClickListener {
-            val intent = Intent(activity, eggcgart::class.java)
+                val intent = Intent(activity, egg::class.java)
             startActivity(intent)
         }
         return view

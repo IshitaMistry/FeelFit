@@ -34,11 +34,9 @@ class profile : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
+        savedInstanceState: Bundle?): View {
 
         _binding = FragmentProfileBinding.inflate(inflater,container, false)
-        // Inflate the layout for this fragment
 
         firebaseAuth= FirebaseAuth.getInstance()
         var user=firebaseAuth.currentUser?.email
@@ -69,7 +67,7 @@ class profile : Fragment() {
         }
         return _binding!!.root
 
-        activity?.onBackPressed()
+
 
     }
 

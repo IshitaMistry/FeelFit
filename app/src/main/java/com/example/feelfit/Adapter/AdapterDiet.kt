@@ -14,7 +14,7 @@ class AdapterDiet(private val myContext: Context, fm: FragmentManager, private v
 
         return when (position) {
             0 -> {
-                //  val homeFragment: HomeFragment = HomeFragment()
+
                 VegDietPlan()
             }
             1 -> {
