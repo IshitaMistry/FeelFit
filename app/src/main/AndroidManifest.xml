@@ -24,10 +24,10 @@
         android:theme="@style/Theme.FeelFit"
         tools:targetApi="31">
         <activity
-            android:name=".DietPlan.DietPlanTwo"
+            android:name=".eggschart"
             android:exported="false" />
         <activity
-            android:name=".eggschart"
+            android:name=".DietPlan.DietPlanTwo"
             android:exported="false" />
         <activity
             android:name=".chickenchart"
@@ -47,19 +47,19 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".proteinchart"
+            android:name=".DietPlanGain.proteinchart"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".yogurtchart"
+            android:name=".DietPlanGain.yogurtchart"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ricechart"
+            android:name=".DietPlanGain.ricechart"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".vegetablechart"
+            android:name=".DietPlanGain.vegetablechart"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
@@ -67,7 +67,7 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".fruitschart"
+            android:name=".DietPlanGain.fruitschart"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
@@ -95,7 +95,7 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ProximitySensor"
+            android:name=".Sensors.ProximitySensor"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
@@ -139,7 +139,7 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".DietPlan.DietPlanOne"
+            android:name=".DietPlanGain.DietPlanOne"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
@@ -162,7 +162,7 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".showSteps"
+            android:name=".Sensors.showSteps"
             android:exported="false" />
         <activity
             android:name=".LosingExercise.Exercise_details_two"
