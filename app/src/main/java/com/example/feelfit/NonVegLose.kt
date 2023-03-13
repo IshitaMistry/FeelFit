@@ -7,6 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import com.example.feelfit.DietPlanGain.eggcgart
+import com.example.feelfit.DietPlanGain.fruitschart
+import com.example.feelfit.DietPlanGain.vegetablechart
+import com.example.feelfit.DietPlanGain.yogurtchart
 
 
 class NonVegLose : Fragment() {
@@ -48,7 +52,7 @@ class NonVegLose : Fragment() {
         }
         val egg = view.findViewById<LinearLayout>(R.id.eggss)
         egg.setOnClickListener {
-            val intent = Intent(activity,eggschart::class.java)
+            val intent = Intent(activity, eggcgart::class.java)
             startActivity(intent)
         }
         return view

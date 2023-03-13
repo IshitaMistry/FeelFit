@@ -7,6 +7,6 @@ import com.example.feelfit.R
 class chickenchart : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_chickenchart)
+        setContentView(R.layout.activity_chicken_chart)
     }
 }

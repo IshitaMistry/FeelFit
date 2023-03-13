@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import com.example.feelfit.DietPlan.DietPlanTwo
 import com.example.feelfit.DietPlanGain.DietPlanOne
 import com.example.feelfit.IntermittentPlan
 import com.example.feelfit.R
@@ -25,23 +26,27 @@ class Exercise_details_one : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
         val Steps = findViewById<Button>(R.id.steps)
         Steps.setOnClickListener {
             intent = Intent(this, showSteps::class.java)
             startActivity(intent)
             finish()
         }
+
         val diet = findViewById<Button>(R.id.diet)
         diet.setOnClickListener {
-            intent = Intent(this, DietPlanOne::class.java)
+            intent = Intent(this, DietPlanTwo::class.java)
             startActivity(intent)
             finish()
         }
+
         val inter = findViewById<Button>(R.id.inter1)
         inter.setOnClickListener {
             intent = Intent(this, IntermittentPlan::class.java)
             startActivity(intent)
             finish()
         }
+
     }
 }

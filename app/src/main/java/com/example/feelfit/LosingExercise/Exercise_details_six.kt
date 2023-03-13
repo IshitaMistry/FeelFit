@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import com.example.feelfit.DietPlan.DietPlanTwo
 import com.example.feelfit.DietPlanGain.DietPlanOne
 import com.example.feelfit.R
 
@@ -16,7 +17,7 @@ class Exercise_details_six : AppCompatActivity() {
 
         val dietsix = findViewById<Button>(R.id.diet6)
         dietsix.setOnClickListener {
-            intent= Intent(this, DietPlanOne::class.java)
+            intent= Intent(this, DietPlanTwo::class.java)
             startActivity(intent)
             finish()
 
