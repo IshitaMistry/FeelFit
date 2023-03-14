@@ -56,10 +56,10 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
             startActivity(intent)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             intent.addFlags( Intent.FLAG_ACTIVITY_CLEAR_TASK)
-            val FragmentManager= supportFragmentManager
-            val FragmentTransaction=FragmentManager.beginTransaction()
-            FragmentTransaction.replace(R.id.fragment, home())
-            FragmentTransaction.commit()
+//            val FragmentManager= supportFragmentManager
+//            val FragmentTransaction=FragmentManager.beginTransaction()
+//         //   FragmentTransaction.replace(R.id.fragment, home())
+//            FragmentTransaction.commit()
 
         }
 
@@ -136,10 +136,10 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
             }
 
-            val FragmentManager= supportFragmentManager
-            val FragmentTransaction=FragmentManager.beginTransaction()
-            FragmentTransaction.replace(R.id.fragment, home())
-            FragmentTransaction.commit()
+//            val FragmentManager= supportFragmentManager
+//            val FragmentTransaction=FragmentManager.beginTransaction()
+//            FragmentTransaction.replace(R.id.fragment, home())
+//            FragmentTransaction.commit()
 
         }
 
@@ -159,6 +159,10 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
         drawerLayout.addDrawerListener(toggle)
         toggle.isDrawerIndicatorEnabled=true
         toggle.syncState()
+        drawerLayout.bringToFront()
+
+
+
 //_______________________________________________________________________________________________________
         // notification for water
        var intent = Intent(this, water::class.java)
