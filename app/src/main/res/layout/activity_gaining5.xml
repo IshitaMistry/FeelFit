@@ -21,7 +21,7 @@
 
 
             <ImageView
-                android:id="@+id/arrow"
+                android:id="@+id/arrowgainfive"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="20dp"

@@ -43,12 +43,12 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="29dp"
                 android:layout_toEndOf="@+id/image_exercise"
-                android:text="GAINING \nEXERCISES "
                 android:fontFamily="@font/merriweatherblack"
+                android:text="GAINING \nEXERCISES "
 
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textSize="30sp"
+                android:textSize="25sp"
                 android:textStyle="bold"
                 tools:ignore="HardcodedText">
 

@@ -21,7 +21,7 @@
 
 
             <ImageView
-                android:id="@+id/arrow"
+                android:id="@+id/arrowgainthree"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="20dp"
@@ -57,7 +57,7 @@
             android:layout_width="match_parent"
             android:layout_height="380dp"
             android:layout_marginHorizontal="20dp"
-            android:text="  \n    BENEFITS:-\n\n - You can easily trust squats \n     for weight gain because with \n     this exercise, your muscle mass \n     increases (which is heavier than \n     body fat).\n  \n  - There is no exact number of how \n     many sets of squats you should \n     do every day. It all depends on \n     your individual goals and advice \n     from an expert."
+            android:text="  \n    BENEFITS:-\n\n - You can easily trust squats \n     for weight gain because with \n     this exercise, your muscle mass \n     increases (which is heavier than \n     body fat).\n  \n  - There is no exact number of \n     how many sets of squats you \n     should    do every day. It all \n    depends on your individual \n    goals and advice from an expert."
             android:textSize="20sp"
             android:background="#3C8DCD"
             android:layout_marginTop="20dp"

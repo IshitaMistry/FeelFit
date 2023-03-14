@@ -26,15 +26,15 @@
                 android:layout_width="50dp"
                 android:layout_height="90dp"
                 android:src="@drawable/back_arrow"
-                android:layout_marginTop="20dp"></ImageView>
+                android:layout_marginTop="20dp"/>
 
             <ImageView
                 android:id="@+id/image_exercise"
                 android:layout_width="80dp"
                 android:layout_height="90dp"
-                android:layout_marginTop="20dp"
                 android:layout_marginLeft="50dp"
-                android:src="@drawable/exercise"/>
+                android:layout_marginTop="20dp"
+                android:src="@drawable/exercise" />
 
 
             <TextView
@@ -43,12 +43,12 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="29dp"
                 android:layout_toEndOf="@+id/image_exercise"
+                android:fontFamily="@font/merriweatherblack"
                 android:text="LOSING \nEXERCISES "
                 android:textAlignment="center"
-                android:fontFamily="@font/merriweatherblack"
 
                 android:textColor="@color/black"
-                android:textSize="34sp"
+                android:textSize="25sp"
                 android:textStyle="bold"
                 tools:ignore="HardcodedText">
 

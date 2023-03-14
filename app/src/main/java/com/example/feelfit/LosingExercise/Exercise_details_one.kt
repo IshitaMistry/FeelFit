@@ -41,12 +41,6 @@ class Exercise_details_one : AppCompatActivity() {
             finish()
         }
 
-        val inter = findViewById<Button>(R.id.inter1)
-        inter.setOnClickListener {
-            intent = Intent(this, IntermittentPlan::class.java)
-            startActivity(intent)
-            finish()
-        }
 
     }
 }

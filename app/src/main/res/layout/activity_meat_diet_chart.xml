@@ -18,7 +18,7 @@
             android:layout_marginTop="30dp">
 
             <ImageView
-                android:id="@+id/arrowgainprotein"
+                android:id="@+id/arrowyogurt"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="20dp"
@@ -28,9 +28,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="PROTEIN SHAKES"
+                android:text="MEAT"
                 android:textSize="30sp"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="100dp"
                 android:fontFamily="@font/merriweatherblack"
                 android:textColor="@color/lightblue"
                 tools:ignore="HardcodedText"/>
@@ -40,22 +40,10 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="200dp"
-            android:layout_marginTop="50dp"
-            android:layout_gravity="center"
-            android:background="@drawable/proshake"/>
-
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:backgroundTint="@color/lightblue"
-            app:cardCornerRadius="20dp">
+            android:layout_gravity="center"
+            android:background="@drawable/meats"/>
 
-        </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -70,7 +58,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="-1 medium banana, frozen.\n-1 scoop (25 grams) casein protein powder (chocolate or peanut butter flavor).\n-2 tbsp. ( 14 grams) unsweetened cocoa powder.\n-2 tbsp. ( 32 grams) peanut butter.\n-1 1/2 cups (360 mL) whole milk.\n-2–3 ice cubes."
+                android:text="-Lean cuts of red meat can be a great source protein and other nutrients when you are trying to lose weight. Several studies have shown that higher protein, low to moderate carb diets are very effective for weight loss."
                 tools:ignore="HardcodedText"
                 android:textSize="20sp"
                 android:layout_marginTop="20dp"

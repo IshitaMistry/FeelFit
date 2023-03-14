@@ -32,6 +32,12 @@ class NonVegLose : Fragment() {
             startActivity(intent)
         }
 
+        val meat = view.findViewById<LinearLayout>(R.id.meat)
+        meat.setOnClickListener {
+            val intent = Intent(activity,meatDietChart::class.java)
+            startActivity(intent)
+        }
+
         val veges2 = view.findViewById<LinearLayout>(R.id.vege2)
         veges2.setOnClickListener {
             val intent = Intent(activity,vegetablechart::class.java)

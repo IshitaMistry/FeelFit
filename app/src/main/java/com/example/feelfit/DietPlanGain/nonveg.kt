@@ -32,7 +32,7 @@ class nonveg_diet_plan : Fragment() {
 
         val veges2 = view.findViewById<LinearLayout>(R.id.vege2)
         veges2.setOnClickListener {
-            val intent = Intent(activity, vegetablechart::class.java)
+            val intent = Intent(activity, vegechartGain::class.java)
             startActivity(intent)
         }
 

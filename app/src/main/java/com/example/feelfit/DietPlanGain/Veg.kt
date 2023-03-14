@@ -28,13 +28,14 @@ class VegDietPlan : Fragment() {
 
         val fruits1 = view.findViewById<LinearLayout>(R.id.fruitsOne)
         fruits1.setOnClickListener{
-            val intent = Intent(activity, fruitschart::class.java)
+            val intent = Intent(activity, fruitsChartGain::class.java)
             startActivity(intent)
 
         }
+
         val vege1 =  view.findViewById<LinearLayout>(R.id.vege)
         vege1.setOnClickListener {
-            val intent = Intent(activity, vegetablechart::class.java)
+            val intent = Intent(activity, vegechartGain::class.java)
             startActivity(intent)
         }
 

@@ -1,26 +1,23 @@
-package com.example.feelfit.DietPlanGain
+package com.example.feelfit
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
-import com.example.feelfit.DietPlan.DietPlanTwo
-import com.example.feelfit.R
+import com.example.feelfit.DietPlanGain.DietPlanOne
 
-class vegetablechart : AppCompatActivity() {
+class vegechartGain : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_vegetablechart)
+        setContentView(R.layout.activity_vegechart_gain)
 
-        val arrowlosevege = findViewById<ImageView>(R.id.arrowvegelose)
-        arrowlosevege.setOnClickListener {
-            intent= Intent(this,DietPlanTwo::class.java)
+        val arrowgainve = findViewById<ImageView>(R.id.arrowgainvege)
+        arrowgainve.setOnClickListener {
+            intent= Intent(this,DietPlanOne::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent)
             finish()
         }
-
-
     }
 }

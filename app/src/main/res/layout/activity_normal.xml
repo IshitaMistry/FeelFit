@@ -40,14 +40,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="29dp"
                 android:layout_marginLeft="10dp"
+                android:layout_marginTop="29dp"
                 android:layout_toEndOf="@+id/image_exercise"
                 android:fontFamily="@font/merriweatherblack"
                 android:text="NORMAL \nEXERCISES "
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textSize="30sp"
+                android:textSize="25sp"
                 android:textStyle="bold"
                 tools:ignore="HardcodedText">
 
