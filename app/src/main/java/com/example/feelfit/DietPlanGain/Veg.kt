@@ -29,6 +29,8 @@ class VegDietPlan : Fragment() {
         val fruits1 = view.findViewById<LinearLayout>(R.id.fruitsOne)
         fruits1.setOnClickListener{
             val intent = Intent(activity, fruitsChartGain::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent)
 
         }
@@ -36,24 +38,32 @@ class VegDietPlan : Fragment() {
         val vege1 =  view.findViewById<LinearLayout>(R.id.vege)
         vege1.setOnClickListener {
             val intent = Intent(activity, vegechartGain::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent)
         }
 
         val rice1 = view.findViewById<LinearLayout>(R.id.rice)
         rice1.setOnClickListener {
             val intent = Intent(activity, ricechart::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent)
         }
 
         val yogurt1 = view.findViewById<LinearLayout>(R.id.yogurt)
         yogurt1.setOnClickListener {
             val intent = Intent(activity, yogurtchart::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent)
         }
 
         val proteinshakes = view.findViewById<LinearLayout>(R.id.protein)
         proteinshakes.setOnClickListener {
             val intent = Intent(activity, proteinchart::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent)
         }
         return view

@@ -10,7 +10,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -101,7 +101,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/malefemaleLinearlayout"
         android:layout_marginStart="70dp"
-        android:layout_marginTop="25dp"
         android:orientation="horizontal">
 
         <RadioGroup
@@ -126,7 +125,7 @@
                 android:id="@+id/femalebtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="100dp"
+                android:layout_marginStart="110dp"
                 android:text="@string/female"
                 android:fontFamily="@font/merriweatherblack"
                 android:textColor="@color/white"

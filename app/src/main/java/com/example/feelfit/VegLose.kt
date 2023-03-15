@@ -18,7 +18,6 @@ class VegLose : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-
     }
 
     override fun onCreateView(
@@ -27,7 +26,6 @@ class VegLose : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view= inflater.inflate(R.layout.fragment_veg_lose, container, false)
-
         val fruits11 = view.findViewById<LinearLayout>(R.id.fruitsTwo)
         fruits11.setOnClickListener{
             val intent = Intent(activity,fruitschart::class.java)
@@ -51,6 +49,7 @@ class VegLose : Fragment() {
             val intent = Intent(activity,proteinchart::class.java)
             startActivity(intent)
         }
+
         return view
     }
 }

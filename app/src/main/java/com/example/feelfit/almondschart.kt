@@ -4,16 +4,17 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
-import com.example.feelfit.DietPlanGain.DietPlanOne
+import com.example.feelfit.DietPlan.DietPlanTwo
 
-class meatDietChart : AppCompatActivity() {
+class almondschart : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_meat_diet_chart)
+        setContentView(R.layout.activity_almondschart)
 
-        val arrowmeatlose = findViewById<ImageView>(R.id.arrowmeat)
-        arrowmeatlose.setOnClickListener {
-            intent= Intent(this, DietPlanOne::class.java)
+
+        val arrowalmonds = findViewById<ImageView>(R.id.arrowalmondlose)
+        arrowalmonds.setOnClickListener {
+            val intent = Intent(this,DietPlanTwo::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent)

@@ -26,6 +26,7 @@ class NonVegLose : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view= inflater.inflate(R.layout.fragment_non_veg_lose, container, false)
+
         val fruit1 = view.findViewById<LinearLayout>(R.id.fruit2)
         fruit1.setOnClickListener{
             val intent = Intent(activity,fruitschart::class.java)
@@ -55,11 +56,13 @@ class NonVegLose : Fragment() {
             val intent = Intent(activity,yogurtchart::class.java)
             startActivity(intent)
         }
+
         val egg = view.findViewById<LinearLayout>(R.id.eggss)
         egg.setOnClickListener {
             val intent = Intent(activity,eggschart::class.java)
             startActivity(intent)
         }
+
         return view
     }
 }

@@ -17,7 +17,6 @@ import kotlinx.coroutines.launch
 
 class ShowProfileAct : AppCompatActivity() {
 
-
     private lateinit var firebaseAuth: FirebaseAuth
 
     lateinit var binding: ActivityShowProfileBinding
@@ -30,7 +29,6 @@ class ShowProfileAct : AppCompatActivity() {
 
         binding = ActivityShowProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
 
         firebaseAuth = FirebaseAuth.getInstance()
         var user = firebaseAuth.currentUser?.email
@@ -63,7 +61,6 @@ class ShowProfileAct : AppCompatActivity() {
                     }
                 }
             }
-
 
     }
 

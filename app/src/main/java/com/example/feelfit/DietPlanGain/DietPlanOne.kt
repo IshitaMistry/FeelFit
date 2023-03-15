@@ -39,10 +39,8 @@ class DietPlanOne : AppCompatActivity() {
 
             override fun onTabReselected(tab: TabLayout.Tab?) {
             }
-
-        })
-
-
+        }
+        )
     }
 
 }

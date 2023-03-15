@@ -18,7 +18,7 @@
             android:layout_marginTop="30dp">
 
             <ImageView
-                android:id="@+id/arrowmeat"
+                android:id="@+id/arrowalmondlose"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="20dp"
@@ -28,9 +28,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="MEAT"
+                android:text="ALMONDS"
                 android:textSize="30sp"
-                android:layout_marginStart="100dp"
+                android:layout_marginStart="80dp"
                 android:fontFamily="@font/merriweatherblack"
                 android:textColor="@color/lightblue"
                 tools:ignore="HardcodedText"/>
@@ -42,7 +42,7 @@
             android:layout_height="200dp"
             android:layout_marginTop="20dp"
             android:layout_gravity="center"
-            android:background="@drawable/meats"/>
+            android:background="@drawable/badam11"/>
 
 
         <androidx.cardview.widget.CardView
@@ -58,7 +58,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="-Lean cuts of red meat can be a great source protein and other nutrients when you are trying to lose weight. Several studies have shown that higher protein, low to moderate carb diets are very effective for weight loss."
+                android:text="-Almonds contain lots of healthy fats, fiber, protein, magnesium, and vitamin E. The health benefits of almonds include lower blood sugar levels, reduced blood pressure, and lower cholesterol levels. They can also reduce hunger and promote weight loss."
                 tools:ignore="HardcodedText"
                 android:textSize="20sp"
                 android:layout_marginTop="20dp"

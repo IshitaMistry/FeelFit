@@ -25,8 +25,6 @@ class customAdapter3(private val mList3: List<itemview3>, val listner: MyClickLi
                 listner.onClick(position)
             }
         }
-
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -53,7 +51,5 @@ class customAdapter3(private val mList3: List<itemview3>, val listner: MyClickLi
     {
         fun onClick(position: Int)
     }
-
-
 
 }
