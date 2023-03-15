@@ -47,8 +47,7 @@ class ProximitySensor : AppCompatActivity() {
         }
     }
 
-    // calling the sensor event class to detect
-    // the change in data when sensor starts working.
+    // calling the sensor event class to detect the change in data when sensor starts working.
     var proximitySensorEventListener: SensorEventListener? = object : SensorEventListener {
         override fun onAccuracyChanged(sensor: Sensor, accuracy: Int) {
             // method to check accuracy changed in sensor.

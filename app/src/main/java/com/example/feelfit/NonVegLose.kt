@@ -54,6 +54,7 @@ class NonVegLose : Fragment() {
         val yogs11 = view.findViewById<LinearLayout>(R.id.yogs)
         yogs11.setOnClickListener {
             val intent = Intent(activity,yogurtchart::class.java)
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
             startActivity(intent)
         }
 

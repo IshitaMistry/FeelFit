@@ -48,6 +48,7 @@ class VegLose : Fragment() {
         almonds11.setOnClickListener {
             val intent = Intent(activity,almondschart::class.java)
             startActivity(intent)
+
         }
 
         val proteinshakes2 = view.findViewById<LinearLayout>(R.id.protein2)

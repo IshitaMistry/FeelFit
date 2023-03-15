@@ -42,7 +42,6 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
     lateinit var InsDB: AppDatabase
 
 
-
     @SuppressLint("SuspiciousIndentation", "LogNotTimber", "UnspecifiedImmutableFlag")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

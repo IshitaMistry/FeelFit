@@ -22,7 +22,6 @@ private lateinit var firebaseAuth: FirebaseAuth
 @SuppressLint("StaticFieldLeak")
 private var _binding: FragmentProfileBinding? = null
 lateinit var InsDB: AppDatabase
-var UserList = listOf<InfoEntityC>()
 
 class profile : Fragment() {
 

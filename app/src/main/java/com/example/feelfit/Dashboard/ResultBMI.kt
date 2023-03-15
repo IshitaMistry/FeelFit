@@ -3,7 +3,6 @@ package com.example.feelfit.Dashboard
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.feelfit.GainingExercises.Exercise2
 import com.example.feelfit.LosingExercise.ExerciseI
@@ -30,7 +29,7 @@ class ResultBMI : AppCompatActivity() {
     lateinit var InsDB: AppDatabase
 
     @OptIn(DelicateCoroutinesApi::class)
-    @SuppressLint("ResourceAsColor", "SetTextI18n", "LogNotTimber")
+    @SuppressLint("ResourceAsColor", "SetTextI18n", "LogNotTimber", "SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -55,8 +54,7 @@ class ResultBMI : AppCompatActivity() {
         intheight = height!!.toFloat()
         intweight = weight!!.toFloat()
 
-        intheight = intheight /100
-
+        intheight /= 100
         intbmi = intweight/(intheight * intheight)
         mbmi = java.lang.Float.toString(intbmi)
         println(mbmi)
@@ -114,7 +112,7 @@ class ResultBMI : AppCompatActivity() {
             val age=age.toString()
             val height=height1.toString()
             val weight=weight1.toString()
-            Log.e("shubh", "show :$body " )
+         //   Log.e("shubh", "show :$body " )
 
 
             GlobalScope.launch (Dispatchers.IO){
