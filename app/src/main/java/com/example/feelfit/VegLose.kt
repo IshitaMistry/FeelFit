@@ -44,6 +44,12 @@ class VegLose : Fragment() {
             startActivity(intent)
         }
 
+        val almonds11 = view.findViewById<LinearLayout>(R.id.almonds)
+        almonds11.setOnClickListener {
+            val intent = Intent(activity,almondschart::class.java)
+            startActivity(intent)
+        }
+
         val proteinshakes2 = view.findViewById<LinearLayout>(R.id.protein2)
         proteinshakes2.setOnClickListener {
             val intent = Intent(activity,proteinchart::class.java)
