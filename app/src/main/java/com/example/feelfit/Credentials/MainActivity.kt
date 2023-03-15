@@ -100,7 +100,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun validConf(): String? {
 
-        val cnfText=binding.cnfPasswordRegister.text.toString()
+        val cnfText=binding.cnfPasswordRegister.text.toString().trim()
         if (cnfText.length<8)
         {
             return "minimum 8 character required"
@@ -132,7 +132,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun validPassword(): String? {
 
-        val passwordText = binding.passwordRegister.text.toString()
+        val passwordText = binding.passwordRegister.text.toString().trim()
         if(passwordText.length < 8)
         {
             return "Minimum 8 Character Password"
@@ -162,7 +162,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun validEmail(): String? {
-        val email = binding.emailregister.text.toString()
+        val email = binding.emailregister.text.toString().trim()
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             return "Invalid Email Address"
         }
@@ -179,7 +179,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun entFirstname(): String? {
-        val firstname=binding.nameRegister.text.toString()
+        val firstname=binding.nameRegister.text.toString().trim()
         if (firstname.equals("")){
             return "enter your name"
         }

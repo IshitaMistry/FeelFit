@@ -24,8 +24,8 @@ class Login : AppCompatActivity() {
             startActivity(intent)
         }
         binding.BtnRegister.setOnClickListener {
-            val email = binding.EmailRegister.text.toString()
-            val pass = binding.PasswordRegister.text.toString()
+            val email = binding.EmailRegister.text.toString().trim()
+            val pass = binding.PasswordRegister.text.toString().trim()
 
 
 
