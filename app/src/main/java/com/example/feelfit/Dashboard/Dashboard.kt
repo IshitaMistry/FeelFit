@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
 import android.view.View
+import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
@@ -47,6 +48,9 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
         super.onCreate(savedInstanceState)
         binding = ActivityDashboardBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
+
 
         //--------------Main Fragments-------------------------//
         val btn = findViewById<BottomNavigationItemView>(R.id.profile)
@@ -133,16 +137,13 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
                     }
                 }
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             }
 
-//            val FragmentManager= supportFragmentManager
-//            val FragmentTransaction=FragmentManager.beginTransaction()
-//            FragmentTransaction.replace(R.id.fragment, home())
-//            FragmentTransaction.commit()
 
         }
 
-         //  startActivity(Intent(applicationContext,Reminder::class.java))
+
         // ------------------------------------------------------------------------------------------------------------
 
         builder=AlertDialog.Builder(this)

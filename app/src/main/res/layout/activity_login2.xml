@@ -147,6 +147,20 @@
 
         </LinearLayout>
 
+        <ProgressBar
+            android:id="@+id/progress11"
+            android:visibility="invisible"
+            android:progress="0"
+            android:minWidth="200dp"
+            android:minHeight="50dp"
+            android:indeterminate="true"
+            android:max="100"
+            android:indeterminateTint="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="50dp"
+            android:layout_gravity="center_horizontal"/>
+
     </LinearLayout>
 
 </ScrollView>
