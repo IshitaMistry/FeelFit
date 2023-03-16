@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.util.Patterns
 import android.view.View
+import android.view.WindowManager
 import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -15,7 +16,6 @@ import com.google.firebase.auth.FirebaseAuth
 class Login : AppCompatActivity() {
     private lateinit var binding: ActivityLogin2Binding
     private lateinit var firebaseAuth: FirebaseAuth
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,29 +33,11 @@ class Login : AppCompatActivity() {
         }
 
 
-
-
-
         binding.BtnRegister.setOnClickListener {
 
+            //_____________progressBar______________________________________________________________________________
+            binding.progress11.visibility=View.VISIBLE
             submitForm()
-
-            val builder= AlertDialog.Builder(this@Login)
-
-            val progressBar= ProgressBar(this@Login)
-            progressBar.isIndeterminate=true
-            builder.setView(progressBar)
-
-            val dialog=builder.create()
-            dialog.show()
-
-            Handler().postDelayed({ // Hide the progress bar
-                progressBar.visibility = View.GONE
-                Handler().postDelayed({ dialog.dismiss() }, 1000)
-            }, 3000)
-//
-
-
 
         }
     }
@@ -77,6 +59,8 @@ class Login : AppCompatActivity() {
 
                     val intent = Intent(this@Login, Dashboard::class.java)
                     startActivity(intent)
+                    binding.progress11.visibility=View.GONE
+
 
 
                 } else {

@@ -26,9 +26,7 @@
         <activity
             android:name=".almondschart"
             android:exported="false" />
-        <activity
-            android:name=".almondChart"
-            android:exported="false" />
+
         <activity
             android:name=".vegechartGain"
             android:exported="false" />

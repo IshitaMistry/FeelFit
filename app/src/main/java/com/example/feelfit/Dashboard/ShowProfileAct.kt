@@ -8,7 +8,6 @@ import android.view.View
 import android.widget.Toast
 import com.example.feelfit.R
 import com.example.feelfit.RoomDB.AppDatabase
-import com.example.feelfit.RoomDB.InfoEntityC
 import com.example.feelfit.databinding.ActivityShowProfileBinding
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.Dispatchers
@@ -30,6 +29,7 @@ class ShowProfileAct : AppCompatActivity() {
         binding = ActivityShowProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         firebaseAuth = FirebaseAuth.getInstance()
         var user = firebaseAuth.currentUser?.email
 
@@ -37,6 +37,7 @@ class ShowProfileAct : AppCompatActivity() {
         binding.reccalculatebmi.setOnClickListener(View.OnClickListener {
             startActivity(Intent(this, BmiCalculator::class.java))
             intent.addFlags( Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         })
 
         // RECALCULATE BMI

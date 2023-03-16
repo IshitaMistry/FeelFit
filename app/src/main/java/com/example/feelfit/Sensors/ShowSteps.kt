@@ -39,9 +39,7 @@ class showSteps : AppCompatActivity(), SensorEventListener {
 
     }
 
-
-
-    fun requestPermission() {
+    private fun requestPermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
             if (ContextCompat.checkSelfPermission(
                     this,
@@ -75,8 +73,6 @@ class showSteps : AppCompatActivity(), SensorEventListener {
             Toast.makeText(this,"No sensor Detected on this device",Toast.LENGTH_SHORT).show()
         }else{
             sensorManager?.registerListener(this,stepSensor,SensorManager.SENSOR_DELAY_UI)
-//            sensorManager?.registerListener(
-//                this,stepSensor,SensorManager.SENSOR_DELAY_UI)
         }
     }
 

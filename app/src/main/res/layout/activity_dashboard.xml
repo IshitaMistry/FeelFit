@@ -55,10 +55,9 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="30dp"
                 android:fontFamily="@font/merriweatherblack"
-                android:text="WELCOME"
+                android:text="@string/welcome"
                 android:textColor="@color/white"
-                android:textSize="25sp"
-                tools:ignore="HardcodedText"/>
+                android:textSize="25sp" />
 
             <TextView
                 android:id="@+id/user_mail"
@@ -67,11 +66,10 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/merriweatherblack"
-                android:text="EMAIL ADDRESS"
+                android:text="@string/email_address"
                 android:textColor="@color/white"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                tools:ignore="HardcodedText"/>
+                android:textStyle="bold" />
 
           </androidx.cardview.widget.CardView>
 
@@ -90,11 +88,10 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/merriweatherblack"
-                android:text="BMI is an estimate of body fat"
+                android:text="@string/bmi_is_an_estimate_of_body_fat"
                 android:textColor="@color/white"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                tools:ignore="HardcodedText"/>
+                android:textStyle="bold" />
 
             <ImageView
                 android:layout_width="100dp"
@@ -112,10 +109,9 @@
                 android:layout_marginTop="165dp"
                 android:background="@color/white"
                 android:fontFamily="@font/merriweatherblack"
-                android:text="CALCULATE BMI"
+                android:text="@string/calculate_bmi"
                 android:textColor="@color/lightblue"
-                android:textSize="20sp"
-                tools:ignore="HardcodedText"/>
+                android:textSize="20sp" />
 
           </androidx.cardview.widget.CardView>
 
@@ -133,10 +129,6 @@
         app:defaultNavHost="true"
         app:headerLayout="@layout/header"
         app:menu="@menu/menu"/>
-<!--    <androidx.fragment.app.FragmentContainerView
-        android:layout_width="match_parent"
-        android:layout_height="600dp"
-        android:id="@+id/fragment"/>-->
 
 
   </androidx.drawerlayout.widget.DrawerLayout>

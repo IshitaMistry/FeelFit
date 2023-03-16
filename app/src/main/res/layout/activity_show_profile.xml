@@ -133,16 +133,17 @@
 
         tools:ignore="HardcodedText"/>
 
-    <TextView
-        android:id="@+id/weight1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="null"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="20dp"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        tools:ignore="HardcodedText"/>
+        <TextView
+            android:id="@+id/weight1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:hint="null"
+            android:textColor="@color/black"
+            android:textColorHint="#78909C"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText,TextContrastCheck" />
 
     <TextView
         android:layout_width="match_parent"

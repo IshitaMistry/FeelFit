@@ -28,12 +28,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="CHICKEN"
+                android:text="@string/chicken"
                 android:textSize="30sp"
                 android:layout_marginStart="100dp"
                 android:fontFamily="@font/merriweatherblack"
-                android:textColor="@color/lightblue"
-                tools:ignore="HardcodedText"/>
+                android:textColor="@color/lightblue" />
 
         </LinearLayout>
 
@@ -59,8 +58,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="-10 kilograms of fat has 77,000 calories. If you consume an additional 2600 calories each day for one month, you will gain 10 kg. If you consume 6000–6500 calories per day for one month, you will gain 10 kg if you are 180 cm tall and weigh 75–80 kilograms."
-                tools:ignore="HardcodedText"
+                android:text="@string/_10_kilograms_of_fat_has_77_000_calories_if_you_consume_an_additional_2600_calories_each_day_for_one_month_you_will_gain_10_kg_if_you_consume_6000_6500_calories_per_day_for_one_month_you_will_gain_10_kg_if_you_are_180_cm_tall_and_weigh_75_80_kilograms"
                 android:textSize="20sp"
                 android:layout_marginTop="20dp"
                 android:layout_marginStart="20dp"

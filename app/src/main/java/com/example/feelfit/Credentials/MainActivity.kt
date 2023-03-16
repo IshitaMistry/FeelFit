@@ -2,6 +2,7 @@ package com.example.feelfit.Credentials
 import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
+import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.feelfit.Users
@@ -42,7 +43,6 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
-
     private fun submitForm() {
        binding.emailcontainer.helperText=validEmail()
         binding.pass.helperText=validPassword()
@@ -157,6 +157,11 @@ class MainActivity : AppCompatActivity() {
                 binding.emailcontainer.helperText = validEmail()
             }
         }
+
+
+
+
+
     }
 
     private fun validEmail(): String? {
