@@ -1,9 +1,11 @@
 package com.example.feelfit.Dashboard
 
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.example.feelfit.R
@@ -42,9 +44,12 @@ class ShowProfileAct : AppCompatActivity() {
 
         // RECALCULATE BMI
 
-        InsDB = AppDatabase.getDatabase(this@ShowProfileAct)
-            GlobalScope.launch(Dispatchers.IO) {
+        InsDB = AppDatabase.getDatabase(Activity())
+        Log.e("car", ":Passat "+InsDB)
+
+        GlobalScope.launch(Dispatchers.IO) {
                 val enties = user?.let { InsDB.userInfoDao().getAll(it) }
+
                 launch(Dispatchers.Main) {
                     if (enties!!.isEmpty()) {
                         Toast.makeText(applicationContext,"Calculate your bmi",Toast.LENGTH_SHORT).show()
@@ -52,6 +57,7 @@ class ShowProfileAct : AppCompatActivity() {
                     } else {
 
                         binding.getemail.text = enties!![0].email
+
                         binding.gen.text = enties[0].gender
                         binding.height1.text = enties[0].height
                         binding.weight1.text = enties[0].weight

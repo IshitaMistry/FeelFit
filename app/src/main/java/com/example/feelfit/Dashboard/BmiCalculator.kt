@@ -95,7 +95,7 @@ class BmiCalculator : AppCompatActivity()
 //            val gender=radioButton.text.toString()
 //            Log.e("shubh", "========>>"+gender )
 
-            InsDB= AppDatabase.getDatabase(this)
+            InsDB= AppDatabase.getDatabase(Dashboard())
 
             GlobalScope.launch {(Dispatchers.IO)
                 InsDB.userInfoDao().insert(InfoEntityC(email,null ,height,weight,age,null.toString(), null.toString()))

@@ -13,6 +13,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+      <FrameLayout
+          android:id="@+id/framel"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_above="@+id/bottomnavi"
+          android:layout_alignParentTop="true"
+          android:layout_alignParentEnd="true"
+          android:layout_marginTop="50dp"
+           />
+
       <com.google.android.material.bottomnavigation.BottomNavigationView
           android:id="@+id/bottomnavi"
           android:layout_width="match_parent"
@@ -25,98 +35,98 @@
           app:menu="@menu/bottomnavigation" />
         <include layout="@layout/toolbar"/>
 
-      <ScrollView
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_above="@+id/bottomnavi"
-          android:layout_alignParentTop="true"
-          android:layout_marginTop="40dp"
-          android:layout_marginBottom="25dp">
+<!--      <ScrollView-->
+<!--          android:layout_width="match_parent"-->
+<!--          android:layout_height="wrap_content"-->
+<!--          android:layout_above="@+id/bottomnavi"-->
+<!--          android:layout_alignParentTop="true"-->
+<!--          android:layout_marginTop="40dp"-->
+<!--          android:layout_marginBottom="25dp">-->
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:orientation="vertical">-->
 
-          <androidx.cardview.widget.CardView
-              android:id="@+id/cardView"
-              android:layout_width="match_parent"
-              android:layout_height="200dp"
-              android:layout_gravity="center_horizontal"
-              android:layout_marginHorizontal="15dp"
-              android:layout_marginTop="120dp"
-              app:cardBackgroundColor="@color/lightblue"
-              app:cardCornerRadius="20dp"
-              tools:ignore="MissingConstraints">
+<!--          <androidx.cardview.widget.CardView-->
+<!--              android:id="@+id/cardView"-->
+<!--              android:layout_width="match_parent"-->
+<!--              android:layout_height="200dp"-->
+<!--              android:layout_gravity="center_horizontal"-->
+<!--              android:layout_marginHorizontal="15dp"-->
+<!--              android:layout_marginTop="120dp"-->
+<!--              app:cardBackgroundColor="@color/lightblue"-->
+<!--              app:cardCornerRadius="20dp"-->
+<!--              tools:ignore="MissingConstraints">-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="30dp"
-                android:fontFamily="@font/merriweatherblack"
-                android:text="@string/welcome"
-                android:textColor="@color/white"
-                android:textSize="25sp" />
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center_horizontal"-->
+<!--                android:layout_marginTop="30dp"-->
+<!--                android:fontFamily="@font/merriweatherblack"-->
+<!--                android:text="@string/welcome"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="25sp" />-->
 
-            <TextView
-                android:id="@+id/user_mail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/merriweatherblack"
-                android:text="@string/email_address"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+<!--            <TextView-->
+<!--                android:id="@+id/user_mail"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:fontFamily="@font/merriweatherblack"-->
+<!--                android:text="@string/email_address"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="20sp"-->
+<!--                android:textStyle="bold" />-->
 
-          </androidx.cardview.widget.CardView>
+<!--          </androidx.cardview.widget.CardView>-->
 
-          <androidx.cardview.widget.CardView
-              android:layout_width="match_parent"
-              android:layout_height="250dp"
-              android:layout_gravity="center_horizontal"
-              android:layout_marginHorizontal="15dp"
-              android:layout_marginTop="40dp"
-              app:cardBackgroundColor="@color/lightblue"
-              app:cardCornerRadius="30dp">
+<!--          <androidx.cardview.widget.CardView-->
+<!--              android:layout_width="match_parent"-->
+<!--              android:layout_height="250dp"-->
+<!--              android:layout_gravity="center_horizontal"-->
+<!--              android:layout_marginHorizontal="15dp"-->
+<!--              android:layout_marginTop="40dp"-->
+<!--              app:cardBackgroundColor="@color/lightblue"-->
+<!--              app:cardCornerRadius="30dp">-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/merriweatherblack"
-                android:text="@string/bmi_is_an_estimate_of_body_fat"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center_horizontal"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:fontFamily="@font/merriweatherblack"-->
+<!--                android:text="@string/bmi_is_an_estimate_of_body_fat"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="20sp"-->
+<!--                android:textStyle="bold" />-->
 
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="35dp"
-                android:src="@drawable/bmi"/>
+<!--            <ImageView-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginBottom="35dp"-->
+<!--                android:src="@drawable/bmi"/>-->
 
-            <android.widget.Button
-                android:id="@+id/buttonCalculate"
-                android:layout_width="250dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="165dp"
-                android:background="@color/white"
-                android:fontFamily="@font/merriweatherblack"
-                android:text="@string/calculate_bmi"
-                android:textColor="@color/lightblue"
-                android:textSize="20sp" />
+<!--            <android.widget.Button-->
+<!--                android:id="@+id/buttonCalculate"-->
+<!--                android:layout_width="250dp"-->
+<!--                android:layout_height="60dp"-->
+<!--                android:layout_gravity="center_horizontal"-->
+<!--                android:layout_marginTop="165dp"-->
+<!--                android:background="@color/white"-->
+<!--                android:fontFamily="@font/merriweatherblack"-->
+<!--                android:text="@string/calculate_bmi"-->
+<!--                android:textColor="@color/lightblue"-->
+<!--                android:textSize="20sp" />-->
 
-          </androidx.cardview.widget.CardView>
+<!--          </androidx.cardview.widget.CardView>-->
 
-        </LinearLayout>
-      </ScrollView>
+<!--        </LinearLayout>-->
+<!--      </ScrollView>-->
 
       </RelativeLayout>
 

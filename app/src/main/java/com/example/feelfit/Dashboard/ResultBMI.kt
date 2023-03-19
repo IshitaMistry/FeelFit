@@ -40,7 +40,7 @@ class ResultBMI : AppCompatActivity() {
         firebaseAuth= FirebaseAuth.getInstance()
         val email=firebaseAuth.currentUser?.email
 
-        InsDB= AppDatabase.getDatabase(this)
+        InsDB= AppDatabase.getDatabase(Dashboard())
 
 
         var intent:Intent = intent
