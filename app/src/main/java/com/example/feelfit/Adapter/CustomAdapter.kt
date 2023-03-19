@@ -11,9 +11,6 @@ import com.example.feelfit.itemview
 
 class customAdapter(private val mList: List<itemview>, val listner: MyClickListener):
     RecyclerView.Adapter<customAdapter.ViewHolder>(){
-
-
-
     inner class ViewHolder(ItemView: View): RecyclerView.ViewHolder(ItemView) {
         val imageViewNum:ImageView=ItemView.findViewById(R.id.image_exercise_one)
         val textView:TextView=ItemView.findViewById(R.id.text_Exercise)

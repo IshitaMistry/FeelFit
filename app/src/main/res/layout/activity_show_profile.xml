@@ -15,7 +15,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="180dp"
-        android:src="@drawable/showuserprofile"
+        android:src="@drawable/crowfile"
         android:padding="10dp"
         android:contentDescription="TODO"
         tools:ignore="ContentDescription,HardcodedText">

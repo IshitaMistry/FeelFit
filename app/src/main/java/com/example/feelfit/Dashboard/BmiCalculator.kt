@@ -57,6 +57,8 @@ class BmiCalculator : AppCompatActivity()
 
                 override fun onStartTrackingTouch(p0: SeekBar?){}
 
+
+
                 override fun onStopTrackingTouch(p0: SeekBar?){}
             })
         binding.plus.setOnClickListener {
@@ -87,15 +89,13 @@ class BmiCalculator : AppCompatActivity()
         fun Writedata() {
 
             var email=user.toString()
-        //    Log.e("123", "--------->>>$gender")
+
             val height=mintprogress.toInt().toString()
             val weight=binding.showweight.text.toString()
             val age=binding.showage.text.toString()
 
-//            val gender=radioButton.text.toString()
-//            Log.e("shubh", "========>>"+gender )
 
-            InsDB= AppDatabase.getDatabase(this)
+            InsDB= AppDatabase.getDatabase(Dashboard())
 
             GlobalScope.launch {(Dispatchers.IO)
                 InsDB.userInfoDao().insert(InfoEntityC(email,null ,height,weight,age,null.toString(), null.toString()))
@@ -103,7 +103,6 @@ class BmiCalculator : AppCompatActivity()
             }
 
         }
-
 
         binding.calculateButton.setOnClickListener {
 

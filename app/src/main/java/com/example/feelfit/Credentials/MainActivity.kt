@@ -157,12 +157,8 @@ class MainActivity : AppCompatActivity() {
                 binding.emailcontainer.helperText = validEmail()
             }
         }
-
-
-
-
-
     }
+
 
     private fun validEmail(): String? {
         val email = binding.emailregister.text.toString().trim()

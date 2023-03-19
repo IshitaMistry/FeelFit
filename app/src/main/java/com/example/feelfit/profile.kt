@@ -8,8 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.feelfit.Dashboard.BmiCalculator
+import com.example.feelfit.Dashboard.Dashboard
 import com.example.feelfit.RoomDB.AppDatabase
-import com.example.feelfit.RoomDB.InfoEntityC
 import com.example.feelfit.databinding.FragmentProfileBinding
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.Dispatchers
@@ -17,7 +17,7 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
 
-private lateinit var firebaseAuth: FirebaseAuth
+lateinit var firebaseAuth: FirebaseAuth
 
 @SuppressLint("StaticFieldLeak")
 private var _binding: FragmentProfileBinding? = null
@@ -46,8 +46,7 @@ class profile : Fragment() {
 
         })
 
-        InsDB = AppDatabase.getDatabase(requireActivity())
-
+        InsDB = AppDatabase.getDatabase((Dashboard()))
 
         GlobalScope.launch(Dispatchers.IO) {
 

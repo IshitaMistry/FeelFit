@@ -1,33 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context=".DietPlan.DietPlanTwo">
+    android:layout_height="match_parent"
+    tools:context=".dietFragment">
+
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tablelayout1"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         app:tabBackground="@color/lightblue"
-        app:tabIndicatorColor="@color/white"
+        app:tabIndicator="@color/white"
         app:tabSelectedTextColor="@color/white"
         app:tabIndicatorHeight="2dp"
         app:tabTextColor="@color/white"
         android:fontFamily="@font/merriweatherblack">
     </com.google.android.material.tabs.TabLayout>
 
-
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewpage1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     </androidx.viewpager.widget.ViewPager>
-
-
-
-
 </LinearLayout>

@@ -28,6 +28,9 @@
     <string name="calculate_bmi">CALCULATE BMI</string>
     <string name="fruits">FRUITS</string>
     <string name="apple_pear_orange_peach_nmedium_nbanana_1_small_about6_long_ngrapefruit_half_of_a_medium_ngrape_16_nkiwifruit_1_medium_nmango_half_of_a_medium_nmelon_half_inch_thick_wedge_of_sliced_watermelon_npineapple_1_4_of_a_medium_strawberry_4_large">-Apple, Pear, Orange, Peach:\nMedium\nBanana: 1 small (about6\' long)\nGrapefruit: Half of a medium.\nGrape: 16.\nKiwifruit: 1 medium\nMango: Half of a medium\nMelon: Half-inch thick wedge of sliced watermelon. \nPineapple: 1/4 of a medium Strawberry: 4 large.</string>
+    <string name="home">Home</string>
+    <string name="home_hai_be">Home hai be</string>
+    <string name="dietplan">DietPlan</string>
 
 
 </resources>

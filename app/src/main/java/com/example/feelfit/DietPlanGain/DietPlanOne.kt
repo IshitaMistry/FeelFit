@@ -2,6 +2,7 @@ package com.example.feelfit.DietPlanGain
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.viewpager.widget.ViewPager
 import com.example.feelfit.Adapter.AdapterDiet
 import com.example.feelfit.R
@@ -16,12 +17,15 @@ class DietPlanOne : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_diet_plan_one)
 
+        Log.e("help", "oneeeeee++++++++++: ")
+
         tabLayout = findViewById(R.id.tablelayout)
         viewPager = findViewById(R.id.viewpage)
 
         tabLayout!!.addTab(tabLayout!!.newTab().setText("Veg"))
         tabLayout!!.addTab(tabLayout!!.newTab().setText("Non-Veg"))
         tabLayout!!.tabGravity = TabLayout.GRAVITY_FILL
+
 
         val adapter = AdapterDiet(this,supportFragmentManager,tabLayout!!.tabCount)
         viewPager!!.adapter = adapter

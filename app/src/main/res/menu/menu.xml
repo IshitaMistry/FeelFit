@@ -28,6 +28,10 @@
                     android:id="@+id/logout"
                     android:icon="@drawable/logout"
                     android:title="@string/Log_Out"/>
+                <item
+                        android:id="@+id/bellreminder"
+                        android:icon="@drawable/bell"
+                        android:title="SetWaterReminder"/>
 
         </group>
 </menu>

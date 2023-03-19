@@ -2,17 +2,26 @@
 <menu xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-
     <item
-        android:id="@+id/profile"
-        android:icon="@drawable/profi"
-        android:title="Profile"
-        tools:ignore="HardcodedText"/>
+        android:id="@+id/Home"
+        android:icon="@drawable/home"
+        android:title="@string/home"/>
+
 
     <item
         android:id="@+id/exercise"
         android:icon="@drawable/current"
         android:title="Current exercise"
         tools:ignore="HardcodedText"/>
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/profi"
+        android:title="Profile"
+        tools:ignore="HardcodedText"/>
+    <item
+        android:id="@+id/dietP"
+        android:icon="@drawable/dietplan"
+        android:title="@string/dietplan"/>
+
 
 </menu>
