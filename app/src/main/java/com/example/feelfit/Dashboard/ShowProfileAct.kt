@@ -57,6 +57,7 @@ class ShowProfileAct : AppCompatActivity() {
                     } else {
 
                         binding.getemail.text = enties!![0].email
+
                         binding.gen.text = enties[0].gender
                         binding.height1.text = enties[0].height
                         binding.weight1.text = enties[0].weight
