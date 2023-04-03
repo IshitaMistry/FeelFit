@@ -134,7 +134,7 @@ class BmiCalculator : AppCompatActivity()
                 val intSelectButton: Int = binding.btn!!.checkedRadioButtonId
                 radioButton = findViewById(intSelectButton)
 
-                Log.e("parthi","===========>>"+radioButton.text)
+               // Log.e("parthi","===========>>"+radioButton.text)
                 intent.putExtra("weight",binding.showweight.text.toString())
                 intent.putExtra("age",binding.showage.text.toString())
                 intent.putExtra("height1",binding.seekHeight.text.toString())

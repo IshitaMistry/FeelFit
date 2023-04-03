@@ -8,15 +8,15 @@
     android:orientation="vertical"
     tools:context=".SetReminderWater">
 
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Select Time Interval For Water "
+        android:text="@string/select_time_interval_for_water"
         android:textColor="@color/white"
         android:layout_marginTop="30dp"
         android:background="@drawable/bg_setreminder"
        android:layout_gravity="center"
-        android:textSize="28sp"/>
+        android:textSize="24sp"/>
 
     <pl.droidsonroids.gif.GifImageView
         android:layout_width="250dp"
@@ -25,7 +25,55 @@
         android:src="@drawable/drinkwater"
         android:layout_marginTop="20dp"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        android:padding="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Pick Time"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:backgroundTint="#129C8F"
+            android:fontFamily="@font/merriweatherblack"
+            tools:ignore="HardcodedText"/>
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:text="Hello World!"
+            android:layout_marginStart="20dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/TextSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="25dp"
+        android:textAlignment="center"
+        android:textColor="@color/lightblue"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
 
+    <TextView
+        android:id="@+id/textshare"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="25dp"
+        android:textAlignment="center"
+        android:textColor="@color/lightblue"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
 </LinearLayout>

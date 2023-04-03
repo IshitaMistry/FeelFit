@@ -15,19 +15,12 @@ class Exercise_details_three : AppCompatActivity() {
         setContentView(R.layout.activity_exercise_details_three)
 
 
-        val dietthree =  findViewById<Button>(R.id.diet3)
-        dietthree.setOnClickListener {
-            intent=Intent(this, DietPlanTwo::class.java)
-            startActivity(intent)
-            finish()
-        }
+
 
         val arrow3 = findViewById<ImageView>(R.id.arrow3)
         arrow3.setOnClickListener {
-            intent = Intent(this, ExerciseI::class.java)
-            startActivity(intent)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
-            finish()
+            onBackPressed()
+
         }
 
 

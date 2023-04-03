@@ -13,7 +13,6 @@ import com.example.feelfit.DietPlanGain.proteinchart
 import com.example.feelfit.DietPlanGain.vegetablechart
 import com.example.feelfit.DietPlanGain.yogurtchart
 
-
 class VegLose : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -59,7 +58,7 @@ class VegLose : Fragment() {
             val intent = Intent(activity,proteinchart::class.java)
             startActivity(intent)
         }
-
         return view
     }
+
 }

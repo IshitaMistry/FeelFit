@@ -81,15 +81,7 @@
                 android:layout_marginHorizontal="20dp"
                 tools:ignore="HardcodedText"/>
 
-            <Button
-                android:id="@+id/diet5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:backgroundTint="#3C8DCD"
-                android:text="DIET PLAN"
-                android:layout_marginHorizontal="20dp"
-                tools:ignore="HardcodedText"/>
+
 
         </LinearLayout>
 

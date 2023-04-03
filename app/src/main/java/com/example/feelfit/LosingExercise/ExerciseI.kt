@@ -20,7 +20,6 @@ class ExerciseI : AppCompatActivity(), customAdapter.MyClickListener {
         val recyclerView = findViewById<RecyclerView>(R.id.recycler_view1)
         recyclerView.layoutManager= LinearLayoutManager(this)
 
-
         val data = ArrayList<itemview>()
 
         data.add(itemview(R.drawable.gain1, R.drawable.jog,"RUNNING"))
@@ -29,7 +28,7 @@ class ExerciseI : AppCompatActivity(), customAdapter.MyClickListener {
         data.add(itemview(R.drawable.gain4, R.drawable.burpeesexercise,"BURPESS"))
         data.add(itemview(R.drawable.gain5, R.drawable.pushup,"PUSHUP"))
         data.add(itemview(R.drawable.gain6, R.drawable.crunchess,"CRUNCHES"))
-        data.add(itemview(R.drawable.seven,R.drawable.no,"INTERMITENT\n FASTING"))
+        data.add(itemview(R.drawable.seven, R.drawable.no,"INTERMITENT\n FASTING"))
 
         val adapter = customAdapter(data,this@ExerciseI)
         recyclerView.adapter=adapter
@@ -77,7 +76,6 @@ class ExerciseI : AppCompatActivity(), customAdapter.MyClickListener {
         super.onBackPressed()
         startActivity(Intent(applicationContext, Dashboard::class.java))
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
-
         finish()
     }
 }

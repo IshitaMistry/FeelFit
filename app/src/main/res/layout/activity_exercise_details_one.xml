@@ -41,8 +41,6 @@
                 android:textColor="@color/black"
                 tools:ignore="HardcodedText"/>
 
-
-
         </LinearLayout>
 
         <pl.droidsonroids.gif.GifImageView
@@ -57,7 +55,7 @@
             android:layout_width="match_parent"
             android:layout_height="380dp"
             android:layout_marginHorizontal="20dp"
-            android:text="  \n    BENEFITS:-\n\n -Running is an excellent form \n    of exercise for weight loss.\n\n  -It burns a lot of calories.\n\n  -Running is one of the best \n    forms of exercise to lose belly fat  \n\n- If you run 8-10 kilometres daily, \n    then you can burn 350 calories \n    more than walking."
+            android:text="  \n    BENEFITS:-\n\n -Running is an excellent form \n    of exercise for weight loss.\n\n  -It burns a lot of calories.\n\n  -Running is one of the best \n    forms of exercise to lose belly \n    fat.  \n\n- If you run 8-10 kilometres daily, \n    then you can burn 350 calories \n    more than walking."
             android:textSize="20sp"
             android:background="#3C8DCD"
             android:fontFamily="@font/merriweatherblack"
@@ -65,7 +63,6 @@
             android:textStyle="bold"
             android:textColor="@color/white"
             tools:ignore="HardcodedText"/>
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -88,18 +85,7 @@
                 android:textStyle="bold"
                 tools:ignore="HardcodedText"/>
 
-            <Button
-                android:id="@+id/diet"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="DIET PLAN"
-                android:layout_marginHorizontal="10dp"
-                app:cornerRadius="10dp"
-                android:textStyle="bold"
-                android:textSize="12sp"
-                android:textColor="@color/white"
-                android:backgroundTint="#3C8DCD"
-                tools:ignore="HardcodedText"/>
+
 
         </LinearLayout>
 

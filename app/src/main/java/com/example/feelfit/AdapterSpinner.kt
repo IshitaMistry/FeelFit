@@ -9,7 +9,7 @@ import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
 
-class AdapterSpinner(internal var context: Context, internal var images: IntArray, internal var breakfast: Array<String>):
+class AdapterSpinner(internal var context: Context, internal var Time: Int):
                 BaseAdapter()
 {
 
@@ -20,7 +20,7 @@ class AdapterSpinner(internal var context: Context, internal var images: IntArra
 
     }
     override fun getCount(): Int {
-        return images.size
+        return Time
     }
 
     override fun getItem(i: Int): Any? {
@@ -31,13 +31,11 @@ class AdapterSpinner(internal var context: Context, internal var images: IntArra
         return 0
     }
 
-    @SuppressLint("ViewHolder", "InflateParams")
+    @SuppressLint("ViewHolder", "InflateParams", "MissingInflatedId")
     override fun getView(i: Int, view: View?, viewgroup: ViewGroup?): View {
-        val view = inflter.inflate(R.layout.activity_custom_spinner,null)
-        val icon = view.findViewById<View>(R.id.imageview) as ImageView?
+        val view = inflter.inflate(R.layout.activity_custom_spinner2,null)
         val names = view.findViewById<View>(R.id.textview) as TextView?
-        icon!!.setImageResource(images[i])
-        names!!.text = breakfast[i]
+        names!!.text = Time.toString()
         return view
     }
 }

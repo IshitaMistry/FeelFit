@@ -16,5 +16,4 @@ interface UserInfoDao {
     @Query("SELECT * FROM UserInfo WHERE email =:email")
     fun getAll(email: String): List<InfoEntityC>
 
-
 }

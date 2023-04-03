@@ -63,18 +63,7 @@
             android:textStyle="bold"
             tools:ignore="HardcodedText"/>
 
-        <Button
-            android:id="@+id/diet4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#3C8DCD"
-            app:cornerRadius="10dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
-            android:text="DIET PLAN"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            tools:ignore="HardcodedText"/>
+
 
     </LinearLayout>
 

@@ -31,22 +31,12 @@ class Exercise_details_five : AppCompatActivity() {
 
 
         }
-        val dietfive = findViewById<Button>(R.id.diet5)
-        dietfive.setOnClickListener {
-            intent=Intent(this, DietPlanTwo::class.java)
-            startActivity(intent)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-            finish()
-        }
+
 
         val arrow5 = findViewById<ImageView>(R.id.arrow5)
         arrow5.setOnClickListener {
-            intent = Intent(this, ExerciseI::class.java)
-            startActivity(intent)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-            finish()
+            onBackPressed()
+
         }
 
 
