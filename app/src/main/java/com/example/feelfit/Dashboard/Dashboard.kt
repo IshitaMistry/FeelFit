@@ -65,7 +65,7 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
                     replacementFrag(ProfileFragment())
                 }
                 R.id.exercise->{
-                    replacementFrag(BMIFragment())
+                    replacementFrag(ExerciseLosing())
 
                 }
                 R.id.Home ->{
@@ -441,11 +441,9 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
             .setNegativeButton("No"){dialogInterface,it ->
                 dialogInterface.cancel()
             }
-
     }
 
 }
-
 
 
     public fun database() {

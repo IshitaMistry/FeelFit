@@ -55,47 +55,47 @@ class BMIFragment : Fragment() {
                 if (enties!!.isEmpty()) {
 
                 }
-//               else {
-//
-//                    val body = enties?.get(0)?.body.toString()
-//
-//                    if (body == "SEVERE SKINNY") {
-//                        startActivity(Intent(activity, Exercise2::class.java))
-//                    }
-//                    if (body == "MODERATE SKINNY") {
-//                        startActivity(Intent(activity, Exercise2::class.java))
-//
-//                    }
-//                    if (body == "MODERATE SKINNY") {
-//                        startActivity(Intent(activity, Exercise2::class.java))
-//
-//
-//                    }
-//                    if (body == "MILD THINNESS") {
-//                        startActivity(Intent(activity, Exercise2::class.java))
-//
-//
-//                    }
-//                    if (body == "NORMAL") {
-//                        startActivity(
-//                            Intent(activity, NormalActivity::class.java))
-//
-//                    }
-//                    if (body == "OVERWEIGHT") {
-//                        startActivity(Intent(activity, ExerciseI::class.java))
-//
-//                    }
-//                    if (body == "OBESE I") {
-//                        startActivity(Intent(activity, ExerciseI::class.java))
-//
-//                    }
-//                    if (body == "OBESE II") {
-//                        startActivity(Intent(activity, ExerciseI::class.java))
-//
-//                    } else {
-//
-//                    }
-//                }
+               else {
+
+                    val body = enties?.get(0)?.body.toString()
+
+                    if (body == "SEVERE SKINNY") {
+                        startActivity(Intent(activity, Exercise2::class.java))
+                    }
+                    if (body == "MODERATE SKINNY") {
+                        startActivity(Intent(activity, Exercise2::class.java))
+
+                    }
+                    if (body == "MODERATE SKINNY") {
+                        startActivity(Intent(activity, Exercise2::class.java))
+
+
+                    }
+                    if (body == "MILD THINNESS") {
+                        startActivity(Intent(activity, Exercise2::class.java))
+
+
+                    }
+                    if (body == "NORMAL") {
+                        startActivity(
+                            Intent(activity, NormalActivity::class.java))
+
+                    }
+                    if (body == "OVERWEIGHT") {
+                        startActivity(Intent(activity, ExerciseI::class.java))
+
+                    }
+                    if (body == "OBESE I") {
+                        startActivity(Intent(activity, ExerciseI::class.java))
+
+                    }
+                    if (body == "OBESE II") {
+                        startActivity(Intent(activity, ExerciseI::class.java))
+
+                    } else {
+
+                    }
+                }
             }
         }
 

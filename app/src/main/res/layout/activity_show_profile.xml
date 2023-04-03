@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="vertical"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -53,7 +53,6 @@
         android:layout_marginStart="10dp"
         android:textStyle="bold"
         android:fontFamily="@font/merriweatherblack"
-
         android:textSize="25sp"
         android:textColor="@color/black"
         android:paddingLeft="2dp"
@@ -63,13 +62,13 @@
         android:id="@+id/gen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="2dp"
+        android:paddingStart="2dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="20dp"
         android:hint="null"
         android:textColor="@color/black"
         android:textSize="25sp"
-        tools:ignore="HardcodedText"/>
+        tools:ignore="HardcodedText,RtlSymmetry"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -79,7 +78,6 @@
         android:layout_marginStart="10dp"
         android:textSize="25sp"
         android:fontFamily="@font/merriweatherblack"
-
         android:textColor="@color/black"
         android:paddingLeft="2dp"
         tools:ignore="HardcodedText"/>
@@ -103,7 +101,6 @@
         android:textStyle="bold"
         android:textColor="@color/black"
         android:fontFamily="@font/merriweatherblack"
-
         android:paddingStart="2dp"
         android:layout_marginStart="10dp"
         tools:ignore="HardcodedText,RtlSymmetry"/>
@@ -120,7 +117,6 @@
         tools:ignore="HardcodedText"/>
 
     <TextView
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="WEIGHT:-"
@@ -130,7 +126,6 @@
         android:textColor="@color/black"
         android:paddingStart="2dp"
         android:fontFamily="@font/merriweatherblack"
-
         tools:ignore="HardcodedText"/>
 
         <TextView
@@ -153,7 +148,6 @@
         android:textStyle="bold"
         android:layout_marginStart="10dp"
         android:fontFamily="@font/merriweatherblack"
-
         android:textColor="@color/black"
         tools:ignore="HardcodedText"/>
 
@@ -174,7 +168,6 @@
         android:text="BMI:-"
         android:textStyle="bold"
         android:fontFamily="@font/merriweatherblack"
-
         android:textSize="25sp"
         android:layout_marginStart="10dp"
         android:textColor="@color/black"
@@ -187,7 +180,6 @@
         android:layout_height="wrap_content"
         android:hint="null"
         android:textColor="@color/black"
-
         android:textSize="20sp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="20dp"
@@ -206,4 +198,5 @@
         tools:ignore="HardcodedText"/>
 
 </LinearLayout>
+
 </ScrollView>

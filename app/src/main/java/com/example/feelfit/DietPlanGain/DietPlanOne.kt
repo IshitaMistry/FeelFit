@@ -1,14 +1,16 @@
 package com.example.feelfit.DietPlanGain
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.viewpager.widget.ViewPager
 import com.example.feelfit.Adapter.AdapterDiet
+import com.example.feelfit.Dashboard.Dashboard
 import com.example.feelfit.R
 import com.google.android.material.tabs.TabLayout
-class DietPlanOne : AppCompatActivity() {
 
+class DietPlanOne : AppCompatActivity() {
 
     var tabLayout: TabLayout? = null
     var viewPager: ViewPager? = null
@@ -45,6 +47,12 @@ class DietPlanOne : AppCompatActivity() {
             }
         }
         )
+    }
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(this, Dashboard::class.java))
+        this.finish()
+
     }
 
 }

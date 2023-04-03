@@ -12,6 +12,7 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -24,12 +25,30 @@
         android:theme="@style/Theme.FeelFit"
         tools:targetApi="31">
         <activity
+            android:name=".gridview_item"
+            android:exported="false" />
+        <activity
+            android:name=".ExerciseLosing"
+            android:exported="false" />
+        <activity
             android:name=".SetReminderWater"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <activity
+            android:name=".OtpView"
+            android:exported="false" />
+        <activity
+            android:name=".phoneNumber"
+            android:exported="false" />
+        <activity
+            android:name=".OtpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".forgetPassword"
+            android:exported="false" />
         <activity
             android:name=".almondschart"
             android:exported="false" />

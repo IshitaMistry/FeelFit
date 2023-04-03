@@ -27,22 +27,12 @@ class Exercise_details_two : AppCompatActivity() {
 
         val arrow2 = findViewById<ImageView>(R.id.arrow2)
         arrow2.setOnClickListener {
-            intent= Intent(this, ExerciseI::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            onBackPressed()
 
-            startActivity(intent)
-            finish()
         }
 
 
-        val diettwo = findViewById<Button>(R.id.diet2)
-        diettwo.setOnClickListener {
-            intent=Intent(this, DietPlanTwo::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
 
-            startActivity(intent)
-            finish()
-        }
 
     }
 }
