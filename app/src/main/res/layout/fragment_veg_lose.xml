@@ -9,10 +9,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+
+
+
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            tools:ignore="UselessParent">
 
             <LinearLayout
                 android:id="@+id/fruitsTwo"
@@ -111,6 +115,7 @@
                     tools:ignore="HardcodedText"/>
 
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/almonds"
                 android:background="#3C8DCD"

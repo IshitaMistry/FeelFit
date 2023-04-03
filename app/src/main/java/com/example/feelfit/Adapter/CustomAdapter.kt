@@ -5,19 +5,23 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.example.feelfit.ExerciseLosing
 import com.example.feelfit.R
 import com.example.feelfit.itemview
 
 class customAdapter(private val mList: List<itemview>, val listner: MyClickListener):
     RecyclerView.Adapter<customAdapter.ViewHolder>(){
+
     inner class ViewHolder(ItemView: View): RecyclerView.ViewHolder(ItemView) {
-        val imageViewNum:ImageView=ItemView.findViewById(R.id.image_exercise_one)
-        val textView:TextView=ItemView.findViewById(R.id.text_Exercise)
-        val imageShow:ImageView=ItemView.findViewById(R.id.img_run)
+
+        val imageViewNum:ImageView=itemView.findViewById(R.id.image_exercise_one)
+        val textView:TextView=itemView.findViewById(R.id.text_Exercise)
+        val imageShow:ImageView=itemView.findViewById(R.id.img_run)
 
         init {
-            ItemView.setOnClickListener{
+            itemView.setOnClickListener{
                 val position=adapterPosition
                 listner.onClick(position)
             }
@@ -53,3 +57,5 @@ class customAdapter(private val mList: List<itemview>, val listner: MyClickListe
 
 
 }
+
+
