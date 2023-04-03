@@ -31,6 +31,21 @@
     <string name="home">Home</string>
     <string name="home_hai_be">Home hai be</string>
     <string name="dietplan">DietPlan</string>
+    <string name="select_time_interval_for_water">Select Time Interval For Water</string>
+    <string name="selected_time_format">%1$s:%2$s</string>
+    <string name="time_prefix">>></string>
+
+    <string-array name="Time">
+        <item>1 </item>
+        <item>2 </item>
+        <item>3 </item>
+        <item>4 </item>
+        <item>5</item>
+        <item>6</item>
+        <item>7 </item>
+
+
+    </string-array>
 
 
 </resources>

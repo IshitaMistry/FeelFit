@@ -1,56 +1,321 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".HomeFragment">
-<FrameLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/Home_fragment">
-    <LinearLayout
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/sun"
+                    android:padding="10dp" />
+
+                <TextView
+                    android:id="@+id/CurrentStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:text="Tuesday,13 Apr"
+                    android:fontFamily="@font/merriweatherblack"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/personName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearLayout"
+                android:layout_marginHorizontal="30dp"
+                android:fontFamily="@font/merriweatherblack"
+                android:text="Hi! Ishita"
+                android:textColor="@color/black"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circularImageview"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/logo"
+                app:civ_border_color="#03A9F4"
+                app:civ_border_width="8dp"
+                tools:ignore="MissingClass">
+
+            </de.hdodenhof.circleimageview.CircleImageView>
+
+
+        </RelativeLayout>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginHorizontal="15dp"
-            android:layout_marginTop="120dp"
-            android:backgroundTint="@color/lightblue"
-            tools:ignore="MissingConstraints">
+            android:layout_height="170dp"
+            android:layout_below="@id/relative"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/background"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="30dp"
-                android:fontFamily="@font/merriweatherblack"
-                android:text="@string/welcome"
-                android:textColor="@color/white"
-                android:textSize="25sp" />
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/user_mail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/merriweatherblack"
-                android:text="@string/email_address"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                <LinearLayout
+                    android:id="@+id/imageView"
+                    android:layout_width="150dp"
+                    android:layout_height="130dp"
+                    android:background="@drawable/hexagon"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/bmiDashboard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/merriweatherblack"
+                        android:text="18.5"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/merriweatherblack"
+                    android:text="BMI Score"
+                    android:textColor="@color/black"
+                    android:textSize="28sp"
+                    tools:ignore="HardcodedText"/>
+
+            </LinearLayout>
+
 
         </androidx.cardview.widget.CardView>
 
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/metrics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardView"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/merriweatherblack"
+            android:text="METRICS"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
 
-</FrameLayout>
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/metrics"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:gravity="center"-->
+
+<!--            android:orientation="horizontal">-->
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:id="@+id/weightcard"-->
+<!--                android:layout_width="120dp"-->
+<!--                android:layout_height="180dp"-->
+<!--                android:layout_below="@+id/metrics"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:backgroundTint="@color/lightblue"-->
+<!--                app:cardCornerRadius="20dp">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_horizontal"-->
+<!--                    android:layout_marginTop="15dp"-->
+<!--                    android:fontFamily="@font/merriweatherblack"-->
+<!--                    android:text="Weight"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="25sp"-->
+<!--                    tools:ignore="HardcodedText" />-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:layout_gravity="center_horizontal"-->
+<!--                    android:layout_marginTop="60dp"-->
+<!--                    android:src="@drawable/weightmachine" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/weightDashboard"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_horizontal"-->
+<!--                    android:layout_marginTop="120dp"-->
+<!--                    android:fontFamily="@font/merriweatherblack"-->
+<!--                    android:text="45"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="25sp"-->
+<!--                    tools:ignore="HardcodedText" />-->
 
 
-</RelativeLayout>
+<!--            </androidx.cardview.widget.CardView>-->
+
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:id="@+id/heightcard"-->
+<!--                android:layout_width="120dp"-->
+<!--                android:layout_height="180dp"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:layout_marginStart="5dp"-->
+<!--                android:layout_toRightOf="@+id/weightcard"-->
+<!--                android:backgroundTint="@color/lightblue"-->
+<!--                app:cardCornerRadius="20dp">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_horizontal"-->
+<!--                    android:layout_marginTop="15dp"-->
+<!--                    android:fontFamily="@font/merriweatherblack"-->
+<!--                    android:text="Height"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="25sp"-->
+<!--                    tools:ignore="HardcodedText" />-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:layout_gravity="center_horizontal"-->
+<!--                    android:layout_marginTop="60dp"-->
+<!--                    android:src="@drawable/height" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/heightDashboard"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_horizontal"-->
+<!--                    android:layout_marginTop="120dp"-->
+<!--                    android:fontFamily="@font/merriweatherblack"-->
+<!--                    android:text="160cm"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="25sp"-->
+<!--                    tools:ignore="HardcodedText" />-->
+
+
+<!--            </androidx.cardview.widget.CardView>-->
+
+<!--            <androidx.cardview.widget.CardView-->
+
+<!--                android:layout_width="120dp"-->
+<!--                android:layout_height="180dp"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:layout_marginStart="5dp"-->
+<!--                android:backgroundTint="@color/lightblue"-->
+<!--                app:cardCornerRadius="20dp">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_horizontal"-->
+<!--                    android:layout_marginTop="15dp"-->
+<!--                    android:fontFamily="@font/merriweatherblack"-->
+<!--                    android:text="Gender"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="25sp"-->
+<!--                    tools:ignore="HardcodedText" />-->
+
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_horizontal"-->
+<!--                    android:layout_marginTop="60dp"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="50dp"-->
+<!--                        android:layout_height="50dp"-->
+<!--                        android:src="@drawable/femalee" />-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="50dp"-->
+<!--                        android:layout_height="50dp"-->
+<!--                        android:src="@drawable/malee" />-->
+<!--                </LinearLayout>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/genderDashboard"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_horizontal"-->
+<!--                    android:layout_marginTop="120dp"-->
+<!--                    android:fontFamily="@font/merriweatherblack"-->
+<!--                    android:text="Female"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="25sp"-->
+<!--                    tools:ignore="HardcodedText" />-->
+<!--            </androidx.cardview.widget.CardView>-->
+
+
+<!--        </LinearLayout>-->
+
+        <GridView
+            android:id="@+id/idGRV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/metrics"
+            android:horizontalSpacing="6dp"
+            android:numColumns="2"
+            android:verticalSpacing="6dp">
+
+        </GridView>
+
+
+            </RelativeLayout>
+
+
+
+
+    </ScrollView>
+
+
+
+

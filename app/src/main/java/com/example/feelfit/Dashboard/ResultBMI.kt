@@ -3,13 +3,20 @@ package com.example.feelfit.Dashboard
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.feelfit.GainingExercises.Exercise2
 import com.example.feelfit.LosingExercise.ExerciseI
 import com.example.feelfit.NormalExercise.NormalActivity
 import com.example.feelfit.RoomDB.AppDatabase
+import com.example.feelfit.Users
 import com.example.feelfit.databinding.ActivityResultBmiBinding
+import com.firebase.ui.auth.data.model.User
+import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -27,6 +34,9 @@ class ResultBMI : AppCompatActivity() {
     var mbmi: String? =null
 
     lateinit var InsDB: AppDatabase
+
+    private lateinit var database: DatabaseReference
+
 
     @OptIn(DelicateCoroutinesApi::class)
     @SuppressLint("ResourceAsColor", "SetTextI18n", "LogNotTimber", "SuspiciousIndentation")
@@ -112,7 +122,18 @@ class ResultBMI : AppCompatActivity() {
             val age=age.toString()
             val height=height1.toString()
             val weight=weight1.toString()
-         //   Log.e("shubh", "show :$body " )
+
+            val bmiText=bmi
+            val bodyT=body
+            val genderT=gender
+            val ageT=age
+            val heightT=height
+            val weightT=weight
+
+
+
+            updateFirebaseDB(bmiText, bodyT, genderT, ageT, heightT, weightT)
+
 
 
             GlobalScope.launch (Dispatchers.IO){
@@ -157,12 +178,30 @@ class ResultBMI : AppCompatActivity() {
 
         }
 
-        }
+
     }
-    @Deprecated("Deprecated in Java")
-    override fun onBackPressed() {
-        super.onBackPressed()
-        startActivity(Intent(applicationContext, Dashboard::class.java))
-        this.finish()
     }
+
+
+
+    private fun updateFirebaseDB(bmiText: String, bodyT: String, genderT: String,ageT:String,heightT:String,weightT:String ) {
+        var uid=firebaseAuth?.uid
+        database=FirebaseDatabase.getInstance().getReference("Users")
+        val user= mapOf<String,String>(
+            "age"    to ageT,
+            "bmi"    to bmiText,
+            "body"   to bodyT,
+            "gender" to genderT,
+            "height" to heightT,
+            "weight" to weightT
+        )
+        if (uid != null) {
+            database.child(uid).updateChildren(user).addOnSuccessListener {
+
+            }.addOnFailureListener {
+                Snackbar.make(binding.root,"Server Down !!",Snackbar.LENGTH_SHORT).show()
+
+            }
+    }
+}
 }

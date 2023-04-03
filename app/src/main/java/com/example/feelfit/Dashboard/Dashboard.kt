@@ -35,6 +35,7 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
 class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedListener {
+
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var firebaseUser: FirebaseUser
 
@@ -45,7 +46,7 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
     lateinit var drawerLayout: DrawerLayout
     lateinit var InsDB: AppDatabase
 
-    var userReminderIntervalMillis: Long = 0
+
 
     @SuppressLint("SuspiciousIndentation", "LogNotTimber", "UnspecifiedImmutableFlag")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -65,14 +66,14 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
                     replacementFrag(ProfileFragment())
                 }
                 R.id.exercise->{
-                    replacementFrag(BMIFragment())
+                    replacementFrag(ExerciseLosing())
 
                 }
                 R.id.Home ->{
                     replacementFrag(HomeFragment())
                 }
                 R.id.dietP->{
-                    replacementFrag(DietPlanTwo())
+                    replacementFrag(ActivityforDietF())
                 }
 
 
@@ -200,18 +201,18 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
 
 //_______________________________________________________________________________________________________
         // notification for water
-       var intent = Intent(this, water::class.java)
-        val pendingIntent: PendingIntent
-        pendingIntent = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_IMMUTABLE)
-        } else {
-            PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT)
-        }
-        val alarmManager = getSystemService(ALARM_SERVICE) as AlarmManager
-        alarmManager.setRepeating(
-            AlarmManager.RTC_WAKEUP,
-            System.currentTimeMillis(),
-            REMINDER_INTERVAL_MILLIS.toLong(), pendingIntent)
+//       var intent = Intent(this, water::class.java)
+//        val pendingIntent: PendingIntent
+//        pendingIntent = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+//            PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_IMMUTABLE)
+//        } else {
+//            PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT)
+//        }
+//        val alarmManager = getSystemService(ALARM_SERVICE) as AlarmManager
+//        alarmManager.setRepeating(
+//            AlarmManager.RTC_WAKEUP,
+//            System.currentTimeMillis(),
+//            REMINDER_INTERVAL_MILLIS!!.toLong(), pendingIntent)
 
 //_______________________________________________________________________________________________________________________
 //_______________________________________________________________________________________________________________________
@@ -226,9 +227,8 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
 
 //___________________________________________________________________________________________________________
 
-        fun getUserInput() {
-          //  userReminderIntervalMillis = editText.text.toString().toLong() * 60 * 1000
-        }
+       // fun getUserInput() {
+          //  userReminderIntervalMillis = editText.text.toString().toLong() * 60 * 1000 }
 
 
 
@@ -273,13 +273,12 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
 
     }
 
-    companion object {
-        private var REMINDER_INTERVAL_MILLIS = 60 * 60 * 1000
-    }
+//    companion object {
+//        var abc:Int=0
+//        var REMINDER_INTERVAL_MILLIS: Long? = abc.toLong()*60*1000
+//
+//    }
 
-    fun updateReminderInterval() {
-        REMINDER_INTERVAL_MILLIS = userReminderIntervalMillis.toInt()
-    }
 
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

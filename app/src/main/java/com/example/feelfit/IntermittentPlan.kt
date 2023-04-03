@@ -53,7 +53,7 @@ class IntermittentPlan : AppCompatActivity() {
 
             }
         }
-        val adapterSpinner = AdapterSpinner(applicationContext,images, breakfast)
+        val adapterSpinner = AdapterSpinner(applicationContext, R.array.Time )
         spin.adapter = adapterSpinner
     }
 }
