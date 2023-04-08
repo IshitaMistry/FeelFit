@@ -56,4 +56,7 @@ class VegfragmentDiet : Fragment() {
 
 
 
+
+
+
 }
