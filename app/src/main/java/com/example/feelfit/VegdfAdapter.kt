@@ -4,10 +4,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.feelfit.databinding.ItemDietnonvegLayoutBinding
 import com.example.feelfit.databinding.ItemVegdietFragmentBinding
+import com.firebase.ui.database.FirebaseRecyclerOptions
 
-class VegdfAdapter(private val VegDietList:List<VegDModel>):
+class VegdfAdapter(private val VegDietList:List <VegDModel>):
     RecyclerView.Adapter<VegdfAdapter.VegViewHolder>() {
 
 
@@ -15,10 +15,9 @@ class VegdfAdapter(private val VegDietList:List<VegDModel>):
        fun bind(vegDModel: VegDModel) {
            binding.vegdietAmount.text=vegDModel.toString()
            binding.vegdietFname.text=vegDModel.toString()
-
            binding.calorievegd.text=vegDModel.toString()
            Glide.with(binding.root)
-               .load(vegDModel.imageurl)
+               .load(vegDModel.img)
                .into(binding.imgdietvegf)
        }
     }

@@ -72,7 +72,7 @@ class Dashboard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
                     replacementFrag(HomeFragment())
                 }
                 R.id.dietP->{
-                    replacementFrag(DietPlanTwo())
+                    replacementFrag(ActivityforDietF())
                 }
 
 

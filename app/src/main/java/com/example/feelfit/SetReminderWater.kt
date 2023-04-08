@@ -10,9 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.TextView
+import android.widget.*
 
 import com.example.feelfit.databinding.ActivitySetReminderWaterBinding
 
@@ -24,54 +22,66 @@ class SetReminderWater : AppCompatActivity(), AdapterView.OnItemSelectedListener
     lateinit var pendingIntent1: PendingIntent
     var REMINDER_INTERVAL_MILLIS=0
 
+
+
     private lateinit var sharedPreferences: SharedPreferences
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySetReminderWaterBinding.inflate(layoutInflater)
         setContentView(binding.root)
+//
+//        textView1 = findViewById(R.id.TextSpinner)
+       show=findViewById(R.id.texvShow)
 
-        textView1 = findViewById(R.id.TextSpinner)
-        show=findViewById(R.id.textshare)
+        setupNumberPicker()
 
+// Set the initial value
 
         cancelAlarm()
 
-        valueToSharedPref()
-
+//        valueToSharedPref(value:Int)
 
         val Adapter = ArrayAdapter.createFromResource(this, R.array.Time, android.R.layout.simple_spinner_item)
         Adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        binding.spinner1.adapter = Adapter
-        binding.spinner1.onItemSelectedListener = this
+//        binding.spinner1.adapter = Adapter
+//        binding.spinner1.onItemSelectedListener = this
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     }
 
+    private fun setupNumberPicker() {
+
+        val numberPicker: NumberPicker = findViewById(R.id.numpicker1)
+        numberPicker.minValue = 0
+        numberPicker.maxValue = 10
+        numberPicker.wrapSelectorWheel = true
+
+        numberPicker.setOnValueChangedListener{ picker, oldVal, newVal ->
+            var text = "Changed from $oldVal to $newVal"
+            val numberString = text.replace(Regex("[^0-9]"), "") // removes all non-numeric characters from the string
+            val value = numberString.toInt()
+           Toast.makeText(this@SetReminderWater, text, Toast.LENGTH_SHORT).show()
+            valueToSharedPref(value)
+
+        }
+
+    }
 
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
         val text: String = parent?.getItemAtPosition(position).toString()
         textView1.text = text
         var value=text.toInt()
-        sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
-        var editor = sharedPreferences.edit()
-        editor.putInt("MyNumber", value)
-        editor.apply()
-         userInput()
-
+        userInput()
 }
-    private fun valueToSharedPref() {
 
+    private fun valueToSharedPref(value: Int) {
         sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
-        sharedPreferences.edit().putInt("MyNumber", 8).apply()
+        sharedPreferences.edit().putInt("MyNumber",value ).apply()
         val savedNumber = sharedPreferences.getInt("MyNumber", 0)
         show.text=savedNumber.toString()
         REMINDER_INTERVAL_MILLIS=savedNumber*60*1000
-
-
     }
 
     private fun userInput() {

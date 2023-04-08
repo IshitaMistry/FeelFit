@@ -90,6 +90,7 @@ class BmiCalculator : AppCompatActivity()
 
             var email=user.toString()
 
+
             val height=mintprogress.toInt().toString()
             val weight=binding.showweight.text.toString()
             val age=binding.showage.text.toString()

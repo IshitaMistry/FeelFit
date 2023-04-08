@@ -1,4 +1,10 @@
 package com.example.feelfit
 
-data class VegDModel(val amount:String,val banana:String,val calorie:String,val imageurl:String)
+
+
+
+ data class VegDModel(val amount:String =" ",val banana:String="",val calorie:String="",val img:String="")
+ {
+
+ }
 

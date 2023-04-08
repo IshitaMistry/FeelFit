@@ -33,16 +33,15 @@ class NonVegDietFragmentPlan : Fragment() {
 
 
         val database = FirebaseDatabase.getInstance()
-        var NonvegR = database.getReference("Diet").child("Non veg")
+        var NonvegR = database.getReference("Diet")
 
-        Log.e("crimea", "onCreateView: $NonvegR", )
+        //Log.e("crimea", "onCreateView: $NonvegR", )
 
         NonvegR.addChildEventListener(object : ChildEventListener {
             override fun onChildAdded(snapshot: DataSnapshot, previousChildName: String?) {
-                val text = snapshot.child(""  ).getValue(String::class.java)
+                val text = snapshot.child("Non veg"  ).getValue(String::class.java)
                 val imageUrl = snapshot.child("img").getValue(String::class.java)
                 Log.e("Asus", "++++++++++: $imageUrl" + "", )
-
 
                 val img = NonVegF(text ?: "", imageUrl ?: "")
                 bookList.add(img)
