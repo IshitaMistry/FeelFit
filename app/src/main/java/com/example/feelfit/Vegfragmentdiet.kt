@@ -23,6 +23,7 @@ class VegfragmentDiet : Fragment() {
         // Inflate the layout for this fragment
         val view= inflater.inflate(R.layout.fragment_vegdiet, container, false)
 
+
         recyclerView = view.findViewById(R.id.RecyclerViewDietFragment)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         // Create the FirebaseRecyclerOptions object
