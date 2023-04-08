@@ -12,8 +12,6 @@ import com.firebase.ui.database.FirebaseRecyclerOptions
 import com.google.firebase.database.FirebaseDatabase
 
 class VegfragmentDiet : Fragment() {
-
-
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: MyFirebaseRecyclerAdapter
 
