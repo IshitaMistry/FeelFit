@@ -23,6 +23,7 @@ class VegdfAdapter(private val VegDietList:List <VegDModel>):
     }
 
 
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VegViewHolder {
         val binding = ItemVegdietFragmentBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return VegViewHolder (binding)
